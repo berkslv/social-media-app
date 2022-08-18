@@ -421,7 +421,54 @@ namespace DataAccess.Migrations
             migrationBuilder.InsertData(
                 table: "DepartmentCodes",
                 columns: new[] { "Id", "Created", "Name", "Updated" },
-                values: new object[] { 1, 0L, "Bilgisayar mühendisliği", 0L });
+                values: new object[,]
+                {
+                    { 1, 0L, "Acil Yardım ve Afet Yönetimi", 0L },
+                    { 2, 0L, "Alman Dili ve Edebiyatı", 0L },
+                    { 3, 0L, "Arkeoloji", 0L },
+                    { 4, 0L, "Bahçe Bitkileri", 0L },
+                    { 5, 0L, "Beslenme ve Diyetetik", 0L },
+                    { 6, 0L, "Bilgisayar Mühendisliği", 0L },
+                    { 7, 0L, "Bitki Koruma", 0L },
+                    { 8, 0L, "Biyoloji", 0L },
+                    { 9, 0L, "Biyomedikal Mühendisliği", 0L },
+                    { 10, 0L, "Biyosistem Mühendisliği", 0L },
+                    { 11, 0L, "Coğrafya", 0L },
+                    { 12, 0L, "Çalışma Ekonomisi ve Endüstri İlişkileri", 0L },
+                    { 13, 0L, "Çevre Mühendisliği", 0L },
+                    { 14, 0L, "Elektrik-Elektronik Mühendisliği", 0L },
+                    { 15, 0L, "Endüstri Mühendisliği", 0L },
+                    { 16, 0L, "Fizik", 0L },
+                    { 17, 0L, "Fransız Dili ve Edebiyatı", 0L },
+                    { 18, 0L, "Gıda Mühendisliği", 0L },
+                    { 19, 0L, "Hemşirelik", 0L },
+                    { 20, 0L, "Hukuk", 0L },
+                    { 21, 0L, "İktisat", 0L },
+                    { 22, 0L, "İlahiyat", 0L },
+                    { 23, 0L, "İngiliz Dili ve Edebiyatı", 0L },
+                    { 24, 0L, "İnşaat Mühendisliği", 0L },
+                    { 25, 0L, "İşletme", 0L },
+                    { 26, 0L, "Kimya", 0L },
+                    { 27, 0L, "Makine Mühendisliği", 0L },
+                    { 28, 0L, "Maliye", 0L },
+                    { 29, 0L, "Matematik", 0L },
+                    { 30, 0L, "Mimarlık", 0L },
+                    { 31, 0L, "Peyzaj Mimarlığı", 0L },
+                    { 32, 0L, "Psikoloji", 0L },
+                    { 33, 0L, "Siyaset Bilimi ve Kamu Yönetimi", 0L },
+                    { 34, 0L, "Sosyoloji", 0L },
+                    { 35, 0L, "Tarım Ekonomisi", 0L },
+                    { 36, 0L, "Tarımsal Biyoteknoloji", 0L },
+                    { 37, 0L, "Tarih", 0L },
+                    { 38, 0L, "Tarla Bitkileri", 0L },
+                    { 39, 0L, "Tekstil Mühendisliği", 0L },
+                    { 40, 0L, "Tıp", 0L },
+                    { 41, 0L, "Toprak Bilimi ve Bitki Besleme", 0L },
+                    { 42, 0L, "Türk Dili ve Edebiyatı", 0L },
+                    { 43, 0L, "Uluslararası İlişkiler", 0L },
+                    { 44, 0L, "Veterinerlik", 0L },
+                    { 45, 0L, "Zootekni", 0L }
+                });
 
             migrationBuilder.InsertData(
                 table: "OperationClaims",
@@ -437,7 +484,7 @@ namespace DataAccess.Migrations
             migrationBuilder.InsertData(
                 table: "Universities",
                 columns: new[] { "Id", "City", "Created", "FoundationYear", "Name", "Updated" },
-                values: new object[] { 1, "59", 0L, 2000, "Namık Kemal", 0L });
+                values: new object[] { 1, "29", 0L, 2000, "Tekirdağ Namık Kemal Üniversitesi", 0L });
 
             migrationBuilder.InsertData(
                 table: "UserOperationClaims",
@@ -447,17 +494,76 @@ namespace DataAccess.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Created", "DepartmentId", "Email", "FacultyId", "Name", "PasswordHash", "PasswordSalt", "Role", "Status", "UniversityId", "Updated", "Username" },
-                values: new object[] { 1, 0L, null, "berkslv@gmail.com", null, "Berk Selvi", new byte[] { 196, 16, 137, 62, 88, 75, 33, 231, 76, 110, 1, 214, 151, 20, 100, 216, 155, 162, 134, 236, 202, 49, 215, 97, 57, 41, 151, 194, 137, 198, 77, 2, 75, 125, 75, 36, 190, 32, 4, 128, 201, 73, 159, 37, 132, 120, 176, 210, 240, 171, 163, 12, 118, 123, 215, 169, 40, 2, 5, 115, 178, 109, 14, 133 }, new byte[] { 199, 242, 160, 211, 88, 43, 114, 158, 109, 249, 59, 31, 202, 221, 8, 245, 232, 54, 240, 130, 141, 195, 254, 163, 51, 250, 109, 253, 140, 53, 161, 6, 108, 2, 231, 165, 196, 69, 215, 156, 35, 51, 27, 33, 222, 244, 148, 15, 10, 14, 131, 141, 249, 208, 40, 198, 149, 82, 123, 159, 16, 162, 119, 179, 165, 67, 0, 229, 233, 226, 230, 243, 19, 209, 81, 232, 66, 149, 97, 32, 141, 7, 250, 133, 91, 99, 229, 3, 72, 158, 57, 86, 58, 96, 146, 232, 210, 90, 3, 227, 110, 247, 124, 28, 213, 188, 224, 62, 32, 222, 218, 241, 30, 211, 41, 60, 91, 63, 9, 82, 8, 151, 138, 158, 31, 138, 83, 232 }, "Admin", true, null, 0L, "berkselvi.dev" });
+                values: new object[] { 1, 0L, null, "berkslv@gmail.com", null, "Berk Selvi", new byte[] { 17, 246, 222, 19, 201, 129, 90, 142, 254, 110, 223, 243, 163, 127, 145, 171, 24, 52, 116, 93, 60, 199, 19, 36, 167, 163, 9, 131, 170, 184, 63, 151, 146, 174, 51, 234, 1, 96, 237, 138, 27, 12, 146, 96, 160, 190, 159, 78, 15, 250, 220, 115, 45, 162, 237, 73, 212, 108, 28, 168, 14, 119, 28, 161 }, new byte[] { 229, 151, 213, 208, 78, 84, 74, 6, 226, 61, 79, 120, 79, 110, 47, 42, 123, 25, 218, 121, 163, 173, 212, 203, 117, 65, 163, 145, 24, 9, 39, 124, 0, 209, 100, 26, 12, 235, 236, 50, 209, 144, 134, 19, 197, 26, 79, 254, 138, 221, 90, 27, 136, 107, 145, 48, 73, 247, 184, 166, 217, 130, 38, 48, 41, 95, 196, 110, 49, 236, 120, 29, 112, 110, 189, 19, 129, 79, 190, 215, 98, 36, 50, 251, 236, 252, 8, 143, 97, 175, 66, 154, 132, 27, 202, 117, 222, 125, 94, 191, 220, 61, 254, 186, 193, 58, 109, 24, 250, 164, 87, 207, 149, 200, 57, 137, 91, 153, 250, 37, 22, 23, 161, 77, 11, 52, 122, 77 }, "Admin", true, null, 0L, "berkslv" });
 
             migrationBuilder.InsertData(
                 table: "Faculties",
                 columns: new[] { "Id", "Address", "Altitude", "Created", "Latitude", "Name", "UniversityId", "Updated" },
-                values: new object[] { 1, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Çorlu mühendislik", 1, 0L });
+                values: new object[,]
+                {
+                    { 1, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Çorlu Mühendislik Fakültesi", 1, 0L },
+                    { 2, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Fen-Edebiyat Fakültesi", 1, 0L },
+                    { 3, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Ziraat Fakültesi", 1, 0L },
+                    { 4, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Hukuk Fakültesi", 1, 0L },
+                    { 5, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "İktisadi ve İdari Bilimler Fakültesi", 1, 0L },
+                    { 6, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "İlahiyat Fakültesi", 1, 0L },
+                    { 7, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Güzel Sanatlar, Tasarım ve Mimarlık Fakültesi", 1, 0L },
+                    { 8, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Tıp Fakültesi", 1, 0L },
+                    { 9, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Veteriner Fakültesi", 1, 0L },
+                    { 10, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Sağlık Yüksekokulu", 1, 0L }
+                });
 
             migrationBuilder.InsertData(
                 table: "Departments",
                 columns: new[] { "Id", "Created", "DepartmentCodeId", "FacultyId", "Updated" },
-                values: new object[] { 1, 0L, 1, 1, 0L });
+                values: new object[,]
+                {
+                    { 1, 0L, 1, 10, 0L },
+                    { 2, 0L, 2, 2, 0L },
+                    { 3, 0L, 3, 2, 0L },
+                    { 4, 0L, 4, 3, 0L },
+                    { 5, 0L, 5, 10, 0L },
+                    { 6, 0L, 6, 1, 0L },
+                    { 7, 0L, 7, 3, 0L },
+                    { 8, 0L, 8, 2, 0L },
+                    { 9, 0L, 9, 1, 0L },
+                    { 10, 0L, 10, 3, 0L },
+                    { 11, 0L, 11, 2, 0L },
+                    { 12, 0L, 12, 5, 0L },
+                    { 13, 0L, 13, 1, 0L },
+                    { 14, 0L, 14, 1, 0L },
+                    { 15, 0L, 15, 1, 0L },
+                    { 16, 0L, 16, 2, 0L },
+                    { 17, 0L, 17, 2, 0L },
+                    { 18, 0L, 18, 3, 0L },
+                    { 19, 0L, 19, 10, 0L },
+                    { 20, 0L, 20, 4, 0L },
+                    { 21, 0L, 21, 5, 0L },
+                    { 22, 0L, 22, 6, 0L },
+                    { 23, 0L, 23, 2, 0L },
+                    { 24, 0L, 24, 1, 0L },
+                    { 25, 0L, 25, 5, 0L },
+                    { 26, 0L, 26, 2, 0L },
+                    { 27, 0L, 27, 1, 0L },
+                    { 28, 0L, 28, 5, 0L },
+                    { 29, 0L, 29, 2, 0L },
+                    { 30, 0L, 30, 7, 0L },
+                    { 31, 0L, 31, 7, 0L },
+                    { 32, 0L, 32, 2, 0L },
+                    { 33, 0L, 33, 5, 0L },
+                    { 34, 0L, 34, 2, 0L },
+                    { 35, 0L, 35, 3, 0L },
+                    { 36, 0L, 36, 3, 0L },
+                    { 37, 0L, 37, 2, 0L },
+                    { 38, 0L, 38, 3, 0L },
+                    { 39, 0L, 39, 1, 0L },
+                    { 40, 0L, 40, 8, 0L },
+                    { 41, 0L, 41, 3, 0L },
+                    { 42, 0L, 42, 2, 0L },
+                    { 43, 0L, 43, 5, 0L },
+                    { 44, 0L, 44, 9, 0L },
+                    { 45, 0L, 45, 3, 0L }
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Comments_AuthorId",

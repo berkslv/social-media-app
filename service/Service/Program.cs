@@ -162,7 +162,7 @@ try
 
     app.UseCors(AllowedCORS);
 
-    app.UseHttpsRedirection();
+    // app.UseHttpsRedirection();
 
     app.UseStaticFiles();
 

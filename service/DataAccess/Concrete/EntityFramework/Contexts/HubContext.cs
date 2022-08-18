@@ -2,6 +2,7 @@
 using Core.Entity.Abstract;
 using Core.Entity.Concrete;
 using Core.Utilities.Security.Hashing;
+using DataAccess.Concrete.EntityFramework.Seed;
 using Entity.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -19,7 +20,7 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
                 .Build();
 
             optionsBuilder.UseMySql(
-                configuration.GetValue<string>("ConnectionStrings:TestConnection"),
+                configuration.GetValue<string>("ConnectionStrings:DefaultConnection"),
                 new MySqlServerVersion(new Version(8, 0, 11))
             );
         }
@@ -103,66 +104,8 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
                 .HasOne(x => x.Author)
                 .WithMany(x => x.Posts);
 
-            // Seed Role
-            modelBuilder.Entity<OperationClaim>().HasData(
-                new OperationClaim { Id = 1, Name = Role.Student },
-                new OperationClaim { Id = 2, Name = Role.Business },
-                new OperationClaim { Id = 3, Name = Role.Manager },
-                new OperationClaim { Id = 4, Name = Role.Admin }
-            );
-
-            // Seed University
-            modelBuilder.Entity<University>().HasData(
-                new University { Id = 1, Name = "Namık Kemal", City = "59", FoundationYear = 2000 }
-            );
-
-            // Seed Faculty
-            modelBuilder.Entity<Faculty>().HasData(
-                new Faculty
-                {
-                    Id = 1,
-                    Name = "Çorlu mühendislik",
-                    Altitude = 21.213124,
-                    Latitude = 43.213412,
-                    Address = "Çorlu, silahtarağa mah.",
-                    UniversityId = 1
-                }
-            );
-
-            // Seed DepartmentCode
-            modelBuilder.Entity<DepartmentCode>().HasData(
-                new DepartmentCode { Id = 1, Name = "Bilgisayar mühendisliği" }
-            );
-
-            // Seed Department
-            modelBuilder.Entity<Department>().HasData(
-                new Department { Id = 1, FacultyId = 1, DepartmentCodeId = 1 }
-            );
-
-            // Seed User
-            string password = "strapiPassword0";
-            byte[] passwordHash, passwordSalt;
-            HashingHelper.CreatePasswordHash(password, out passwordHash, out passwordSalt);
-            modelBuilder.Entity<User>().HasData(
-                new User
-                {
-                    Id = 1,
-                    Name = "Berk Selvi",
-                    Email = "berkslv@gmail.com",
-                    Status = true,
-                    Username = "berkselvi.dev",
-                    PasswordSalt = passwordSalt,
-                    PasswordHash = passwordHash,
-                    Role = Role.Admin,
-                }
-            );
-
-            // Seed UserOperationClaim
-            modelBuilder.Entity<UserOperationClaim>().HasData(
-                new UserOperationClaim { Id = 1, UserId = 1, OperationClaimId = 4 }
-            );
-
-
+            
+            SeedData.Seed(modelBuilder);
         }
         public override int SaveChanges()
         {

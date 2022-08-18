@@ -1,0 +1,501 @@
+{
+    "Universities": [
+        {
+            "id": 1,
+            "city": 29,
+            "name": "Tekirdağ Namık Kemal Üniversitesi",
+            "foundationYear": 2000
+        }
+    ],
+    "Faculties": [
+        {
+            "id": 1,
+            "altitude": 21.213124,
+            "latitude": 43.213412,
+            "address": "Çorlu, silahtarağa mah.",
+            "name": "Çorlu Mühendislik Fakültesi",
+            "universityId": 1
+        },
+        {
+            "id": 2,
+            "altitude": 21.213124,
+            "latitude": 43.213412,
+            "address": "Çorlu, silahtarağa mah.",
+            "name": "Fen-Edebiyat Fakültesi",
+            "universityId": 1
+        },
+        {
+            "id": 3,
+            "altitude": 21.213124,
+            "latitude": 43.213412,
+            "address": "Çorlu, silahtarağa mah.",
+            "name": "Ziraat Fakültesi",
+            "universityId": 1
+        },
+        {
+            "id": 4,
+            "altitude": 21.213124,
+            "latitude": 43.213412,
+            "address": "Çorlu, silahtarağa mah.",
+            "name": "Hukuk Fakültesi",
+            "universityId": 1
+        },
+        {
+            "id": 5,
+            "altitude": 21.213124,
+            "latitude": 43.213412,
+            "address": "Çorlu, silahtarağa mah.",
+            "name": "İktisadi ve İdari Bilimler Fakültesi",
+            "universityId": 1
+        },
+        {
+            "id": 6,
+            "altitude": 21.213124,
+            "latitude": 43.213412,
+            "address": "Çorlu, silahtarağa mah.",
+            "name": "İlahiyat Fakültesi",
+            "universityId": 1
+        },
+        {
+            "id": 7,
+            "altitude": 21.213124,
+            "latitude": 43.213412,
+            "address": "Çorlu, silahtarağa mah.",
+            "name": "Güzel Sanatlar, Tasarım ve Mimarlık Fakültesi",
+            "universityId": 1
+        },
+        {
+            "id": 8,
+            "altitude": 21.213124,
+            "latitude": 43.213412,
+            "address": "Çorlu, silahtarağa mah.",
+            "name": "Tıp Fakültesi",
+            "universityId": 1
+        },
+        {
+            "id": 9,
+            "altitude": 21.213124,
+            "latitude": 43.213412,
+            "address": "Çorlu, silahtarağa mah.",
+            "name": "Veteriner Fakültesi",
+            "universityId": 1
+        },
+        {
+            "id": 10,
+            "altitude": 21.213124,
+            "latitude": 43.213412,
+            "address": "Çorlu, silahtarağa mah.",
+            "name": "Sağlık Yüksekokulu",
+            "universityId": 1
+        }
+    ],
+    "Departments": [
+        {
+            "id": 1,
+            "departmentCodeId": 1,
+            "facultyId": 10
+        },
+        {
+            "id": 2,
+            "departmentCodeId": 2,
+            "facultyId": 2
+        },
+        {
+            "id": 3,
+            "departmentCodeId": 3,
+            "facultyId": 2
+        },
+        {
+            "id": 4,
+            "departmentCodeId": 4,
+            "facultyId": 3
+        },
+        {
+            "id": 5,
+            "departmentCodeId": 5,
+            "facultyId": 10
+        },
+        {
+            "id": 6,
+            "departmentCodeId": 6,
+            "facultyId": 1
+        },
+        {
+            "id": 7,
+            "departmentCodeId": 7,
+            "facultyId": 3
+        },
+        {
+            "id": 8,
+            "departmentCodeId": 8,
+            "facultyId": 2
+        },
+        {
+            "id": 9,
+            "departmentCodeId": 9,
+            "facultyId": 1
+        },
+        {
+            "id": 10,
+            "departmentCodeId": 10,
+            "facultyId": 3
+        },
+        {
+            "id": 11,
+            "departmentCodeId": 11,
+            "facultyId": 2
+        },
+        {
+            "id": 12,
+            "departmentCodeId": 12,
+            "facultyId": 5
+        },
+        {
+            "id": 13,
+            "departmentCodeId": 13,
+            "facultyId": 1
+        },
+        {
+            "id": 14,
+            "departmentCodeId": 14,
+            "facultyId": 1
+        },
+        {
+            "id": 15,
+            "departmentCodeId": 15,
+            "facultyId": 1
+        },
+        {
+            "id": 16,
+            "departmentCodeId": 16,
+            "facultyId": 2
+        },
+        {
+            "id": 17,
+            "departmentCodeId": 17,
+            "facultyId": 2
+        },
+        {
+            "id": 18,
+            "departmentCodeId": 18,
+            "facultyId": 3
+        },
+        {
+            "id": 19,
+            "departmentCodeId": 19,
+            "facultyId": 10
+        },
+        {
+            "id": 20,
+            "departmentCodeId": 20,
+            "facultyId": 4
+        },
+        {
+            "id": 21,
+            "departmentCodeId": 21,
+            "facultyId": 5
+        },
+        {
+            "id": 22,
+            "departmentCodeId": 22,
+            "facultyId": 6
+        },
+        {
+            "id": 23,
+            "departmentCodeId": 23,
+            "facultyId": 2
+        },
+        {
+            "id": 24,
+            "departmentCodeId": 24,
+            "facultyId": 1
+        },
+        {
+            "id": 25,
+            "departmentCodeId": 25,
+            "facultyId": 5
+        },
+        {
+            "id": 26,
+            "departmentCodeId": 26,
+            "facultyId": 2
+        },
+        {
+            "id": 27,
+            "departmentCodeId": 27,
+            "facultyId": 1
+        },
+        {
+            "id": 28,
+            "departmentCodeId": 28,
+            "facultyId": 5
+        },
+        {
+            "id": 29,
+            "departmentCodeId": 29,
+            "facultyId": 2
+        },
+        {
+            "id": 30,
+            "departmentCodeId": 30,
+            "facultyId": 7
+        },
+        {
+            "id": 31,
+            "departmentCodeId": 31,
+            "facultyId": 7
+        },
+        {
+            "id": 32,
+            "departmentCodeId": 32,
+            "facultyId": 2
+        },
+        {
+            "id": 33,
+            "departmentCodeId": 33,
+            "facultyId": 5
+        },
+        {
+            "id": 34,
+            "departmentCodeId": 34,
+            "facultyId": 2
+        },
+        {
+            "id": 35,
+            "departmentCodeId": 35,
+            "facultyId": 3
+        },
+        {
+            "id": 36,
+            "departmentCodeId": 36,
+            "facultyId": 3
+        },
+        {
+            "id": 37,
+            "departmentCodeId": 37,
+            "facultyId": 2
+        },
+        {
+            "id": 38,
+            "departmentCodeId": 38,
+            "facultyId": 3
+        },
+        {
+            "id": 39,
+            "departmentCodeId": 39,
+            "facultyId": 1
+        },
+        {
+            "id": 40,
+            "departmentCodeId": 40,
+            "facultyId": 8
+        },
+        {
+            "id": 41,
+            "departmentCodeId": 41,
+            "facultyId": 3
+        },
+        {
+            "id": 42,
+            "departmentCodeId": 42,
+            "facultyId": 2
+        },
+        {
+            "id": 43,
+            "departmentCodeId": 43,
+            "facultyId": 5
+        },
+        {
+            "id": 44,
+            "departmentCodeId": 44,
+            "facultyId": 9
+        },
+        {
+            "id": 45,
+            "departmentCodeId": 45,
+            "facultyId": 3
+        }
+    ],
+    "DepartmentCodes": [
+        {
+            "id": 1,
+            "name": "Acil Yardım ve Afet Yönetimi"
+        },
+        {
+            "id": 2,
+            "name": "Alman Dili ve Edebiyatı"
+        },
+        {
+            "id": 3,
+            "name": "Arkeoloji"
+        },
+        {
+            "id": 4,
+            "name": "Bahçe Bitkileri"
+        },
+        {
+            "id": 5,
+            "name": "Beslenme ve Diyetetik"
+        },
+        {
+            "id": 6,
+            "name": "Bilgisayar Mühendisliği"
+        },
+        {
+            "id": 7,
+            "name": "Bitki Koruma"
+        },
+        {
+            "id": 8,
+            "name": "Biyoloji"
+        },
+        {
+            "id": 9,
+            "name": "Biyomedikal Mühendisliği"
+        },
+        {
+            "id": 10,
+            "name": "Biyosistem Mühendisliği"
+        },
+        {
+            "id": 11,
+            "name": "Coğrafya"
+        },
+        {
+            "id": 12,
+            "name": "Çalışma Ekonomisi ve Endüstri İlişkileri"
+        },
+        {
+            "id": 13,
+            "name": "Çevre Mühendisliği"
+        },
+        {
+            "id": 14,
+            "name": "Elektrik-Elektronik Mühendisliği"
+        },
+        {
+            "id": 15,
+            "name": "Endüstri Mühendisliği"
+        },
+        {
+            "id": 16,
+            "name": "Fizik"
+        },
+        {
+            "id": 17,
+            "name": "Fransız Dili ve Edebiyatı"
+        },
+        {
+            "id": 18,
+            "name": "Gıda Mühendisliği"
+        },
+        {
+            "id": 19,
+            "name": "Hemşirelik"
+        },
+        {
+            "id": 20,
+            "name": "Hukuk"
+        },
+        {
+            "id": 21,
+            "name": "İktisat"
+        },
+        {
+            "id": 22,
+            "name": "İlahiyat"
+        },
+        {
+            "id": 23,
+            "name": "İngiliz Dili ve Edebiyatı"
+        },
+        {
+            "id": 24,
+            "name": "İnşaat Mühendisliği"
+        },
+        {
+            "id": 25,
+            "name": "İşletme"
+        },
+        {
+            "id": 26,
+            "name": "Kimya"
+        },
+        {
+            "id": 27,
+            "name": "Makine Mühendisliği"
+        },
+        {
+            "id": 28,
+            "name": "Maliye"
+        },
+        {
+            "id": 29,
+            "name": "Matematik"
+        },
+        {
+            "id": 30,
+            "name": "Mimarlık"
+        },
+        {
+            "id": 31,
+            "name": "Peyzaj Mimarlığı"
+        },
+        {
+            "id": 32,
+            "name": "Psikoloji"
+        },
+        {
+            "id": 33,
+            "name": "Siyaset Bilimi ve Kamu Yönetimi"
+        },
+        {
+            "id": 34,
+            "name": "Sosyoloji"
+        },
+        {
+            "id": 35,
+            "name": "Tarım Ekonomisi"
+        },
+        {
+            "id": 36,
+            "name": "Tarımsal Biyoteknoloji"
+        },
+        {
+            "id": 37,
+            "name": "Tarih"
+        },
+        {
+            "id": 38,
+            "name": "Tarla Bitkileri"
+        },
+        {
+            "id": 39,
+            "name": "Tekstil Mühendisliği"
+        },
+        {
+            "id": 40,
+            "name": "Tıp"
+        },
+        {
+            "id": 41,
+            "name": "Toprak Bilimi ve Bitki Besleme"
+        },
+        {
+            "id": 42,
+            "name": "Türk Dili ve Edebiyatı"
+        },
+        {
+            "id": 43,
+            "name": "Uluslararası İlişkiler"
+        },
+        {
+            "id": 44,
+            "name": "Veterinerlik"
+        },
+        {
+            "id": 45,
+            "name": "Zootekni"
+        }
+    ]
+}
