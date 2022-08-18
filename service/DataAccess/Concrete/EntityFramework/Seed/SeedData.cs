@@ -61,6 +61,17 @@ namespace DataAccess.Concrete.EntityFramework.Seed
                 // Seed Department
                 modelBuilder.Entity<Department>().HasData(dataSet.Departments);
 
+                // Seed Tag
+                modelBuilder.Entity<Tag>().HasData(dataSet.Tags);
+
+                // Seed Post
+                modelBuilder.Entity<Post>().HasData(dataSet.Posts);
+
+                // Seed PostHasTag
+                modelBuilder.Entity<PostHasTag>().HasData(dataSet.PostHasTags);
+
+                // Seed Comment
+                modelBuilder.Entity<Comment>().HasData(dataSet.Comments);
             }
         }
     }
@@ -74,5 +85,9 @@ namespace DataAccess.Concrete.EntityFramework.Seed
         public List<Department> Departments { get; set; }
 
         public List<DepartmentCode> DepartmentCodes { get; set; }
+        public List<Tag> Tags { get; set; }
+        public List<Post> Posts { get; set; }
+        public List<Comment> Comments { get; set; }
+        public List<PostHasTag> PostHasTags { get; set; }
     }
 }

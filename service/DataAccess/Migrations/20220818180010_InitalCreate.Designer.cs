@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(HubContext))]
-    [Migration("20220818173923_InitalCreate")]
+    [Migration("20220818180010_InitalCreate")]
     partial class InitalCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -133,6 +133,26 @@ namespace DataAccess.Migrations
                     b.HasIndex("PostId");
 
                     b.ToTable("Comments");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AuthorId = 1,
+                            Content = "Güzel gönderi",
+                            Created = 0L,
+                            PostId = 1,
+                            Updated = 0L
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AuthorId = 1,
+                            Content = "Tanışmak ister misin?",
+                            Created = 0L,
+                            PostId = 1,
+                            Updated = 0L
+                        });
                 });
 
             modelBuilder.Entity("Entity.Concrete.Department", b =>
@@ -1034,6 +1054,32 @@ namespace DataAccess.Migrations
                     b.HasIndex("AuthorId");
 
                     b.ToTable("Posts");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AuthorId = 1,
+                            Content = "I used to live in my neighbor's fishpond, but the aesthetic wasn't to my taste.",
+                            Created = 0L,
+                            Updated = 0L
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AuthorId = 1,
+                            Content = "The waitress was not amused when he ordered green eggs and ham.",
+                            Created = 0L,
+                            Updated = 0L
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AuthorId = 1,
+                            Content = "I don’t respect anybody who can’t tell the difference between Pepsi and Coke.",
+                            Created = 0L,
+                            Updated = 0L
+                        });
                 });
 
             modelBuilder.Entity("Entity.Concrete.PostHasTag", b =>
@@ -1055,6 +1101,50 @@ namespace DataAccess.Migrations
                     b.HasIndex("TagId");
 
                     b.ToTable("PostHasTag");
+
+                    b.HasData(
+                        new
+                        {
+                            PostId = 1,
+                            TagId = 1,
+                            Created = 0L,
+                            Updated = 0L
+                        },
+                        new
+                        {
+                            PostId = 1,
+                            TagId = 2,
+                            Created = 0L,
+                            Updated = 0L
+                        },
+                        new
+                        {
+                            PostId = 2,
+                            TagId = 3,
+                            Created = 0L,
+                            Updated = 0L
+                        },
+                        new
+                        {
+                            PostId = 2,
+                            TagId = 4,
+                            Created = 0L,
+                            Updated = 0L
+                        },
+                        new
+                        {
+                            PostId = 3,
+                            TagId = 5,
+                            Created = 0L,
+                            Updated = 0L
+                        },
+                        new
+                        {
+                            PostId = 3,
+                            TagId = 1,
+                            Created = 0L,
+                            Updated = 0L
+                        });
                 });
 
             modelBuilder.Entity("Entity.Concrete.Tag", b =>
@@ -1079,6 +1169,48 @@ namespace DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tags");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Created = 0L,
+                            Description = "Sadece goygoy. Ciddi olma!",
+                            Name = "Goygoy",
+                            Updated = 0L
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Created = 0L,
+                            Description = "Kedini burada paylaşabilirsin.",
+                            Name = "Hayvani",
+                            Updated = 0L
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Created = 0L,
+                            Description = "İkinci el ürününü hemen elinden çıkart.",
+                            Name = "İkinci el",
+                            Updated = 0L
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Created = 0L,
+                            Description = "Hadi tanışalım.",
+                            Name = "Tanışma",
+                            Updated = 0L
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Created = 0L,
+                            Description = "Nerelerde takılıyorsun?",
+                            Name = "Mekanlar",
+                            Updated = 0L
+                        });
                 });
 
             modelBuilder.Entity("Entity.Concrete.University", b =>
@@ -1182,8 +1314,8 @@ namespace DataAccess.Migrations
                             Created = 0L,
                             Email = "berkslv@gmail.com",
                             Name = "Berk Selvi",
-                            PasswordHash = new byte[] { 17, 246, 222, 19, 201, 129, 90, 142, 254, 110, 223, 243, 163, 127, 145, 171, 24, 52, 116, 93, 60, 199, 19, 36, 167, 163, 9, 131, 170, 184, 63, 151, 146, 174, 51, 234, 1, 96, 237, 138, 27, 12, 146, 96, 160, 190, 159, 78, 15, 250, 220, 115, 45, 162, 237, 73, 212, 108, 28, 168, 14, 119, 28, 161 },
-                            PasswordSalt = new byte[] { 229, 151, 213, 208, 78, 84, 74, 6, 226, 61, 79, 120, 79, 110, 47, 42, 123, 25, 218, 121, 163, 173, 212, 203, 117, 65, 163, 145, 24, 9, 39, 124, 0, 209, 100, 26, 12, 235, 236, 50, 209, 144, 134, 19, 197, 26, 79, 254, 138, 221, 90, 27, 136, 107, 145, 48, 73, 247, 184, 166, 217, 130, 38, 48, 41, 95, 196, 110, 49, 236, 120, 29, 112, 110, 189, 19, 129, 79, 190, 215, 98, 36, 50, 251, 236, 252, 8, 143, 97, 175, 66, 154, 132, 27, 202, 117, 222, 125, 94, 191, 220, 61, 254, 186, 193, 58, 109, 24, 250, 164, 87, 207, 149, 200, 57, 137, 91, 153, 250, 37, 22, 23, 161, 77, 11, 52, 122, 77 },
+                            PasswordHash = new byte[] { 136, 28, 171, 5, 161, 12, 180, 202, 42, 51, 27, 241, 82, 3, 115, 165, 121, 157, 162, 241, 160, 48, 63, 228, 44, 235, 87, 246, 192, 78, 177, 222, 252, 148, 138, 39, 144, 251, 94, 119, 49, 142, 34, 98, 52, 248, 100, 147, 69, 141, 180, 159, 251, 160, 198, 87, 56, 10, 244, 15, 131, 164, 42, 114 },
+                            PasswordSalt = new byte[] { 40, 204, 156, 179, 196, 235, 124, 191, 134, 166, 200, 22, 138, 129, 246, 100, 123, 82, 250, 22, 101, 149, 165, 243, 70, 30, 212, 10, 99, 4, 231, 67, 203, 135, 169, 127, 164, 153, 64, 46, 171, 79, 34, 108, 112, 174, 59, 255, 25, 251, 153, 178, 65, 250, 77, 164, 49, 179, 158, 121, 43, 53, 117, 95, 16, 34, 163, 71, 131, 251, 35, 21, 226, 143, 41, 104, 112, 7, 103, 232, 68, 106, 166, 169, 247, 255, 101, 0, 242, 159, 210, 20, 32, 122, 81, 162, 235, 253, 161, 52, 163, 165, 137, 124, 141, 129, 85, 208, 79, 195, 207, 138, 171, 88, 63, 138, 235, 121, 90, 120, 182, 83, 175, 3, 131, 115, 92, 54 },
                             Role = "Admin",
                             Status = true,
                             Updated = 0L,

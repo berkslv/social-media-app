@@ -497,5 +497,89 @@
             "id": 45,
             "name": "Zootekni"
         }
+    ],
+    "Tags": [
+        {
+            "id": 1,
+            "name": "Goygoy",
+            "description": "Sadece goygoy. Ciddi olma!"
+        },
+        {
+            "id": 2,
+            "name": "Hayvani",
+            "description": "Kedini burada paylaşabilirsin."
+        },
+        {
+            "id": 3,
+            "name": "İkinci el",
+            "description": "İkinci el ürününü hemen elinden çıkart."
+        },
+        {
+            "id": 4,
+            "name": "Tanışma",
+            "description": "Hadi tanışalım."
+        },
+        {
+            "id": 5,
+            "name": "Mekanlar",
+            "description": "Nerelerde takılıyorsun?"
+        }
+    ],
+    "Posts": [
+        {
+            "id": 1,
+            "content": "I used to live in my neighbor's fishpond, but the aesthetic wasn't to my taste.",
+            "authorId": 1
+        },
+        {
+            "id": 2,
+            "content": "The waitress was not amused when he ordered green eggs and ham.",
+            "authorId": 1
+        },
+        {
+            "id": 3,
+            "content": "I don’t respect anybody who can’t tell the difference between Pepsi and Coke.",
+            "authorId": 1
+        }
+    ],
+    "PostHasTags": [
+        {
+            "postId": 1,
+            "tagId": 1
+        },
+        {
+            "postId": 1,
+            "tagId": 2
+        },
+        {
+            "postId": 2,
+            "tagId": 3
+        },
+        {
+            "postId": 2,
+            "tagId": 4
+        },
+        {
+            "postId": 3,
+            "tagId": 5
+        },
+        {
+            "postId": 3,
+            "tagId": 1
+        }
+    ],
+    "Comments": [
+        {
+            "id": 1,
+            "content": "Güzel gönderi",
+            "postId": 1,
+            "authorId": 1
+        },
+        {
+            "id": 2,
+            "content": "Tanışmak ister misin?",
+            "postId": 1,
+            "authorId": 1
+        }
     ]
 }

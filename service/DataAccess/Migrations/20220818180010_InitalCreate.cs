@@ -482,6 +482,18 @@ namespace DataAccess.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Tags",
+                columns: new[] { "Id", "Created", "Description", "Name", "Updated" },
+                values: new object[,]
+                {
+                    { 1, 0L, "Sadece goygoy. Ciddi olma!", "Goygoy", 0L },
+                    { 2, 0L, "Kedini burada paylaşabilirsin.", "Hayvani", 0L },
+                    { 3, 0L, "İkinci el ürününü hemen elinden çıkart.", "İkinci el", 0L },
+                    { 4, 0L, "Hadi tanışalım.", "Tanışma", 0L },
+                    { 5, 0L, "Nerelerde takılıyorsun?", "Mekanlar", 0L }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Universities",
                 columns: new[] { "Id", "City", "Created", "FoundationYear", "Name", "Updated" },
                 values: new object[] { 1, "29", 0L, 2000, "Tekirdağ Namık Kemal Üniversitesi", 0L });
@@ -494,7 +506,7 @@ namespace DataAccess.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Created", "DepartmentId", "Email", "FacultyId", "Name", "PasswordHash", "PasswordSalt", "Role", "Status", "UniversityId", "Updated", "Username" },
-                values: new object[] { 1, 0L, null, "berkslv@gmail.com", null, "Berk Selvi", new byte[] { 17, 246, 222, 19, 201, 129, 90, 142, 254, 110, 223, 243, 163, 127, 145, 171, 24, 52, 116, 93, 60, 199, 19, 36, 167, 163, 9, 131, 170, 184, 63, 151, 146, 174, 51, 234, 1, 96, 237, 138, 27, 12, 146, 96, 160, 190, 159, 78, 15, 250, 220, 115, 45, 162, 237, 73, 212, 108, 28, 168, 14, 119, 28, 161 }, new byte[] { 229, 151, 213, 208, 78, 84, 74, 6, 226, 61, 79, 120, 79, 110, 47, 42, 123, 25, 218, 121, 163, 173, 212, 203, 117, 65, 163, 145, 24, 9, 39, 124, 0, 209, 100, 26, 12, 235, 236, 50, 209, 144, 134, 19, 197, 26, 79, 254, 138, 221, 90, 27, 136, 107, 145, 48, 73, 247, 184, 166, 217, 130, 38, 48, 41, 95, 196, 110, 49, 236, 120, 29, 112, 110, 189, 19, 129, 79, 190, 215, 98, 36, 50, 251, 236, 252, 8, 143, 97, 175, 66, 154, 132, 27, 202, 117, 222, 125, 94, 191, 220, 61, 254, 186, 193, 58, 109, 24, 250, 164, 87, 207, 149, 200, 57, 137, 91, 153, 250, 37, 22, 23, 161, 77, 11, 52, 122, 77 }, "Admin", true, null, 0L, "berkslv" });
+                values: new object[] { 1, 0L, null, "berkslv@gmail.com", null, "Berk Selvi", new byte[] { 136, 28, 171, 5, 161, 12, 180, 202, 42, 51, 27, 241, 82, 3, 115, 165, 121, 157, 162, 241, 160, 48, 63, 228, 44, 235, 87, 246, 192, 78, 177, 222, 252, 148, 138, 39, 144, 251, 94, 119, 49, 142, 34, 98, 52, 248, 100, 147, 69, 141, 180, 159, 251, 160, 198, 87, 56, 10, 244, 15, 131, 164, 42, 114 }, new byte[] { 40, 204, 156, 179, 196, 235, 124, 191, 134, 166, 200, 22, 138, 129, 246, 100, 123, 82, 250, 22, 101, 149, 165, 243, 70, 30, 212, 10, 99, 4, 231, 67, 203, 135, 169, 127, 164, 153, 64, 46, 171, 79, 34, 108, 112, 174, 59, 255, 25, 251, 153, 178, 65, 250, 77, 164, 49, 179, 158, 121, 43, 53, 117, 95, 16, 34, 163, 71, 131, 251, 35, 21, 226, 143, 41, 104, 112, 7, 103, 232, 68, 106, 166, 169, 247, 255, 101, 0, 242, 159, 210, 20, 32, 122, 81, 162, 235, 253, 161, 52, 163, 165, 137, 124, 141, 129, 85, 208, 79, 195, 207, 138, 171, 88, 63, 138, 235, 121, 90, 120, 182, 83, 175, 3, 131, 115, 92, 54 }, "Admin", true, null, 0L, "berkslv" });
 
             migrationBuilder.InsertData(
                 table: "Faculties",
@@ -511,6 +523,25 @@ namespace DataAccess.Migrations
                     { 8, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Tıp Fakültesi", 1, 0L },
                     { 9, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Veteriner Fakültesi", 1, 0L },
                     { 10, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Sağlık Yüksekokulu", 1, 0L }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Posts",
+                columns: new[] { "Id", "AuthorId", "Content", "Created", "Updated" },
+                values: new object[,]
+                {
+                    { 1, 1, "I used to live in my neighbor's fishpond, but the aesthetic wasn't to my taste.", 0L, 0L },
+                    { 2, 1, "The waitress was not amused when he ordered green eggs and ham.", 0L, 0L },
+                    { 3, 1, "I don’t respect anybody who can’t tell the difference between Pepsi and Coke.", 0L, 0L }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Comments",
+                columns: new[] { "Id", "AuthorId", "Content", "Created", "PostId", "Updated" },
+                values: new object[,]
+                {
+                    { 1, 1, "Güzel gönderi", 0L, 1, 0L },
+                    { 2, 1, "Tanışmak ister misin?", 0L, 1, 0L }
                 });
 
             migrationBuilder.InsertData(
@@ -563,6 +594,19 @@ namespace DataAccess.Migrations
                     { 43, 0L, 43, 5, 0L },
                     { 44, 0L, 44, 9, 0L },
                     { 45, 0L, 45, 3, 0L }
+                });
+
+            migrationBuilder.InsertData(
+                table: "PostHasTag",
+                columns: new[] { "PostId", "TagId", "Created", "Updated" },
+                values: new object[,]
+                {
+                    { 1, 1, 0L, 0L },
+                    { 1, 2, 0L, 0L },
+                    { 2, 3, 0L, 0L },
+                    { 2, 4, 0L, 0L },
+                    { 3, 1, 0L, 0L },
+                    { 3, 5, 0L, 0L }
                 });
 
             migrationBuilder.CreateIndex(
