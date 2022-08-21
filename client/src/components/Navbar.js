@@ -9,31 +9,31 @@ const Navbar = () => {
     <>
       {/* Desktop Navbar */}
       <nav
-        class="navbar has-background-link-light is-hidden-touch"
+        className="navbar has-background-link-light is-hidden-touch"
         role="navigation"
         aria-label="main navigation"
       >
-        <div class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="/">
+        <div className="navbar-menu">
+          <div className="navbar-start">
+            <a className="navbar-item" href="/">
               <img alt="" src={Logo} width="112" height="28" />
             </a>
-            <a href="/" class="navbar-item has-text-link">
+            <a href="/" className="navbar-item has-text-link">
               Ana Sayfa
             </a>
 
-            <a href="/" class="navbar-item has-text-link">
+            <a href="/" className="navbar-item has-text-link">
               Profil
             </a>
           </div>
 
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a href="/" class="button is-link">
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <div className="buttons">
+                <a href="/" className="button is-link">
                   <strong>Kayıt ol</strong>
                 </a>
-                <a href="/" class="button is-light">
+                <a href="/" className="button is-light">
                   Giriş yap
                 </a>
               </div>
@@ -43,19 +43,19 @@ const Navbar = () => {
       </nav>
       {/* Mobile Navbar */}
       <nav
-        class="navbar is-fixed-bottom is-hidden-desktop"
+        className="navbar is-fixed-bottom is-hidden-desktop"
         role="navigation"
         aria-label="main navigation"
       >
-        <div class="navbar-menu is-flex has-background-link-light is-justify-content-space-evenly is-align-content-center">
-          <a href="/" class="navbar-item column py-0 has-text-centered">
-            <img src={HomeIcon} class="" alt="home" />
+        <div className="navbar-menu is-flex has-background-link-light is-justify-content-space-evenly is-align-content-center">
+          <a href="/" className="navbar-item column py-0 has-text-centered">
+            <img src={HomeIcon} className="" alt="home" />
           </a>
-          <a href="/" class="navbar-item column py-0 has-text-centered">
-            <img src={UserIcon} class="" alt="user" />
+          <a href="/" className="navbar-item column py-0 has-text-centered">
+            <img src={UserIcon} className="" alt="user" />
           </a>
-          <a href="/" class="navbar-item column py-0 has-text-centered">
-            <img src={LogoutIcon} class="" alt="logout" />
+          <a href="/" className="navbar-item column py-0 has-text-centered">
+            <img src={LogoutIcon} className="" alt="logout" />
           </a>
         </div>
       </nav>

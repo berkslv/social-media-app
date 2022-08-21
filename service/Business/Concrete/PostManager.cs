@@ -246,7 +246,7 @@ namespace Business.Concrete
             }
 
             // List of Comment under Post is returned with the given Post id.
-            var comment = await _commentDal.GetList(pagination);
+            var comment = await _commentDal.GetList(pagination, x => x.PostId == postId);
 
             // Comment existence is checked.
             if (!comment.Any())

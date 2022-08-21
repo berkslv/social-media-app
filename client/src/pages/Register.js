@@ -2,87 +2,87 @@ import Logo from "../assets/logo-light.svg";
 
 const Register = () => {
   return (
-    <section class="hero has-background-link-light is-fullheight">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns is-centered">
-            <div class="column is-5-tablet is-5-desktop is-4-widescreen">
-              <div class="column is-three-quarters mx-auto">
+    <section className="hero has-background-link-light is-fullheight">
+      <div className="hero-body">
+        <div className="container">
+          <div className="columns is-centered">
+            <div className="column is-5-tablet is-5-desktop is-4-widescreen">
+              <div className="column is-three-quarters mx-auto">
                 <img src={Logo} alt="Logo" />
               </div>
-              <form action="" class="box">
-                <div class="field">
-                  <label for="" class="label">
+              <form action="" className="box">
+                <div className="field">
+                  <label for="" className="label">
                     İsim
                   </label>
-                  <div class="control">
+                  <div className="control">
                     <input
                       type="text"
                       placeholder="e.g. Berk Selvi"
-                      class="input"
+                      className="input"
                       required
                     />
                   </div>
                 </div>
-                <div class="field">
-                  <label for="" class="label">
+                <div className="field">
+                  <label for="" className="label">
                     Kullanıcı adı
                   </label>
-                  <div class="control">
+                  <div className="control">
                     <input
                       type="text"
                       placeholder="e.g. Berk Selvi"
-                      class="input"
+                      className="input"
                       required
                     />
                   </div>
                 </div>
-                <div class="field">
-                  <label for="" class="label">
+                <div className="field">
+                  <label for="" className="label">
                     Email
                   </label>
-                  <div class="control">
+                  <div className="control">
                     <input
                       type="email"
                       placeholder="e.g. bobsmith@gmail.com"
-                      class="input"
+                      className="input"
                       required
                     />
                   </div>
                 </div>
-                <div class="field">
-                  <label for="" class="label">
+                <div className="field">
+                  <label for="" className="label">
                     Parola
                   </label>
-                  <div class="control">
+                  <div className="control">
                     <input
                       type="password"
                       placeholder="*******"
-                      class="input"
+                      className="input"
                       required
                     />
                   </div>
                 </div>
-                <div class="field">
-                  <label for="" class="label">
+                <div className="field">
+                  <label for="" className="label">
                     Parola (tekrar giriniz)
                   </label>
-                  <div class="control">
+                  <div className="control">
                     <input
                       type="password"
                       placeholder="*******"
-                      class="input"
+                      className="input"
                       required
                     />
                   </div>
                 </div>
-                <div class="field mt-3">
-                  <button class="button is-success is-fullwidth">
+                <div className="field mt-3">
+                  <button className="button is-success is-fullwidth">
                     Kayıt ol
                   </button>
                 </div>
-                <div class="field mt-3">
-                  <button class="button has-background-success-light has-text-success is-fullwidth">
+                <div className="field mt-3">
+                  <button className="button has-background-success-light has-text-success is-fullwidth">
                     Kayıt olmadan devam et
                   </button>
                 </div>
