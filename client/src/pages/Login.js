@@ -1,6 +1,4 @@
 import Logo from "../assets/logo-light.svg";
-import MailIcon from "../assets/mail.svg";
-import LockIcon from "../assets/lock.svg";
 
 
 const Login = () => {
@@ -18,37 +16,36 @@ const Login = () => {
                   <label for="" class="label">
                     Email
                   </label>
-                  <div class="control has-icons-left">
+                  <div class="control">
                     <input
                       type="email"
-                      placeholder="e.g. bobsmith@gmail.com"
+                      placeholder="e.g. berkslv@gmail.com"
                       class="input"
                       required
                     />
-                    <span class="icon is-small is-left">
-                      <img src={MailIcon} alt="Mail Icon" />
-                    </span>
                   </div>
                 </div>
                 <div class="field">
                   <label for="" class="label">
                     Parola
                   </label>
-                  <div class="control has-icons-left">
+                  <div class="control">
                     <input
                       type="password"
                       placeholder="*******"
                       class="input"
                       required
                     />
-                    <span class="icon is-small is-left">
-                      <img src={LockIcon} alt="Lock Icon" />
-                    </span>
                   </div>
                 </div>
                 <div class="field mt-3">
                   <button class="button is-success is-fullwidth">
                     Giriş yap
+                  </button>
+                </div>
+                <div class="field mt-3">
+                  <button class="button has-background-success-light has-text-success is-fullwidth">
+                    Giriş yapmadan devam et
                   </button>
                 </div>
               </form>

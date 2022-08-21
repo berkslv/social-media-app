@@ -78,7 +78,12 @@ const Register = () => {
                 </div>
                 <div class="field mt-3">
                   <button class="button is-success is-fullwidth">
-                    Giriş yap
+                    Kayıt ol
+                  </button>
+                </div>
+                <div class="field mt-3">
+                  <button class="button has-background-success-light has-text-success is-fullwidth">
+                    Kayıt olmadan devam et
                   </button>
                 </div>
               </form>

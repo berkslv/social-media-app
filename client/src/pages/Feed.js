@@ -1,9 +1,12 @@
-import React from 'react'
+import Navbar from "../components/Navbar";
 
 const Feed = () => {
   return (
-    <div>Feed</div>
-  )
-}
+    <>
+      <Navbar />
+      <div>selam</div>
+    </>
+  );
+};
 
-export default Feed
+export default Feed;
