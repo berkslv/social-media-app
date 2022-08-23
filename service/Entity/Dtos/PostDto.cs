@@ -11,6 +11,8 @@ namespace Entity.Dtos
         public int Like { get; set; }
         public int Dislike { get; set; }
         public int AuthorId { get; set; }
+        public string Username { get; set; }
         public List<int> TagId { get; set; }
+        public long Created { get; set; }
     }
 }

@@ -1,6 +1,8 @@
 {
     "Universities": [
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 1,
             "city": 29,
             "name": "Tekirdağ Namık Kemal Üniversitesi",
@@ -9,6 +11,8 @@
     ],
     "Faculties": [
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 1,
             "altitude": 21.213124,
             "latitude": 43.213412,
@@ -17,6 +21,8 @@
             "universityId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 2,
             "altitude": 21.213124,
             "latitude": 43.213412,
@@ -25,6 +31,8 @@
             "universityId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 3,
             "altitude": 21.213124,
             "latitude": 43.213412,
@@ -33,6 +41,8 @@
             "universityId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 4,
             "altitude": 21.213124,
             "latitude": 43.213412,
@@ -41,6 +51,8 @@
             "universityId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 5,
             "altitude": 21.213124,
             "latitude": 43.213412,
@@ -49,6 +61,8 @@
             "universityId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 6,
             "altitude": 21.213124,
             "latitude": 43.213412,
@@ -57,6 +71,8 @@
             "universityId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 7,
             "altitude": 21.213124,
             "latitude": 43.213412,
@@ -65,6 +81,8 @@
             "universityId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 8,
             "altitude": 21.213124,
             "latitude": 43.213412,
@@ -73,6 +91,8 @@
             "universityId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 9,
             "altitude": 21.213124,
             "latitude": 43.213412,
@@ -81,6 +101,8 @@
             "universityId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 10,
             "altitude": 21.213124,
             "latitude": 43.213412,
@@ -91,226 +113,316 @@
     ],
     "Departments": [
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 1,
             "departmentCodeId": 1,
             "facultyId": 10
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 2,
             "departmentCodeId": 2,
             "facultyId": 2
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 3,
             "departmentCodeId": 3,
             "facultyId": 2
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 4,
             "departmentCodeId": 4,
             "facultyId": 3
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 5,
             "departmentCodeId": 5,
             "facultyId": 10
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 6,
             "departmentCodeId": 6,
             "facultyId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 7,
             "departmentCodeId": 7,
             "facultyId": 3
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 8,
             "departmentCodeId": 8,
             "facultyId": 2
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 9,
             "departmentCodeId": 9,
             "facultyId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 10,
             "departmentCodeId": 10,
             "facultyId": 3
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 11,
             "departmentCodeId": 11,
             "facultyId": 2
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 12,
             "departmentCodeId": 12,
             "facultyId": 5
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 13,
             "departmentCodeId": 13,
             "facultyId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 14,
             "departmentCodeId": 14,
             "facultyId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 15,
             "departmentCodeId": 15,
             "facultyId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 16,
             "departmentCodeId": 16,
             "facultyId": 2
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 17,
             "departmentCodeId": 17,
             "facultyId": 2
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 18,
             "departmentCodeId": 18,
             "facultyId": 3
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 19,
             "departmentCodeId": 19,
             "facultyId": 10
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 20,
             "departmentCodeId": 20,
             "facultyId": 4
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 21,
             "departmentCodeId": 21,
             "facultyId": 5
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 22,
             "departmentCodeId": 22,
             "facultyId": 6
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 23,
             "departmentCodeId": 23,
             "facultyId": 2
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 24,
             "departmentCodeId": 24,
             "facultyId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 25,
             "departmentCodeId": 25,
             "facultyId": 5
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 26,
             "departmentCodeId": 26,
             "facultyId": 2
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 27,
             "departmentCodeId": 27,
             "facultyId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 28,
             "departmentCodeId": 28,
             "facultyId": 5
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 29,
             "departmentCodeId": 29,
             "facultyId": 2
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 30,
             "departmentCodeId": 30,
             "facultyId": 7
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 31,
             "departmentCodeId": 31,
             "facultyId": 7
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 32,
             "departmentCodeId": 32,
             "facultyId": 2
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 33,
             "departmentCodeId": 33,
             "facultyId": 5
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 34,
             "departmentCodeId": 34,
             "facultyId": 2
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 35,
             "departmentCodeId": 35,
             "facultyId": 3
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 36,
             "departmentCodeId": 36,
             "facultyId": 3
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 37,
             "departmentCodeId": 37,
             "facultyId": 2
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 38,
             "departmentCodeId": 38,
             "facultyId": 3
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 39,
             "departmentCodeId": 39,
             "facultyId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 40,
             "departmentCodeId": 40,
             "facultyId": 8
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 41,
             "departmentCodeId": 41,
             "facultyId": 3
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 42,
             "departmentCodeId": 42,
             "facultyId": 2
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 43,
             "departmentCodeId": 43,
             "facultyId": 5
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 44,
             "departmentCodeId": 44,
             "facultyId": 9
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 45,
             "departmentCodeId": 45,
             "facultyId": 3
@@ -318,208 +430,308 @@
     ],
     "DepartmentCodes": [
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 1,
             "name": "Acil Yardım ve Afet Yönetimi"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 2,
             "name": "Alman Dili ve Edebiyatı"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 3,
             "name": "Arkeoloji"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 4,
             "name": "Bahçe Bitkileri"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 5,
             "name": "Beslenme ve Diyetetik"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 6,
             "name": "Bilgisayar Mühendisliği"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 7,
             "name": "Bitki Koruma"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 8,
             "name": "Biyoloji"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 9,
             "name": "Biyomedikal Mühendisliği"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 10,
             "name": "Biyosistem Mühendisliği"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 11,
             "name": "Coğrafya"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 12,
             "name": "Çalışma Ekonomisi ve Endüstri İlişkileri"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 13,
             "name": "Çevre Mühendisliği"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 14,
             "name": "Elektrik-Elektronik Mühendisliği"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 15,
             "name": "Endüstri Mühendisliği"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 16,
             "name": "Fizik"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 17,
             "name": "Fransız Dili ve Edebiyatı"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 18,
             "name": "Gıda Mühendisliği"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 19,
             "name": "Hemşirelik"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 20,
             "name": "Hukuk"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 21,
             "name": "İktisat"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 22,
             "name": "İlahiyat"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 23,
             "name": "İngiliz Dili ve Edebiyatı"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 24,
             "name": "İnşaat Mühendisliği"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 25,
             "name": "İşletme"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 26,
             "name": "Kimya"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 27,
             "name": "Makine Mühendisliği"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 28,
             "name": "Maliye"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 29,
             "name": "Matematik"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 30,
             "name": "Mimarlık"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 31,
             "name": "Peyzaj Mimarlığı"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 32,
             "name": "Psikoloji"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 33,
             "name": "Siyaset Bilimi ve Kamu Yönetimi"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 34,
             "name": "Sosyoloji"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 35,
             "name": "Tarım Ekonomisi"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 36,
             "name": "Tarımsal Biyoteknoloji"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 37,
             "name": "Tarih"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 38,
             "name": "Tarla Bitkileri"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 39,
             "name": "Tekstil Mühendisliği"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 40,
             "name": "Tıp"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 41,
             "name": "Toprak Bilimi ve Bitki Besleme"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 42,
             "name": "Türk Dili ve Edebiyatı"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 43,
             "name": "Uluslararası İlişkiler"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 44,
             "name": "Veterinerlik"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 45,
             "name": "Zootekni"
         }
     ],
     "Tags": [
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 1,
             "name": "Goygoy",
             "description": "Sadece goygoy. Ciddi olma!"
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 2,
             "name": "Hayvani",
             "description": "Kedini burada paylaşabilirsin."
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 3,
             "name": "İkinci el",
             "description": "İkinci el ürününü hemen elinden çıkart."
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 4,
             "name": "Tanışma",
             "description": "Hadi tanışalım."
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 5,
             "name": "Mekanlar",
             "description": "Nerelerde takılıyorsun?"
@@ -527,16 +739,22 @@
     ],
     "Posts": [
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 1,
             "content": "I used to live in my neighbor's fishpond, but the aesthetic wasn't to my taste.",
             "authorId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 2,
             "content": "The waitress was not amused when he ordered green eggs and ham.",
             "authorId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 3,
             "content": "I don’t respect anybody who can’t tell the difference between Pepsi and Coke.",
             "authorId": 1
@@ -570,12 +788,16 @@
     ],
     "Comments": [
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 1,
             "content": "Güzel gönderi",
             "postId": 1,
             "authorId": 1
         },
         {
+            "created": 1661243520,
+            "updated": 1661243520,
             "id": 2,
             "content": "Tanışmak ister misin?",
             "postId": 1,

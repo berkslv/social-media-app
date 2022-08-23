@@ -55,6 +55,8 @@ namespace Business.Concrete
             // Post is returned with the given id.
             var post = await _postDal.Get(p => p.Id == postId);
 
+            Console.WriteLine(post.Updated);
+
             // The post is checked. 
             if (post is null)
             {

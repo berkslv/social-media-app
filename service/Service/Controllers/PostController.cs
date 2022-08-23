@@ -49,7 +49,6 @@ namespace Service.Controllers
         [HttpGet]
         public async Task<IActionResult> GetList([FromQuery] PaginationParameters pagination, [FromQuery] PostFilter filter)
         {
-            Console.WriteLine($"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}");
             var result = await _postService.GetList(pagination, filter);
             
             _logger.LogInformation(result.Message);

@@ -104,28 +104,42 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
                 .HasOne(x => x.Author)
                 .WithMany(x => x.Posts);
 
-            
+
             SeedData.Seed(modelBuilder);
         }
-        public override int SaveChanges()
+        
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
-            var entries = ChangeTracker
-                .Entries()
-                .Where(e => e.Entity is IEntity && (
-                        e.State == EntityState.Added
-                        || e.State == EntityState.Modified));
+            var insertedEntries = this.ChangeTracker.Entries()
+                                   .Where(x => x.State == EntityState.Added)
+                                   .Select(x => x.Entity);
 
-            foreach (var entityEntry in entries)
+            foreach (var insertedEntry in insertedEntries)
             {
-                ((IEntity)entityEntry.Entity).Updated = DateTimeOffset.Now.ToUnixTimeSeconds();
-
-                if (entityEntry.State == EntityState.Added)
+                var entity = insertedEntry as IEntity;
+                //If the inserted object is an IEntity. 
+                if (entity != null)
                 {
-                    ((IEntity)entityEntry.Entity).Created = DateTimeOffset.Now.ToUnixTimeSeconds();
+                    entity.Created = DateTimeOffset.Now.ToUnixTimeSeconds();
+                    entity.Updated = DateTimeOffset.Now.ToUnixTimeSeconds();
                 }
             }
 
-            return base.SaveChanges();
+            var modifiedEntries = this.ChangeTracker.Entries()
+                       .Where(x => x.State == EntityState.Modified)
+                       .Select(x => x.Entity);
+
+            foreach (var modifiedEntry in modifiedEntries)
+            {
+                //If the inserted object is an IEntity. 
+                var entity = modifiedEntry as IEntity;
+                if (entity != null)
+                {
+                    entity.Updated = DateTimeOffset.Now.ToUnixTimeSeconds();
+                }
+            }
+
+            return base.SaveChangesAsync(cancellationToken);
         }
 
         public DbSet<University> Universities { get; set; }

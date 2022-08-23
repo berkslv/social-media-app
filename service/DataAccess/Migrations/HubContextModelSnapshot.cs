@@ -138,18 +138,18 @@ namespace DataAccess.Migrations
                             Id = 1,
                             AuthorId = 1,
                             Content = "Güzel gönderi",
-                            Created = 0L,
+                            Created = 1661243520L,
                             PostId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 2,
                             AuthorId = 1,
                             Content = "Tanışmak ister misin?",
-                            Created = 0L,
+                            Created = 1661243520L,
                             PostId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         });
                 });
 
@@ -183,362 +183,362 @@ namespace DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 1,
                             FacultyId = 10,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 2,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 2,
                             FacultyId = 2,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 3,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 3,
                             FacultyId = 2,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 4,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 4,
                             FacultyId = 3,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 5,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 5,
                             FacultyId = 10,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 6,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 6,
                             FacultyId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 7,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 7,
                             FacultyId = 3,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 8,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 8,
                             FacultyId = 2,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 9,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 9,
                             FacultyId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 10,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 10,
                             FacultyId = 3,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 11,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 11,
                             FacultyId = 2,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 12,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 12,
                             FacultyId = 5,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 13,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 13,
                             FacultyId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 14,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 14,
                             FacultyId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 15,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 15,
                             FacultyId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 16,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 16,
                             FacultyId = 2,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 17,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 17,
                             FacultyId = 2,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 18,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 18,
                             FacultyId = 3,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 19,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 19,
                             FacultyId = 10,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 20,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 20,
                             FacultyId = 4,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 21,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 21,
                             FacultyId = 5,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 22,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 22,
                             FacultyId = 6,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 23,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 23,
                             FacultyId = 2,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 24,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 24,
                             FacultyId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 25,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 25,
                             FacultyId = 5,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 26,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 26,
                             FacultyId = 2,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 27,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 27,
                             FacultyId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 28,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 28,
                             FacultyId = 5,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 29,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 29,
                             FacultyId = 2,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 30,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 30,
                             FacultyId = 7,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 31,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 31,
                             FacultyId = 7,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 32,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 32,
                             FacultyId = 2,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 33,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 33,
                             FacultyId = 5,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 34,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 34,
                             FacultyId = 2,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 35,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 35,
                             FacultyId = 3,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 36,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 36,
                             FacultyId = 3,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 37,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 37,
                             FacultyId = 2,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 38,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 38,
                             FacultyId = 3,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 39,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 39,
                             FacultyId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 40,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 40,
                             FacultyId = 8,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 41,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 41,
                             FacultyId = 3,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 42,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 42,
                             FacultyId = 2,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 43,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 43,
                             FacultyId = 5,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 44,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 44,
                             FacultyId = 9,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 45,
-                            Created = 0L,
+                            Created = 1661243520L,
                             DepartmentCodeId = 45,
                             FacultyId = 3,
-                            Updated = 0L
+                            Updated = 1661243520L
                         });
                 });
 
@@ -566,317 +566,317 @@ namespace DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Acil Yardım ve Afet Yönetimi",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 2,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Alman Dili ve Edebiyatı",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 3,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Arkeoloji",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 4,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Bahçe Bitkileri",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 5,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Beslenme ve Diyetetik",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 6,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Bilgisayar Mühendisliği",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 7,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Bitki Koruma",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 8,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Biyoloji",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 9,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Biyomedikal Mühendisliği",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 10,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Biyosistem Mühendisliği",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 11,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Coğrafya",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 12,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Çalışma Ekonomisi ve Endüstri İlişkileri",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 13,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Çevre Mühendisliği",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 14,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Elektrik-Elektronik Mühendisliği",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 15,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Endüstri Mühendisliği",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 16,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Fizik",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 17,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Fransız Dili ve Edebiyatı",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 18,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Gıda Mühendisliği",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 19,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Hemşirelik",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 20,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Hukuk",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 21,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "İktisat",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 22,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "İlahiyat",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 23,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "İngiliz Dili ve Edebiyatı",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 24,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "İnşaat Mühendisliği",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 25,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "İşletme",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 26,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Kimya",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 27,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Makine Mühendisliği",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 28,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Maliye",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 29,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Matematik",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 30,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Mimarlık",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 31,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Peyzaj Mimarlığı",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 32,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Psikoloji",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 33,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Siyaset Bilimi ve Kamu Yönetimi",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 34,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Sosyoloji",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 35,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Tarım Ekonomisi",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 36,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Tarımsal Biyoteknoloji",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 37,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Tarih",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 38,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Tarla Bitkileri",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 39,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Tekstil Mühendisliği",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 40,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Tıp",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 41,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Toprak Bilimi ve Bitki Besleme",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 42,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Türk Dili ve Edebiyatı",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 43,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Uluslararası İlişkiler",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 44,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Veterinerlik",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 45,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Name = "Zootekni",
-                            Updated = 0L
+                            Updated = 1661243520L
                         });
                 });
 
@@ -921,110 +921,110 @@ namespace DataAccess.Migrations
                             Id = 1,
                             Address = "Çorlu, silahtarağa mah.",
                             Altitude = 21.213124000000001,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Latitude = 43.213411999999998,
                             Name = "Çorlu Mühendislik Fakültesi",
                             UniversityId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 2,
                             Address = "Çorlu, silahtarağa mah.",
                             Altitude = 21.213124000000001,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Latitude = 43.213411999999998,
                             Name = "Fen-Edebiyat Fakültesi",
                             UniversityId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 3,
                             Address = "Çorlu, silahtarağa mah.",
                             Altitude = 21.213124000000001,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Latitude = 43.213411999999998,
                             Name = "Ziraat Fakültesi",
                             UniversityId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 4,
                             Address = "Çorlu, silahtarağa mah.",
                             Altitude = 21.213124000000001,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Latitude = 43.213411999999998,
                             Name = "Hukuk Fakültesi",
                             UniversityId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 5,
                             Address = "Çorlu, silahtarağa mah.",
                             Altitude = 21.213124000000001,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Latitude = 43.213411999999998,
                             Name = "İktisadi ve İdari Bilimler Fakültesi",
                             UniversityId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 6,
                             Address = "Çorlu, silahtarağa mah.",
                             Altitude = 21.213124000000001,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Latitude = 43.213411999999998,
                             Name = "İlahiyat Fakültesi",
                             UniversityId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 7,
                             Address = "Çorlu, silahtarağa mah.",
                             Altitude = 21.213124000000001,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Latitude = 43.213411999999998,
                             Name = "Güzel Sanatlar, Tasarım ve Mimarlık Fakültesi",
                             UniversityId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 8,
                             Address = "Çorlu, silahtarağa mah.",
                             Altitude = 21.213124000000001,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Latitude = 43.213411999999998,
                             Name = "Tıp Fakültesi",
                             UniversityId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 9,
                             Address = "Çorlu, silahtarağa mah.",
                             Altitude = 21.213124000000001,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Latitude = 43.213411999999998,
                             Name = "Veteriner Fakültesi",
                             UniversityId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 10,
                             Address = "Çorlu, silahtarağa mah.",
                             Altitude = 21.213124000000001,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Latitude = 43.213411999999998,
                             Name = "Sağlık Yüksekokulu",
                             UniversityId = 1,
-                            Updated = 0L
+                            Updated = 1661243520L
                         });
                 });
 
@@ -1059,24 +1059,24 @@ namespace DataAccess.Migrations
                             Id = 1,
                             AuthorId = 1,
                             Content = "I used to live in my neighbor's fishpond, but the aesthetic wasn't to my taste.",
-                            Created = 0L,
-                            Updated = 0L
+                            Created = 1661243520L,
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 2,
                             AuthorId = 1,
                             Content = "The waitress was not amused when he ordered green eggs and ham.",
-                            Created = 0L,
-                            Updated = 0L
+                            Created = 1661243520L,
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 3,
                             AuthorId = 1,
                             Content = "I don’t respect anybody who can’t tell the difference between Pepsi and Coke.",
-                            Created = 0L,
-                            Updated = 0L
+                            Created = 1661243520L,
+                            Updated = 1661243520L
                         });
                 });
 
@@ -1172,42 +1172,42 @@ namespace DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Description = "Sadece goygoy. Ciddi olma!",
                             Name = "Goygoy",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 2,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Description = "Kedini burada paylaşabilirsin.",
                             Name = "Hayvani",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 3,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Description = "İkinci el ürününü hemen elinden çıkart.",
                             Name = "İkinci el",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 4,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Description = "Hadi tanışalım.",
                             Name = "Tanışma",
-                            Updated = 0L
+                            Updated = 1661243520L
                         },
                         new
                         {
                             Id = 5,
-                            Created = 0L,
+                            Created = 1661243520L,
                             Description = "Nerelerde takılıyorsun?",
                             Name = "Mekanlar",
-                            Updated = 0L
+                            Updated = 1661243520L
                         });
                 });
 
@@ -1243,10 +1243,10 @@ namespace DataAccess.Migrations
                         {
                             Id = 1,
                             City = "29",
-                            Created = 0L,
+                            Created = 1661243520L,
                             FoundationYear = 2000,
                             Name = "Tekirdağ Namık Kemal Üniversitesi",
-                            Updated = 0L
+                            Updated = 1661243520L
                         });
                 });
 
@@ -1312,8 +1312,8 @@ namespace DataAccess.Migrations
                             Created = 0L,
                             Email = "berkslv@gmail.com",
                             Name = "Berk Selvi",
-                            PasswordHash = new byte[] { 136, 28, 171, 5, 161, 12, 180, 202, 42, 51, 27, 241, 82, 3, 115, 165, 121, 157, 162, 241, 160, 48, 63, 228, 44, 235, 87, 246, 192, 78, 177, 222, 252, 148, 138, 39, 144, 251, 94, 119, 49, 142, 34, 98, 52, 248, 100, 147, 69, 141, 180, 159, 251, 160, 198, 87, 56, 10, 244, 15, 131, 164, 42, 114 },
-                            PasswordSalt = new byte[] { 40, 204, 156, 179, 196, 235, 124, 191, 134, 166, 200, 22, 138, 129, 246, 100, 123, 82, 250, 22, 101, 149, 165, 243, 70, 30, 212, 10, 99, 4, 231, 67, 203, 135, 169, 127, 164, 153, 64, 46, 171, 79, 34, 108, 112, 174, 59, 255, 25, 251, 153, 178, 65, 250, 77, 164, 49, 179, 158, 121, 43, 53, 117, 95, 16, 34, 163, 71, 131, 251, 35, 21, 226, 143, 41, 104, 112, 7, 103, 232, 68, 106, 166, 169, 247, 255, 101, 0, 242, 159, 210, 20, 32, 122, 81, 162, 235, 253, 161, 52, 163, 165, 137, 124, 141, 129, 85, 208, 79, 195, 207, 138, 171, 88, 63, 138, 235, 121, 90, 120, 182, 83, 175, 3, 131, 115, 92, 54 },
+                            PasswordHash = new byte[] { 138, 145, 244, 78, 131, 154, 216, 210, 118, 67, 54, 195, 108, 195, 136, 100, 184, 210, 242, 213, 192, 204, 35, 33, 227, 77, 250, 219, 130, 100, 66, 123, 96, 170, 53, 118, 176, 122, 179, 80, 129, 44, 3, 192, 92, 47, 57, 228, 252, 239, 129, 41, 222, 250, 6, 236, 26, 251, 248, 33, 188, 30, 110, 83 },
+                            PasswordSalt = new byte[] { 251, 49, 240, 142, 75, 4, 97, 106, 13, 164, 182, 142, 212, 156, 236, 211, 126, 44, 82, 213, 72, 66, 33, 2, 50, 1, 41, 88, 14, 3, 57, 25, 204, 244, 220, 89, 94, 40, 75, 111, 185, 201, 202, 176, 6, 24, 200, 142, 68, 67, 15, 32, 174, 128, 17, 21, 106, 118, 80, 97, 107, 217, 60, 215, 199, 155, 199, 187, 17, 120, 130, 153, 225, 180, 35, 198, 21, 232, 179, 35, 39, 10, 23, 246, 139, 231, 166, 55, 17, 236, 87, 117, 39, 192, 39, 124, 77, 153, 229, 69, 209, 122, 237, 109, 197, 243, 24, 25, 254, 214, 190, 32, 177, 100, 21, 51, 26, 9, 4, 90, 159, 77, 21, 94, 46, 14, 201, 154 },
                             Role = "Admin",
                             Status = true,
                             Updated = 0L,

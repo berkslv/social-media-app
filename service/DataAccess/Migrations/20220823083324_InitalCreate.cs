@@ -423,51 +423,51 @@ namespace DataAccess.Migrations
                 columns: new[] { "Id", "Created", "Name", "Updated" },
                 values: new object[,]
                 {
-                    { 1, 0L, "Acil Yardım ve Afet Yönetimi", 0L },
-                    { 2, 0L, "Alman Dili ve Edebiyatı", 0L },
-                    { 3, 0L, "Arkeoloji", 0L },
-                    { 4, 0L, "Bahçe Bitkileri", 0L },
-                    { 5, 0L, "Beslenme ve Diyetetik", 0L },
-                    { 6, 0L, "Bilgisayar Mühendisliği", 0L },
-                    { 7, 0L, "Bitki Koruma", 0L },
-                    { 8, 0L, "Biyoloji", 0L },
-                    { 9, 0L, "Biyomedikal Mühendisliği", 0L },
-                    { 10, 0L, "Biyosistem Mühendisliği", 0L },
-                    { 11, 0L, "Coğrafya", 0L },
-                    { 12, 0L, "Çalışma Ekonomisi ve Endüstri İlişkileri", 0L },
-                    { 13, 0L, "Çevre Mühendisliği", 0L },
-                    { 14, 0L, "Elektrik-Elektronik Mühendisliği", 0L },
-                    { 15, 0L, "Endüstri Mühendisliği", 0L },
-                    { 16, 0L, "Fizik", 0L },
-                    { 17, 0L, "Fransız Dili ve Edebiyatı", 0L },
-                    { 18, 0L, "Gıda Mühendisliği", 0L },
-                    { 19, 0L, "Hemşirelik", 0L },
-                    { 20, 0L, "Hukuk", 0L },
-                    { 21, 0L, "İktisat", 0L },
-                    { 22, 0L, "İlahiyat", 0L },
-                    { 23, 0L, "İngiliz Dili ve Edebiyatı", 0L },
-                    { 24, 0L, "İnşaat Mühendisliği", 0L },
-                    { 25, 0L, "İşletme", 0L },
-                    { 26, 0L, "Kimya", 0L },
-                    { 27, 0L, "Makine Mühendisliği", 0L },
-                    { 28, 0L, "Maliye", 0L },
-                    { 29, 0L, "Matematik", 0L },
-                    { 30, 0L, "Mimarlık", 0L },
-                    { 31, 0L, "Peyzaj Mimarlığı", 0L },
-                    { 32, 0L, "Psikoloji", 0L },
-                    { 33, 0L, "Siyaset Bilimi ve Kamu Yönetimi", 0L },
-                    { 34, 0L, "Sosyoloji", 0L },
-                    { 35, 0L, "Tarım Ekonomisi", 0L },
-                    { 36, 0L, "Tarımsal Biyoteknoloji", 0L },
-                    { 37, 0L, "Tarih", 0L },
-                    { 38, 0L, "Tarla Bitkileri", 0L },
-                    { 39, 0L, "Tekstil Mühendisliği", 0L },
-                    { 40, 0L, "Tıp", 0L },
-                    { 41, 0L, "Toprak Bilimi ve Bitki Besleme", 0L },
-                    { 42, 0L, "Türk Dili ve Edebiyatı", 0L },
-                    { 43, 0L, "Uluslararası İlişkiler", 0L },
-                    { 44, 0L, "Veterinerlik", 0L },
-                    { 45, 0L, "Zootekni", 0L }
+                    { 1, 1661243520L, "Acil Yardım ve Afet Yönetimi", 1661243520L },
+                    { 2, 1661243520L, "Alman Dili ve Edebiyatı", 1661243520L },
+                    { 3, 1661243520L, "Arkeoloji", 1661243520L },
+                    { 4, 1661243520L, "Bahçe Bitkileri", 1661243520L },
+                    { 5, 1661243520L, "Beslenme ve Diyetetik", 1661243520L },
+                    { 6, 1661243520L, "Bilgisayar Mühendisliği", 1661243520L },
+                    { 7, 1661243520L, "Bitki Koruma", 1661243520L },
+                    { 8, 1661243520L, "Biyoloji", 1661243520L },
+                    { 9, 1661243520L, "Biyomedikal Mühendisliği", 1661243520L },
+                    { 10, 1661243520L, "Biyosistem Mühendisliği", 1661243520L },
+                    { 11, 1661243520L, "Coğrafya", 1661243520L },
+                    { 12, 1661243520L, "Çalışma Ekonomisi ve Endüstri İlişkileri", 1661243520L },
+                    { 13, 1661243520L, "Çevre Mühendisliği", 1661243520L },
+                    { 14, 1661243520L, "Elektrik-Elektronik Mühendisliği", 1661243520L },
+                    { 15, 1661243520L, "Endüstri Mühendisliği", 1661243520L },
+                    { 16, 1661243520L, "Fizik", 1661243520L },
+                    { 17, 1661243520L, "Fransız Dili ve Edebiyatı", 1661243520L },
+                    { 18, 1661243520L, "Gıda Mühendisliği", 1661243520L },
+                    { 19, 1661243520L, "Hemşirelik", 1661243520L },
+                    { 20, 1661243520L, "Hukuk", 1661243520L },
+                    { 21, 1661243520L, "İktisat", 1661243520L },
+                    { 22, 1661243520L, "İlahiyat", 1661243520L },
+                    { 23, 1661243520L, "İngiliz Dili ve Edebiyatı", 1661243520L },
+                    { 24, 1661243520L, "İnşaat Mühendisliği", 1661243520L },
+                    { 25, 1661243520L, "İşletme", 1661243520L },
+                    { 26, 1661243520L, "Kimya", 1661243520L },
+                    { 27, 1661243520L, "Makine Mühendisliği", 1661243520L },
+                    { 28, 1661243520L, "Maliye", 1661243520L },
+                    { 29, 1661243520L, "Matematik", 1661243520L },
+                    { 30, 1661243520L, "Mimarlık", 1661243520L },
+                    { 31, 1661243520L, "Peyzaj Mimarlığı", 1661243520L },
+                    { 32, 1661243520L, "Psikoloji", 1661243520L },
+                    { 33, 1661243520L, "Siyaset Bilimi ve Kamu Yönetimi", 1661243520L },
+                    { 34, 1661243520L, "Sosyoloji", 1661243520L },
+                    { 35, 1661243520L, "Tarım Ekonomisi", 1661243520L },
+                    { 36, 1661243520L, "Tarımsal Biyoteknoloji", 1661243520L },
+                    { 37, 1661243520L, "Tarih", 1661243520L },
+                    { 38, 1661243520L, "Tarla Bitkileri", 1661243520L },
+                    { 39, 1661243520L, "Tekstil Mühendisliği", 1661243520L },
+                    { 40, 1661243520L, "Tıp", 1661243520L },
+                    { 41, 1661243520L, "Toprak Bilimi ve Bitki Besleme", 1661243520L },
+                    { 42, 1661243520L, "Türk Dili ve Edebiyatı", 1661243520L },
+                    { 43, 1661243520L, "Uluslararası İlişkiler", 1661243520L },
+                    { 44, 1661243520L, "Veterinerlik", 1661243520L },
+                    { 45, 1661243520L, "Zootekni", 1661243520L }
                 });
 
             migrationBuilder.InsertData(
@@ -486,17 +486,17 @@ namespace DataAccess.Migrations
                 columns: new[] { "Id", "Created", "Description", "Name", "Updated" },
                 values: new object[,]
                 {
-                    { 1, 0L, "Sadece goygoy. Ciddi olma!", "Goygoy", 0L },
-                    { 2, 0L, "Kedini burada paylaşabilirsin.", "Hayvani", 0L },
-                    { 3, 0L, "İkinci el ürününü hemen elinden çıkart.", "İkinci el", 0L },
-                    { 4, 0L, "Hadi tanışalım.", "Tanışma", 0L },
-                    { 5, 0L, "Nerelerde takılıyorsun?", "Mekanlar", 0L }
+                    { 1, 1661243520L, "Sadece goygoy. Ciddi olma!", "Goygoy", 1661243520L },
+                    { 2, 1661243520L, "Kedini burada paylaşabilirsin.", "Hayvani", 1661243520L },
+                    { 3, 1661243520L, "İkinci el ürününü hemen elinden çıkart.", "İkinci el", 1661243520L },
+                    { 4, 1661243520L, "Hadi tanışalım.", "Tanışma", 1661243520L },
+                    { 5, 1661243520L, "Nerelerde takılıyorsun?", "Mekanlar", 1661243520L }
                 });
 
             migrationBuilder.InsertData(
                 table: "Universities",
                 columns: new[] { "Id", "City", "Created", "FoundationYear", "Name", "Updated" },
-                values: new object[] { 1, "29", 0L, 2000, "Tekirdağ Namık Kemal Üniversitesi", 0L });
+                values: new object[] { 1, "29", 1661243520L, 2000, "Tekirdağ Namık Kemal Üniversitesi", 1661243520L });
 
             migrationBuilder.InsertData(
                 table: "UserOperationClaims",
@@ -506,23 +506,23 @@ namespace DataAccess.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Created", "DepartmentId", "Email", "FacultyId", "Name", "PasswordHash", "PasswordSalt", "Role", "Status", "UniversityId", "Updated", "Username" },
-                values: new object[] { 1, 0L, null, "berkslv@gmail.com", null, "Berk Selvi", new byte[] { 136, 28, 171, 5, 161, 12, 180, 202, 42, 51, 27, 241, 82, 3, 115, 165, 121, 157, 162, 241, 160, 48, 63, 228, 44, 235, 87, 246, 192, 78, 177, 222, 252, 148, 138, 39, 144, 251, 94, 119, 49, 142, 34, 98, 52, 248, 100, 147, 69, 141, 180, 159, 251, 160, 198, 87, 56, 10, 244, 15, 131, 164, 42, 114 }, new byte[] { 40, 204, 156, 179, 196, 235, 124, 191, 134, 166, 200, 22, 138, 129, 246, 100, 123, 82, 250, 22, 101, 149, 165, 243, 70, 30, 212, 10, 99, 4, 231, 67, 203, 135, 169, 127, 164, 153, 64, 46, 171, 79, 34, 108, 112, 174, 59, 255, 25, 251, 153, 178, 65, 250, 77, 164, 49, 179, 158, 121, 43, 53, 117, 95, 16, 34, 163, 71, 131, 251, 35, 21, 226, 143, 41, 104, 112, 7, 103, 232, 68, 106, 166, 169, 247, 255, 101, 0, 242, 159, 210, 20, 32, 122, 81, 162, 235, 253, 161, 52, 163, 165, 137, 124, 141, 129, 85, 208, 79, 195, 207, 138, 171, 88, 63, 138, 235, 121, 90, 120, 182, 83, 175, 3, 131, 115, 92, 54 }, "Admin", true, null, 0L, "berkslv" });
+                values: new object[] { 1, 0L, null, "berkslv@gmail.com", null, "Berk Selvi", new byte[] { 138, 145, 244, 78, 131, 154, 216, 210, 118, 67, 54, 195, 108, 195, 136, 100, 184, 210, 242, 213, 192, 204, 35, 33, 227, 77, 250, 219, 130, 100, 66, 123, 96, 170, 53, 118, 176, 122, 179, 80, 129, 44, 3, 192, 92, 47, 57, 228, 252, 239, 129, 41, 222, 250, 6, 236, 26, 251, 248, 33, 188, 30, 110, 83 }, new byte[] { 251, 49, 240, 142, 75, 4, 97, 106, 13, 164, 182, 142, 212, 156, 236, 211, 126, 44, 82, 213, 72, 66, 33, 2, 50, 1, 41, 88, 14, 3, 57, 25, 204, 244, 220, 89, 94, 40, 75, 111, 185, 201, 202, 176, 6, 24, 200, 142, 68, 67, 15, 32, 174, 128, 17, 21, 106, 118, 80, 97, 107, 217, 60, 215, 199, 155, 199, 187, 17, 120, 130, 153, 225, 180, 35, 198, 21, 232, 179, 35, 39, 10, 23, 246, 139, 231, 166, 55, 17, 236, 87, 117, 39, 192, 39, 124, 77, 153, 229, 69, 209, 122, 237, 109, 197, 243, 24, 25, 254, 214, 190, 32, 177, 100, 21, 51, 26, 9, 4, 90, 159, 77, 21, 94, 46, 14, 201, 154 }, "Admin", true, null, 0L, "berkslv" });
 
             migrationBuilder.InsertData(
                 table: "Faculties",
                 columns: new[] { "Id", "Address", "Altitude", "Created", "Latitude", "Name", "UniversityId", "Updated" },
                 values: new object[,]
                 {
-                    { 1, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Çorlu Mühendislik Fakültesi", 1, 0L },
-                    { 2, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Fen-Edebiyat Fakültesi", 1, 0L },
-                    { 3, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Ziraat Fakültesi", 1, 0L },
-                    { 4, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Hukuk Fakültesi", 1, 0L },
-                    { 5, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "İktisadi ve İdari Bilimler Fakültesi", 1, 0L },
-                    { 6, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "İlahiyat Fakültesi", 1, 0L },
-                    { 7, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Güzel Sanatlar, Tasarım ve Mimarlık Fakültesi", 1, 0L },
-                    { 8, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Tıp Fakültesi", 1, 0L },
-                    { 9, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Veteriner Fakültesi", 1, 0L },
-                    { 10, "Çorlu, silahtarağa mah.", 21.213124000000001, 0L, 43.213411999999998, "Sağlık Yüksekokulu", 1, 0L }
+                    { 1, "Çorlu, silahtarağa mah.", 21.213124000000001, 1661243520L, 43.213411999999998, "Çorlu Mühendislik Fakültesi", 1, 1661243520L },
+                    { 2, "Çorlu, silahtarağa mah.", 21.213124000000001, 1661243520L, 43.213411999999998, "Fen-Edebiyat Fakültesi", 1, 1661243520L },
+                    { 3, "Çorlu, silahtarağa mah.", 21.213124000000001, 1661243520L, 43.213411999999998, "Ziraat Fakültesi", 1, 1661243520L },
+                    { 4, "Çorlu, silahtarağa mah.", 21.213124000000001, 1661243520L, 43.213411999999998, "Hukuk Fakültesi", 1, 1661243520L },
+                    { 5, "Çorlu, silahtarağa mah.", 21.213124000000001, 1661243520L, 43.213411999999998, "İktisadi ve İdari Bilimler Fakültesi", 1, 1661243520L },
+                    { 6, "Çorlu, silahtarağa mah.", 21.213124000000001, 1661243520L, 43.213411999999998, "İlahiyat Fakültesi", 1, 1661243520L },
+                    { 7, "Çorlu, silahtarağa mah.", 21.213124000000001, 1661243520L, 43.213411999999998, "Güzel Sanatlar, Tasarım ve Mimarlık Fakültesi", 1, 1661243520L },
+                    { 8, "Çorlu, silahtarağa mah.", 21.213124000000001, 1661243520L, 43.213411999999998, "Tıp Fakültesi", 1, 1661243520L },
+                    { 9, "Çorlu, silahtarağa mah.", 21.213124000000001, 1661243520L, 43.213411999999998, "Veteriner Fakültesi", 1, 1661243520L },
+                    { 10, "Çorlu, silahtarağa mah.", 21.213124000000001, 1661243520L, 43.213411999999998, "Sağlık Yüksekokulu", 1, 1661243520L }
                 });
 
             migrationBuilder.InsertData(
@@ -530,9 +530,9 @@ namespace DataAccess.Migrations
                 columns: new[] { "Id", "AuthorId", "Content", "Created", "Updated" },
                 values: new object[,]
                 {
-                    { 1, 1, "I used to live in my neighbor's fishpond, but the aesthetic wasn't to my taste.", 0L, 0L },
-                    { 2, 1, "The waitress was not amused when he ordered green eggs and ham.", 0L, 0L },
-                    { 3, 1, "I don’t respect anybody who can’t tell the difference between Pepsi and Coke.", 0L, 0L }
+                    { 1, 1, "I used to live in my neighbor's fishpond, but the aesthetic wasn't to my taste.", 1661243520L, 1661243520L },
+                    { 2, 1, "The waitress was not amused when he ordered green eggs and ham.", 1661243520L, 1661243520L },
+                    { 3, 1, "I don’t respect anybody who can’t tell the difference between Pepsi and Coke.", 1661243520L, 1661243520L }
                 });
 
             migrationBuilder.InsertData(
@@ -540,8 +540,8 @@ namespace DataAccess.Migrations
                 columns: new[] { "Id", "AuthorId", "Content", "Created", "PostId", "Updated" },
                 values: new object[,]
                 {
-                    { 1, 1, "Güzel gönderi", 0L, 1, 0L },
-                    { 2, 1, "Tanışmak ister misin?", 0L, 1, 0L }
+                    { 1, 1, "Güzel gönderi", 1661243520L, 1, 1661243520L },
+                    { 2, 1, "Tanışmak ister misin?", 1661243520L, 1, 1661243520L }
                 });
 
             migrationBuilder.InsertData(
@@ -549,51 +549,51 @@ namespace DataAccess.Migrations
                 columns: new[] { "Id", "Created", "DepartmentCodeId", "FacultyId", "Updated" },
                 values: new object[,]
                 {
-                    { 1, 0L, 1, 10, 0L },
-                    { 2, 0L, 2, 2, 0L },
-                    { 3, 0L, 3, 2, 0L },
-                    { 4, 0L, 4, 3, 0L },
-                    { 5, 0L, 5, 10, 0L },
-                    { 6, 0L, 6, 1, 0L },
-                    { 7, 0L, 7, 3, 0L },
-                    { 8, 0L, 8, 2, 0L },
-                    { 9, 0L, 9, 1, 0L },
-                    { 10, 0L, 10, 3, 0L },
-                    { 11, 0L, 11, 2, 0L },
-                    { 12, 0L, 12, 5, 0L },
-                    { 13, 0L, 13, 1, 0L },
-                    { 14, 0L, 14, 1, 0L },
-                    { 15, 0L, 15, 1, 0L },
-                    { 16, 0L, 16, 2, 0L },
-                    { 17, 0L, 17, 2, 0L },
-                    { 18, 0L, 18, 3, 0L },
-                    { 19, 0L, 19, 10, 0L },
-                    { 20, 0L, 20, 4, 0L },
-                    { 21, 0L, 21, 5, 0L },
-                    { 22, 0L, 22, 6, 0L },
-                    { 23, 0L, 23, 2, 0L },
-                    { 24, 0L, 24, 1, 0L },
-                    { 25, 0L, 25, 5, 0L },
-                    { 26, 0L, 26, 2, 0L },
-                    { 27, 0L, 27, 1, 0L },
-                    { 28, 0L, 28, 5, 0L },
-                    { 29, 0L, 29, 2, 0L },
-                    { 30, 0L, 30, 7, 0L },
-                    { 31, 0L, 31, 7, 0L },
-                    { 32, 0L, 32, 2, 0L },
-                    { 33, 0L, 33, 5, 0L },
-                    { 34, 0L, 34, 2, 0L },
-                    { 35, 0L, 35, 3, 0L },
-                    { 36, 0L, 36, 3, 0L },
-                    { 37, 0L, 37, 2, 0L },
-                    { 38, 0L, 38, 3, 0L },
-                    { 39, 0L, 39, 1, 0L },
-                    { 40, 0L, 40, 8, 0L },
-                    { 41, 0L, 41, 3, 0L },
-                    { 42, 0L, 42, 2, 0L },
-                    { 43, 0L, 43, 5, 0L },
-                    { 44, 0L, 44, 9, 0L },
-                    { 45, 0L, 45, 3, 0L }
+                    { 1, 1661243520L, 1, 10, 1661243520L },
+                    { 2, 1661243520L, 2, 2, 1661243520L },
+                    { 3, 1661243520L, 3, 2, 1661243520L },
+                    { 4, 1661243520L, 4, 3, 1661243520L },
+                    { 5, 1661243520L, 5, 10, 1661243520L },
+                    { 6, 1661243520L, 6, 1, 1661243520L },
+                    { 7, 1661243520L, 7, 3, 1661243520L },
+                    { 8, 1661243520L, 8, 2, 1661243520L },
+                    { 9, 1661243520L, 9, 1, 1661243520L },
+                    { 10, 1661243520L, 10, 3, 1661243520L },
+                    { 11, 1661243520L, 11, 2, 1661243520L },
+                    { 12, 1661243520L, 12, 5, 1661243520L },
+                    { 13, 1661243520L, 13, 1, 1661243520L },
+                    { 14, 1661243520L, 14, 1, 1661243520L },
+                    { 15, 1661243520L, 15, 1, 1661243520L },
+                    { 16, 1661243520L, 16, 2, 1661243520L },
+                    { 17, 1661243520L, 17, 2, 1661243520L },
+                    { 18, 1661243520L, 18, 3, 1661243520L },
+                    { 19, 1661243520L, 19, 10, 1661243520L },
+                    { 20, 1661243520L, 20, 4, 1661243520L },
+                    { 21, 1661243520L, 21, 5, 1661243520L },
+                    { 22, 1661243520L, 22, 6, 1661243520L },
+                    { 23, 1661243520L, 23, 2, 1661243520L },
+                    { 24, 1661243520L, 24, 1, 1661243520L },
+                    { 25, 1661243520L, 25, 5, 1661243520L },
+                    { 26, 1661243520L, 26, 2, 1661243520L },
+                    { 27, 1661243520L, 27, 1, 1661243520L },
+                    { 28, 1661243520L, 28, 5, 1661243520L },
+                    { 29, 1661243520L, 29, 2, 1661243520L },
+                    { 30, 1661243520L, 30, 7, 1661243520L },
+                    { 31, 1661243520L, 31, 7, 1661243520L },
+                    { 32, 1661243520L, 32, 2, 1661243520L },
+                    { 33, 1661243520L, 33, 5, 1661243520L },
+                    { 34, 1661243520L, 34, 2, 1661243520L },
+                    { 35, 1661243520L, 35, 3, 1661243520L },
+                    { 36, 1661243520L, 36, 3, 1661243520L },
+                    { 37, 1661243520L, 37, 2, 1661243520L },
+                    { 38, 1661243520L, 38, 3, 1661243520L },
+                    { 39, 1661243520L, 39, 1, 1661243520L },
+                    { 40, 1661243520L, 40, 8, 1661243520L },
+                    { 41, 1661243520L, 41, 3, 1661243520L },
+                    { 42, 1661243520L, 42, 2, 1661243520L },
+                    { 43, 1661243520L, 43, 5, 1661243520L },
+                    { 44, 1661243520L, 44, 9, 1661243520L },
+                    { 45, 1661243520L, 45, 3, 1661243520L }
                 });
 
             migrationBuilder.InsertData(

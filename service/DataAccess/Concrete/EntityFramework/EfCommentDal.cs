@@ -20,6 +20,7 @@ namespace DataAccess.Concrete.EntityFramework
                     .Set<Comment>()
                     .Include(x => x.Likes)
                     .Include(x => x.Dislikes)
+                    .Include(x => x.Author)
                     .SingleOrDefaultAsync(filter);
             }
         }
@@ -34,12 +35,14 @@ namespace DataAccess.Concrete.EntityFramework
                         .Set<Comment>()
                         .Include(x => x.Likes)
                         .Include(x => x.Dislikes)
+                        .Include(x => x.Author)
                     : context
                         .Set<Comment>()
                         .Include(x => x.Likes)
                         .Include(x => x.Dislikes)
+                        .Include(x => x.Author)
                         .Where(filter.Filter);
-                
+
                 if (filter.OrderBy is not null)
                 {
                     _result = _result.OrderBy(filter.OrderBy);
@@ -58,14 +61,16 @@ namespace DataAccess.Concrete.EntityFramework
             using (var context = new HubContext())
             {
                 var _result = filter == null
-                    ? context   
+                    ? context
                         .Set<Comment>()
                         .Include(x => x.Likes)
                         .Include(x => x.Dislikes)
+                        .Include(x => x.Author)
                     : context
                         .Set<Comment>()
                         .Include(x => x.Likes)
                         .Include(x => x.Dislikes)
+                        .Include(x => x.Author)
                         .Where(filter);
 
                 var result = pagination == null
