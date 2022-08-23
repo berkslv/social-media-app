@@ -22,3 +22,9 @@
 /Users/berkslv/Documents/project/social-media-app/client/Client/obj/Debug/net6.0/Client.pdb
 /Users/berkslv/Documents/project/social-media-app/client/Client/obj/Debug/net6.0/Client.genruntimeconfig.cache
 /Users/berkslv/Documents/project/social-media-app/client/Client/obj/Debug/net6.0/ref/Client.dll
+/Users/berkslv/Documents/project/social-media-app/client/Client/obj/Debug/net6.0/Client.MvcApplicationPartsAssemblyInfo.cs
+/Users/berkslv/Documents/project/social-media-app/client/Client/bin/Debug/net6.0/FluentValidation.dll
+/Users/berkslv/Documents/project/social-media-app/client/Client/bin/Debug/net6.0/FluentValidation.AspNetCore.dll
+/Users/berkslv/Documents/project/social-media-app/client/Client/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/berkslv/Documents/project/social-media-app/client/Client/obj/Debug/net6.0/Client.csproj.CopyComplete
+/Users/berkslv/Documents/project/social-media-app/client/Client/bin/Debug/net6.0/Newtonsoft.Json.dll

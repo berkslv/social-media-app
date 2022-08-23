@@ -1,7 +1,19 @@
+using System.Globalization;
+using Client.Models;
+using Client.Services;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
+ValidatorOptions.Global.LanguageManager.Culture = new CultureInfo("tr");
+
+
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services
+.AddValidatorsFromAssemblyContaining<PostForCreateModelValidator>()
+.AddControllersWithViews();
+
 
 var app = builder.Build();
 
@@ -22,6 +34,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Feed}/{action=Index}");
 
 app.Run();

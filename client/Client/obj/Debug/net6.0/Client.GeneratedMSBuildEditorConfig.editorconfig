@@ -15,6 +15,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/berkslv/Documents/project/social-media-app/client/Client
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/berkslv/Documents/project/social-media-app/client/Client/Views/Auth/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/berkslv/Documents/project/social-media-app/client/Client/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/berkslv/Documents/project/social-media-app/client/Client/Views/Auth/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/berkslv/Documents/project/social-media-app/client/Client/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/berkslv/Documents/project/social-media-app/client/Client/Views/Feed/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmVlZC9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
