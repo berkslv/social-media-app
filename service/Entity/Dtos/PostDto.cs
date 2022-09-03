@@ -13,6 +13,7 @@ namespace Entity.Dtos
         public int AuthorId { get; set; }
         public string Username { get; set; }
         public List<int> TagId { get; set; }
+        public List<string> Tags { get; set; }
         public long Created { get; set; }
     }
 }

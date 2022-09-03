@@ -20,6 +20,7 @@ namespace DataAccess.Concrete.EntityFramework
                     .Include(x => x.Likes)
                     .Include(x => x.Dislikes)
                     .Include(x => x.Tags)
+                    .ThenInclude(x => x.Tag)
                     .Include(x => x.Author)
                     .SingleOrDefaultAsync(filter);
             }
@@ -36,15 +37,17 @@ namespace DataAccess.Concrete.EntityFramework
                         .Include(x => x.Likes)
                         .Include(x => x.Dislikes)
                         .Include(x => x.Tags)
+                        .ThenInclude(x => x.Tag)
                         .Include(x => x.Author)
                     : context
                         .Set<Post>()
                         .Include(x => x.Likes)
                         .Include(x => x.Dislikes)
                         .Include(x => x.Tags)
+                        .ThenInclude(x => x.Tag)
                         .Include(x => x.Author)
                         .Where(filter.Filter);
-                
+
                 if (filter.OrderBy is not null)
                 {
                     _result = _result.OrderBy(filter.OrderBy);
@@ -63,15 +66,19 @@ namespace DataAccess.Concrete.EntityFramework
             using (var context = new HubContext())
             {
                 var _result = filter == null
-                    ? context   
+                    ? context
                         .Set<Post>()
                         .Include(x => x.Likes)
                         .Include(x => x.Dislikes)
+                        .Include(x => x.Tags)
+                        .ThenInclude(x => x.Tag)
                         .Include(x => x.Author)
                     : context
                         .Set<Post>()
                         .Include(x => x.Likes)
                         .Include(x => x.Dislikes)
+                        .Include(x => x.Tags)
+                        .ThenInclude(x => x.Tag)
                         .Include(x => x.Author)
                         .Where(filter);
 

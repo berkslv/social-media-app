@@ -23,9 +23,12 @@ function Post({ posts, getPosts }) {
             {posts.data.map((post) => (
               <div key={post.id}>
                 <Card
+                  type="post"
                   title={post.username}
                   time={post.created}
-                  body={post.content}
+                  content={post.content}
+                  like={post.like}
+                  dislike={post.dislike}
                 />
               </div>
             ))}
