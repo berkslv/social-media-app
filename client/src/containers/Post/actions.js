@@ -3,18 +3,15 @@ import {
   GET_POST_REQUEST,
   GET_POST_FAILED,
   GET_POST_SUCCESS,
-
   GET_POSTS_REQUEST,
   GET_POSTS_FAILED,
   GET_POSTS_SUCCESS,
-
   LIKE_POST_REQUEST,
   LIKE_POST_FAILED,
   LIKE_POST_SUCCESS,
-
   DISLIKE_POST_REQUEST,
   DISLIKE_POST_FAILED,
-  DISLIKE_POST_SUCCESS
+  DISLIKE_POST_SUCCESS,
 } from "./types";
 
 // ------------------------------------ GET POST ------------------------------------
@@ -71,7 +68,6 @@ export const getPosts = () => async (dispatch, getState) => {
   }
 };
 
-
 // ------------------------------------ LIKE POST ------------------------------------
 export const likePostRequest = () => ({
   type: LIKE_POST_REQUEST,
@@ -95,7 +91,7 @@ export const likePost = (id) => async (dispatch) => {
   } catch (error) {
     dispatch(likePostFailed(error));
   }
-}
+};
 
 // ------------------------------------ DISLIKE POST ------------------------------------
 
@@ -121,4 +117,4 @@ export const dislikePost = (id) => async (dispatch) => {
   } catch (error) {
     dispatch(dislikePostFailed(error));
   }
-}
+};

@@ -1,7 +1,8 @@
 import React from "react";
+import Comment from "./Comment";
 import Post from "./Post";
 
-function Card({ type, post, likeAction, dislikeAction, }) {
+function Card({ type, comment, post, likeAction, dislikeAction }) {
   switch (type) {
     case "post":
       return (
@@ -11,8 +12,10 @@ function Card({ type, post, likeAction, dislikeAction, }) {
           dislikeAction={dislikeAction}
         />
       );
+    case "comment":
+      return <Comment comment={comment} />;
     default:
-      return <div>Card</div>;
+      return <div> Card </div>;
   }
 }
 

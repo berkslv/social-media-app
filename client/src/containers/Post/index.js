@@ -9,7 +9,12 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 function Post({ posts, getPosts, likePost, dislikePost }) {
   useEffect(() => {
-    getPosts();
+    if (posts.data.length === 0) {
+      getPosts();
+    } else if (posts.data.length === 1) {
+      window.location.reload();
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getPosts]);
 
   return (
@@ -20,7 +25,7 @@ function Post({ posts, getPosts, likePost, dislikePost }) {
           dataLength={posts.data.length} //This is important field to render the next data
           next={getPosts}
           hasMore={posts.hasNext}
-          loader={<h4>Loading...</h4>}
+          loader={<Loading />}
           endMessage={
             <p style={{ textAlign: "center" }}>
               <b>Yay! You have seen it all</b>

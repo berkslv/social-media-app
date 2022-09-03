@@ -47,13 +47,14 @@ try
     builder.Services.AddAutoMapper(typeof(MapperProfiles).Assembly);
 
     builder.Services
-    .AddControllers(options => {
+    .AddControllers(options =>
+    {
     })
     .AddFluentValidation(fv =>
      {
-        // Aynı assembly içerisindeki tüm AbstractValidator inherit sınıfları kapsar.
-        fv.RegisterValidatorsFromAssemblyContaining<UniversityForCreateDtoValidator>();
-        fv.RegisterValidatorsFromAssemblyContaining<PaginationParameters>();
+         // Aynı assembly içerisindeki tüm AbstractValidator inherit sınıfları kapsar.
+         fv.RegisterValidatorsFromAssemblyContaining<UniversityForCreateDtoValidator>();
+         fv.RegisterValidatorsFromAssemblyContaining<PaginationParameters>();
      })
     .ConfigureApiBehaviorOptions(options =>
      {
@@ -111,7 +112,7 @@ try
         var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
         options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
     });
-    
+
     builder.Services.AddFluentValidationRulesToSwagger();
 
 
@@ -133,13 +134,13 @@ try
             };
         });
 
-    var AllowedCORS = "_AllowedCORS";
     builder.Services.AddCors(options =>
         {
-            options.AddPolicy(AllowedCORS,
-                builder => builder.WithOrigins("http://localhost:3000")
-                                    .AllowAnyHeader()
-                                    .AllowAnyMethod()
+            options.AddDefaultPolicy(
+                policy => policy.WithOrigins("*")
+                                .AllowAnyHeader()
+                                .AllowAnyMethod()
+                                .AllowAnyOrigin()
             );
         });
 
@@ -159,11 +160,11 @@ try
 
     app.ConfigureExceptionHandler();
 
-    app.UseCors(AllowedCORS);
-
     // app.UseHttpsRedirection();
 
     app.UseStaticFiles();
+
+    app.UseCors();
 
     app.UseAuthentication();
 

@@ -6,9 +6,10 @@ import LikeSolid from "images/like-solid.svg";
 import Dislike from "images/dislike.svg";
 import DislikeSolid from "images/dislike-solid.svg";
 import Comment from "images/comment.svg";
+import { Link } from "react-router-dom";
 
 function Post({ post, likeAction, dislikeAction, }) {
-  const date = moment.unix(post.time).fromNow();
+  const date = moment.unix(post.created).fromNow();
   const relativeLike = post.like - post.dislike;
 
   return (
@@ -27,9 +28,9 @@ function Post({ post, likeAction, dislikeAction, }) {
         <button onClick={() => { dislikeAction(post.id) }} type="button" className="btn p-2">
           {post.disliked ? <img src={DislikeSolid} alt="dislike" width="20" height="20" /> : <img src={Dislike} alt="dislike" width="20" height="20" />}
         </button>
-        <button type="button" className="btn p-2 ms-4">
+        <Link to={`/feed/${post.id}`} className="btn p-2 ms-4">
           <img src={Comment} alt="comment" width="20" height="20" />
-        </button>
+        </Link>
       </div>
       <div class="card-footer text-muted">
         {post.tags.map((tag) => (
