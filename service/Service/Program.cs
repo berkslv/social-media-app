@@ -140,7 +140,6 @@ try
                 builder => builder.WithOrigins("http://localhost:3000")
                                     .AllowAnyHeader()
                                     .AllowAnyMethod()
-                                    .AllowAnyOrigin()
             );
         });
 
