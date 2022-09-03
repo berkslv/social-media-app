@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { getPosts } from "./actions";
+import { getPosts, likePost, dislikePost } from "./actions";
 import Header from "components/Header";
 import Card from "components/Card";
 import Container from "components/Container";
 import Loading from "components/Loading";
+import InfiniteScroll from "react-infinite-scroll-component";
 
-function Post({ posts, getPosts }) {
+function Post({ posts, getPosts, likePost, dislikePost }) {
   useEffect(() => {
     getPosts();
   }, [getPosts]);
@@ -15,25 +16,34 @@ function Post({ posts, getPosts }) {
     <>
       <Header />
       <Container>
-        {posts.loading ? (
-          <Loading />
-        ) : (
-          <div>
-            <h1>Posts</h1>
-            {posts.data.map((post) => (
-              <div key={post.id}>
-                <Card
-                  type="post"
-                  title={post.username}
-                  time={post.created}
-                  content={post.content}
-                  like={post.like}
-                  dislike={post.dislike}
-                />
-              </div>
-            ))}
-          </div>
-        )}
+        <InfiniteScroll
+          dataLength={posts.data.length} //This is important field to render the next data
+          next={getPosts}
+          hasMore={posts.hasNext}
+          loader={<h4>Loading...</h4>}
+          endMessage={
+            <p style={{ textAlign: "center" }}>
+              <b>Yay! You have seen it all</b>
+            </p>
+          }
+        >
+          {posts.data.map((post) => (
+            <div key={post.id}>
+              <Card
+                type="post"
+                id={post.id}
+                title={post.username}
+                time={post.created}
+                content={post.content}
+                like={post.like}
+                likeAction={likePost}
+                dislike={post.dislike}
+                dislikeAction={dislikePost}
+                tags={post.tags}
+              />
+            </div>
+          ))}
+        </InfiniteScroll>
       </Container>
     </>
   );
@@ -48,6 +58,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getPosts: () => dispatch(getPosts()),
+    likePost: (id) => dispatch(likePost(id)),
+    dislikePost: (id) => dispatch(dislikePost(id)),
   };
 };
 

@@ -50,6 +50,7 @@ namespace DataAccess.Concrete.EntityFramework
 
                 if (filter.OrderBy is not null)
                 {
+                    Console.WriteLine(filter.OrderBy);
                     _result = _result.OrderBy(filter.OrderBy);
                 }
 
@@ -73,6 +74,7 @@ namespace DataAccess.Concrete.EntityFramework
                         .Include(x => x.Tags)
                         .ThenInclude(x => x.Tag)
                         .Include(x => x.Author)
+                        .OrderBy(x => x.Created)
                     : context
                         .Set<Post>()
                         .Include(x => x.Likes)
@@ -80,6 +82,7 @@ namespace DataAccess.Concrete.EntityFramework
                         .Include(x => x.Tags)
                         .ThenInclude(x => x.Tag)
                         .Include(x => x.Author)
+                        .OrderBy(x => x.Created)
                         .Where(filter);
 
                 var result = pagination == null

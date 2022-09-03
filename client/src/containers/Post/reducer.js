@@ -2,9 +2,18 @@ import {
   GET_POST_REQUEST,
   GET_POST_FAILED,
   GET_POST_SUCCESS,
+
   GET_POSTS_REQUEST,
   GET_POSTS_FAILED,
   GET_POSTS_SUCCESS,
+
+  LIKE_POST_REQUEST,
+  LIKE_POST_FAILED,
+  LIKE_POST_SUCCESS,
+
+  DISLIKE_POST_REQUEST,
+  DISLIKE_POST_FAILED,
+  DISLIKE_POST_SUCCESS
 } from "./types";
 
 const initialState = {
@@ -56,6 +65,44 @@ const postsReducer = (state = initialState, action) => {
         hasPrevious: action.payload.hasPrevious,
       };
     case GET_POSTS_FAILED:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+    case LIKE_POST_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+    case LIKE_POST_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        data: state.data.map((post) =>
+          post.id === action.payload.data.id ? action.payload.data : post
+        ),
+      };
+    case LIKE_POST_FAILED:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+    case DISLIKE_POST_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+    case DISLIKE_POST_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        data: state.data.map((post) =>
+          post.id === action.payload.data.id ? action.payload.data : post
+        ),
+      };
+    case DISLIKE_POST_FAILED:
       return {
         ...state,
         loading: false,
