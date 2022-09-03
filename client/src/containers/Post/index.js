@@ -31,15 +31,9 @@ function Post({ posts, getPosts, likePost, dislikePost }) {
             <div key={post.id}>
               <Card
                 type="post"
-                id={post.id}
-                title={post.username}
-                time={post.created}
-                content={post.content}
-                like={post.like}
+                post={post}
                 likeAction={likePost}
-                dislike={post.dislike}
                 dislikeAction={dislikePost}
-                tags={post.tags}
               />
             </div>
           ))}

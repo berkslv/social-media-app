@@ -1,20 +1,14 @@
 import React from "react";
 import Post from "./Post";
 
-function Card({ id, type, title, time, content, like, likeAction, dislike, dislikeAction, tags }) {
+function Card({ type, post, likeAction, dislikeAction, }) {
   switch (type) {
     case "post":
       return (
         <Post
-          id={id}
-          title={title}
-          time={time}
-          content={content}
-          like={like}
+          post={post}
           likeAction={likeAction}
-          dislike={dislike}
           dislikeAction={dislikeAction}
-          tags={tags}
         />
       );
     default:
