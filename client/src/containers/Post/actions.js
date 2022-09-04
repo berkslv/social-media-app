@@ -12,6 +12,9 @@ import {
   DISLIKE_POST_REQUEST,
   DISLIKE_POST_FAILED,
   DISLIKE_POST_SUCCESS,
+  CREATE_POST_REQUEST,
+  CREATE_POST_FAILED,
+  CREATE_POST_SUCCESS,
 } from "./types";
 
 // ------------------------------------ GET POST ------------------------------------
@@ -118,3 +121,29 @@ export const dislikePost = (id) => async (dispatch) => {
     dispatch(dislikePostFailed(error));
   }
 };
+
+// ------------------------------------ CREATE POST ------------------------------------
+
+export const createPostRequest = () => ({
+  type: CREATE_POST_REQUEST,
+});
+
+export const createPostSuccess = (post) => ({
+  type: CREATE_POST_SUCCESS,
+  payload: post,
+});
+
+export const createPostFailed = (error) => ({
+  type: CREATE_POST_FAILED,
+  payload: error,
+});
+
+export const createPost = (post) => async (dispatch) => {
+  dispatch(createPostRequest());
+  try {
+    const { data } = await axios.post(`/posts`, post);
+    dispatch(createPostSuccess(data));
+  } catch (error) {
+    dispatch(createPostFailed(error));
+  }
+}

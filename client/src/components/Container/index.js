@@ -2,7 +2,7 @@ import React from 'react'
 
 function Container({ children }) {
   return (
-    <div className="container">
+    <div className="container py-3">
         {children}
     </div>
   )

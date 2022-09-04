@@ -13,7 +13,11 @@ import {
 
   DISLIKE_POST_REQUEST,
   DISLIKE_POST_FAILED,
-  DISLIKE_POST_SUCCESS
+  DISLIKE_POST_SUCCESS,
+
+  CREATE_POST_REQUEST,
+  CREATE_POST_FAILED,
+  CREATE_POST_SUCCESS,
 } from "./types";
 
 const initialState = {
@@ -103,6 +107,23 @@ const postsReducer = (state = initialState, action) => {
         ),
       };
     case DISLIKE_POST_FAILED:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+    case CREATE_POST_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+    case CREATE_POST_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        data: state.data.concat(action.payload.data),
+      };
+    case CREATE_POST_FAILED:
       return {
         ...state,
         loading: false,

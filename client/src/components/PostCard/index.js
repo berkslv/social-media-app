@@ -8,7 +8,7 @@ import DislikeSolid from "images/dislike-solid.svg";
 import Comment from "images/comment.svg";
 import { Link } from "react-router-dom";
 
-function Post({ post, likeAction, dislikeAction, }) {
+function PostCard({ post, likeAction, dislikeAction, }) {
   const date = moment.unix(post.created).fromNow();
   const relativeLike = post.like - post.dislike;
 
@@ -16,7 +16,7 @@ function Post({ post, likeAction, dislikeAction, }) {
     <div className="card my-3">
       <div className="card-body">
         <p className="card-title">
-          {post.id} - @{post.username} · <span className="text-muted">{date}</span>
+          @{post.username} · <span className="text-muted">{date}</span>
         </p>
         <p className="card-text">{post.content}</p>
         <button onClick={() => { likeAction(post.id) }} type="button" className="btn p-2">
@@ -41,4 +41,4 @@ function Post({ post, likeAction, dislikeAction, }) {
   );
 }
 
-export default Post;
+export default PostCard;

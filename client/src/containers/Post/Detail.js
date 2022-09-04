@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getPost, likePost, dislikePost } from "./actions";
+import { getPost, likePost, dislikePost } from "containers/Post/actions";
 import Header from "components/Header";
 import Card from "components/Card";
 import Container from "components/Container";
 import Loading from "components/Loading";
-import InfiniteScroll from "react-infinite-scroll-component";
-import { selectPostById } from "./selector";
+// import InfiniteScroll from "react-infinite-scroll-component";
+import { selectPostById } from "containers/Post/selector";
 
 function PostDetail() {
   const { id } = useParams();

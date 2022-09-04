@@ -2,12 +2,14 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getPosts, likePost, dislikePost } from "./actions";
 import Header from "components/Header";
-import Card from "components/Card";
+import PostCard from "components/PostCard";
 import Container from "components/Container";
 import Loading from "components/Loading";
 import InfiniteScroll from "react-infinite-scroll-component";
+import Create from "./Create";
+import { selectPostOrderByCreated } from "./selector";
 
-function Post({ posts, getPosts, likePost, dislikePost }) {
+function Post({ posts, data, getPosts, likePost, dislikePost }) {
   useEffect(() => {
     if (posts.data.length === 0) {
       getPosts();
@@ -15,12 +17,13 @@ function Post({ posts, getPosts, likePost, dislikePost }) {
       window.location.reload();
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [getPosts]);
+  }, [data]);
 
   return (
     <>
       <Header />
       <Container>
+        <Create />
         <InfiniteScroll
           dataLength={posts.data.length} //This is important field to render the next data
           next={getPosts}
@@ -32,9 +35,9 @@ function Post({ posts, getPosts, likePost, dislikePost }) {
             </p>
           }
         >
-          {posts.data.map((post) => (
+          {data.map((post) => (
             <div key={post.id}>
-              <Card
+              <PostCard
                 type="post"
                 post={post}
                 likeAction={likePost}
@@ -51,6 +54,7 @@ function Post({ posts, getPosts, likePost, dislikePost }) {
 const mapStateToProps = (state) => {
   return {
     posts: state.posts,
+    data: selectPostOrderByCreated(state),
   };
 };
 
