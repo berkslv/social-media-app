@@ -8,6 +8,7 @@ import Container from "components/Container";
 import Loading from "components/Loading";
 // import InfiniteScroll from "react-infinite-scroll-component";
 import { selectPostById } from "containers/Post/selector";
+import Comment from "containers/Comment";
 
 function PostDetail() {
   const { id } = useParams();
@@ -31,12 +32,15 @@ function PostDetail() {
           <Loading />
         ) : (
           data && (
-            <PostCard
-              type="post"
-              post={data}
-              likeAction={(id) => dispatch(likePost(id))}
-              dislikeAction={(id) => dispatch(dislikePost(id))}
-            />
+            <>
+              <PostCard
+                type="post"
+                post={data}
+                likeAction={(id) => dispatch(likePost(id))}
+                dislikeAction={(id) => dispatch(dislikePost(id))}
+              />
+              <Comment postId={data.id} />
+            </>
           )
         )}
       </Container>
