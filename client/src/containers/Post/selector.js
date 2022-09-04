@@ -1,20 +1,29 @@
+import { selectTags } from "containers/Tag/selector";
 import { createSelector } from "reselect";
 
-export const selectPosts = (state) => state.posts;
+export const selectPosts = (state) => state.post;
 export const selectPostId = (state, id) => id;
 
 export const selectPostById = createSelector(
   [selectPosts, selectPostId],
-  (posts, id) => {
+  (post, id) => {
     // eslint-disable-next-line eqeqeq
-    return posts.data.find((post) => post.id == id);
+    return post.data.find((post) => post.id == id);
   }
 );
 
-export const selectPostOrderByCreated = createSelector(
-  [selectPosts],
-  (posts) => {
-    return posts.data.sort((a, b) => {
+export const selectPost = createSelector(
+  [selectPosts, selectTags],
+  (post, tag) => {
+    let selected = null;
+    
+    if (tag.selectedTagId) {
+      selected =  post.data.filter((post) => post.tagId.includes(tag.selectedTagId));
+    } else {
+      selected = post.data;
+    }
+
+    return selected.sort((a, b) => {
       return b.created - a.created;
     });
   }

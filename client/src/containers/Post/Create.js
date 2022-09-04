@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { createPost } from "./actions";
 import PostCreate from "components/PostCreate";
+import Loading from "components/Loading";
 
-function Create({ createPost }) {
+function Create({ tag, createPost }) {
   const [Content, setContent] = useState("");
   // eslint-disable-next-line no-unused-vars
-  const [TagId, setTagId] = useState([2, 3]);
+  const [TagId, setTagId] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,20 +16,43 @@ function Create({ createPost }) {
       TagId,
     };
     createPost(post);
+    setContent("");
+    setTagId([]);
+    e.target.reset();
   };
 
-  const handleChange = (e) => {
+  const handleContentChange = (e) => {
     setContent(e.target.value);
   };
 
+  const handleCheckboxChange = (e) => {
+    const { checked, value } = e.target;
+    if (checked) {
+      setTagId([...TagId, parseInt(value)]);
+    } else {
+      setTagId(TagId.filter((tag) => tag !== parseInt(value)));
+    }
+  };
+
   return (
-    <PostCreate onChange={handleChange} onSubmit={handleSubmit}></PostCreate>
+    <>
+      {tag.loading ? (
+        <Loading />
+      ) : (
+        <PostCreate
+          onChangeContent={handleContentChange}
+          onChangeCheckbox={handleCheckboxChange}
+          tags={tag.data}
+          onSubmit={handleSubmit}
+        ></PostCreate>
+      )}
+    </>
   );
 }
 
 const mapStateToProps = (state) => {
   return {
-    posts: state.posts,
+    tag: state.tag,
   };
 };
 

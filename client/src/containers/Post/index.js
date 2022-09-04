@@ -7,13 +7,14 @@ import Container from "components/Container";
 import Loading from "components/Loading";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Create from "./Create";
-import { selectPostOrderByCreated } from "./selector";
+import { selectPost } from "./selector";
+import Tag from "containers/Tag";
 
-function Post({ posts, data, getPosts, likePost, dislikePost }) {
+function Post({ post, data, getPosts, likePost, dislikePost }) {
   useEffect(() => {
-    if (posts.data.length === 0) {
+    if (post.data.length === 0) {
       getPosts();
-    } else if (posts.data.length === 1) {
+    } else if (post.data.length === 1) {
       window.location.reload();
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -23,11 +24,12 @@ function Post({ posts, data, getPosts, likePost, dislikePost }) {
     <>
       <Header />
       <Container>
+        <Tag />
         <Create />
         <InfiniteScroll
-          dataLength={posts.data.length} //This is important field to render the next data
+          dataLength={post.data.length} //This is important field to render the next data
           next={getPosts}
-          hasMore={posts.hasNext}
+          hasMore={post.hasNext}
           loader={<Loading />}
           endMessage={
             <p style={{ textAlign: "center" }}>
@@ -53,8 +55,8 @@ function Post({ posts, data, getPosts, likePost, dislikePost }) {
 
 const mapStateToProps = (state) => {
   return {
-    posts: state.posts,
-    data: selectPostOrderByCreated(state),
+    post: state.post,
+    data: selectPost(state),
   };
 };
 

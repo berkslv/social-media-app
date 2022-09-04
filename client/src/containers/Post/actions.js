@@ -60,7 +60,7 @@ export const getPostsFailed = (error) => ({
 export const getPosts = () => async (dispatch, getState) => {
   dispatch(getPostsRequest());
   try {
-    const currentPage = getState().posts.currentPage;
+    const currentPage = getState().post.currentPage;
 
     const { data } = await axios.get(
       `/posts?pageNumber=${currentPage + 1}&orderBy=Created_desc`

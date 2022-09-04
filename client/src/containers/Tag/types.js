@@ -1,0 +1,6 @@
+export const GET_TAGS_REQUEST = 'GET_TAGS_REQUEST';
+export const GET_TAGS_SUCCESS = 'GET_TAGS_SUCCESS';
+export const GET_TAGS_FAILED = 'GET_TAGS_FAILED';
+
+export const SELECT_TAG = 'SELECT_TAG';
+export const DESELECT_TAG = 'DESELECT_TAG';

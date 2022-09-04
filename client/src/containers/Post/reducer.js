@@ -32,7 +32,7 @@ const initialState = {
   loading: false,
 };
 
-const postsReducer = (state = initialState, action) => {
+const postReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_POST_REQUEST:
       return {
@@ -134,4 +134,4 @@ const postsReducer = (state = initialState, action) => {
   }
 };
 
-export default postsReducer;
+export default postReducer;
