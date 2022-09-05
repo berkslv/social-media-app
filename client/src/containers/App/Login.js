@@ -32,6 +32,7 @@ function Login({ app, login }) {
 
   return (
     <LoginForm
+      error={app.error}
       onChangeEmail={onChangeEmailHandler}
       onChangePassword={onChangePasswordHandler}
       onSubmit={onSubmitHandler}

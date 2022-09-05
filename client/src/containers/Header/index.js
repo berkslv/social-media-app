@@ -5,7 +5,7 @@ import User from "images/user.svg";
 import Logout from "images/logout.svg";
 import Login from "images/login.svg";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 function Header() {
   const app = useSelector((state) => state.app);
@@ -24,11 +24,13 @@ function Header() {
                   Ana sayfa
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link to={`/profile`} className="nav-link active">
-                  {app.user ? app.user.name : "Profil"}
-                </Link>
-              </li>
+              {app.user && (
+                <li className="nav-item">
+                  <Link to={`/user/${app.user.id}`} className="nav-link active">
+                    {app.user.name}
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
           <div className="d-flex" role="search">
@@ -58,13 +60,15 @@ function Header() {
           <Link to={`/feed`} className="btn btn-dark" style={{ width: "33%" }}>
             <img src={Home} alt="logo" width="30px" />
           </Link>
+          {app.user && (
           <Link
-            to={`/profile`}
+            to={`/user/${app.user.id}`}
             className="btn btn-dark"
             style={{ width: "33%" }}
           >
             <img src={User} alt="logo" width="30px" />
           </Link>
+          )}
           {app.isAuthenticated ? (
             <Link
               to={`/logout`}

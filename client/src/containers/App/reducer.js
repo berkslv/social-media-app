@@ -8,11 +8,9 @@ import {
   VERIFY_REQUEST,
   VERIFY_SUCCESS,
   VERIFY_FAILURE,
-  WHOAMI_REQUEST,
-  WHOAMI_SUCCESS,
-  WHOAMI_FAILURE,
   SET_TOKEN,
   SET_TOKEN_FAILURE,
+  RESET_MESSAGE,
 } from "./types";
 
 const initialState = {
@@ -22,6 +20,7 @@ const initialState = {
   message: null,
   error: null,
   loading: false,
+  isVerified: false,
 };
 
 const appReducer = (state = initialState, action) => {
@@ -89,6 +88,7 @@ const appReducer = (state = initialState, action) => {
         message: action.payload.message,
         error: null,
         loading: false,
+        isVerified: true,
       };
     case VERIFY_FAILURE:
       return {
@@ -97,22 +97,10 @@ const appReducer = (state = initialState, action) => {
         loading: false,
         isAuthenticated: false,
       };
-    case WHOAMI_REQUEST:
+    case RESET_MESSAGE:
       return {
         ...state,
-        loading: true,
-      };
-    case WHOAMI_SUCCESS:
-      return {
-        ...state,
-        user: action.payload.data,
-        loading: false,
-      };
-    case WHOAMI_FAILURE:
-      return {
-        ...state,
-        error: action.payload,
-        loading: false,
+        message: null,
       };
     default:
       return state;

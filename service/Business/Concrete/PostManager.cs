@@ -55,7 +55,6 @@ namespace Business.Concrete
             // Post is returned with the given id.
             var post = await _postDal.Get(p => p.Id == postId);
 
-            Console.WriteLine(post.Likes.FindAll(x => x.UserId == 1).Any());
             // The post is checked. 
             if (post is null)
             {

@@ -11,7 +11,10 @@ namespace Entity.Dtos
         public string Role { get; set; }
         public bool Status { get; set; }
         public int? UniversityId { get; set; }
+        public string University { get; set; }
         public int? FacultyId { get; set; }
+        public string Faculty { get; set; }
         public int? DepartmentId { get; set; }
+        public string Department { get; set; }
     }
 }

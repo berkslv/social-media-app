@@ -9,11 +9,9 @@ import {
   VERIFY_REQUEST,
   VERIFY_SUCCESS,
   VERIFY_FAILURE,
-  WHOAMI_REQUEST,
-  WHOAMI_SUCCESS,
-  WHOAMI_FAILURE,
   SET_TOKEN,
   SET_TOKEN_FAILURE,
+  RESET_MESSAGE,
 } from "./types";
 import { setAuthToken } from "utils/axios";
 import jwtDecoder from "utils/jwtDecoder";
@@ -27,7 +25,7 @@ export const setToken = (token = null) => {
     const data = {
       token,
       user: jwtDecoder(token),
-    }
+    };
     return {
       type: SET_TOKEN,
       payload: data,
@@ -41,7 +39,7 @@ export const setToken = (token = null) => {
     const data = {
       token,
       user: jwtDecoder(token),
-    }
+    };
     return {
       type: SET_TOKEN,
       payload: data,
@@ -81,8 +79,12 @@ export const login = (email, password) => async (dispatch) => {
   dispatch(loginRequest());
   try {
     const { data } = await axios.post("/auth/login", { email, password });
-    dispatch(setToken(data.data.token));
-    dispatch(loginSuccess(data));
+    if (data.success) {
+      dispatch(setToken(data.data.token));
+      dispatch(loginSuccess(data));
+    } else {
+      dispatch(loginFailure(data.message));
+    }
   } catch (error) {
     dispatch(loginFailure(error.response.data.message));
   }
@@ -108,8 +110,8 @@ export const register = (model) => async (dispatch) => {
   dispatch(registerRequest());
   try {
     const { data } = await axios.post("/auth/register", model);
-    console.log(data.message);
-    dispatch(registerSuccess(data));
+    if (data.success) dispatch(registerSuccess(data));
+    else dispatch(registerFailure(data.message));
   } catch (error) {
     dispatch(registerFailure(error.response.data.message));
   }
@@ -135,34 +137,15 @@ export const verify = (email, code) => async (dispatch) => {
   dispatch(verifyRequest());
   try {
     const { data } = await axios.post("/auth/verify", { email, code });
-    dispatch(verifySuccess(data));
+    if (data.success) dispatch(verifySuccess(data));
+    else dispatch(verifyFailure(data.message));
   } catch (error) {
     dispatch(verifyFailure(error.response.data.message));
   }
 };
 
-// ------------------------------------ WHOAMI ------------------------------------
+// ------------------------------------ RESET MESSAGE ------------------------------------
 
-export const whoamiRequest = () => ({
-  type: WHOAMI_REQUEST,
+export const resetMessage = () => ({
+  type: RESET_MESSAGE,
 });
-
-export const whoamiSuccess = (data) => ({
-  type: WHOAMI_SUCCESS,
-  payload: data,
-});
-
-export const whoamiFailure = (error) => ({
-  type: WHOAMI_FAILURE,
-  payload: error,
-});
-
-export const whoami = () => async (dispatch) => {
-  dispatch(whoamiRequest());
-  try {
-    const { data } = await axios.get("/users/me");
-    dispatch(whoamiSuccess(data));
-  } catch (error) {
-    dispatch(whoamiFailure(error.response.data.message));
-  }
-};

@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import VerifyForm from "components/VerifyForm";
-import { verify } from "./actions";
+import { verify, resetMessage } from "./actions";
 import { connect } from "react-redux";
-import { useNavigate } from "react-router-dom";
 
-function Verify({ app, verify }) {
+function Verify({ app, verify, resetMessage }) {
   const [Email, setEmail] = useState("");
   const [Code, setCode] = useState("");
-  const navigate = useNavigate();
 
   const onChangeEmailHandler = (event) => {
     setEmail(event.currentTarget.value);
@@ -22,16 +20,10 @@ function Verify({ app, verify }) {
     verify(Email, Code);
   };
 
-  useEffect(() => {
-    if (app.isAuthenticated) {
-      navigate("/");
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [app.loading]);
-  
 
   return (
     <VerifyForm
+      isVerified={app.isVerified}
       message={app.message}
       onChangeEmail={onChangeEmailHandler}
       onChangeCode={onChangeCodeHandler}
@@ -49,6 +41,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     verify: (email, code) => dispatch(verify(email, code)),
+    resetMessage: () => dispatch(resetMessage()),
   };
 };
 

@@ -8,7 +8,10 @@ namespace Entity.Mapper
     {
         public MapperProfiles()
         {
-            CreateMap<User, UserDto>();
+            CreateMap<User, UserDto>()
+                .ForMember(pts => pts.University , opt => opt.MapFrom(ps => ps.University.Name))
+                .ForMember(pts => pts.Faculty , opt => opt.MapFrom(ps => ps.Faculty.Name))
+                .ForMember(pts => pts.Department , opt => opt.MapFrom(ps => ps.Department.DepartmentCode.Name));
             CreateMap<UserForUpdateDto, User>();
 
 
@@ -31,9 +34,7 @@ namespace Entity.Mapper
 
             CreateMap<Post, PostDto>()
                 .ForMember(pts => pts.Like , opt => opt.MapFrom(ps => ps.Likes.Count))
-                .ForMember(pts => pts.Liked , opt => opt.MapFrom(ps => ps.Likes.FindAll(x => x.UserId == ps.AuthorId).Any()))
                 .ForMember(pts => pts.Dislike , opt => opt.MapFrom(ps => ps.Dislikes.Count))
-                .ForMember(pts => pts.Disliked , opt => opt.MapFrom(ps => ps.Dislikes.FindAll(x => x.UserId == ps.AuthorId).Any()))
                 .ForMember(pts => pts.TagId , opt => opt.MapFrom(ps => ps.Tags.Select(x => x.TagId).ToList()))
                 .ForMember(pts => pts.Tags , opt => opt.MapFrom(ps => ps.Tags.Select(x => x.Tag.Name).ToList()))
                 .ForMember(pts => pts.Username , opt => opt.MapFrom(ps => ps.Author.Username));
@@ -41,9 +42,7 @@ namespace Entity.Mapper
 
             CreateMap<Comment, CommentDto>()
                 .ForMember(pts => pts.Like , opt => opt.MapFrom(ps => ps.Likes.Count))
-                .ForMember(pts => pts.Liked , opt => opt.MapFrom(ps => ps.Likes.FindAll(x => x.UserId == ps.AuthorId).Any()))
                 .ForMember(pts => pts.Dislike , opt => opt.MapFrom(ps => ps.Dislikes.Count))
-                .ForMember(pts => pts.Disliked , opt => opt.MapFrom(ps => ps.Dislikes.FindAll(x => x.UserId == ps.AuthorId).Any()))
                 .ForMember(pts => pts.Username , opt => opt.MapFrom(ps => ps.Author.Username));
             CreateMap<CommentForUpdateDto, Comment>();
 

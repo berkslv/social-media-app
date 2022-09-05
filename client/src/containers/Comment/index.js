@@ -25,12 +25,11 @@ function Comment({ postId }) {
     dispatch(getComments(postId));
   };
 
-  console.log(data.length);
   return (
     <>
       <Create postId={postId} />
       <InfiniteScroll
-        dataLength={data.length} //This is important field to render the next data
+        dataLength={data.length} 
         next={handleNext}
         hasMore={comment.hasNext}
         loader={<Loading />}

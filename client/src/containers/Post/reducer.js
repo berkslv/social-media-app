@@ -18,6 +18,10 @@ import {
   CREATE_POST_REQUEST,
   CREATE_POST_FAILED,
   CREATE_POST_SUCCESS,
+
+  DELETE_POST_REQUEST,
+  DELETE_POST_FAILED,
+  DELETE_POST_SUCCESS,
 } from "./types";
 
 const initialState = {
@@ -124,6 +128,23 @@ const postReducer = (state = initialState, action) => {
         data: state.data.concat(action.payload.data),
       };
     case CREATE_POST_FAILED:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+    case DELETE_POST_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+    case DELETE_POST_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        data: state.data.filter((post) => post.id !== action.payload),
+      };
+    case DELETE_POST_FAILED:
       return {
         ...state,
         loading: false,

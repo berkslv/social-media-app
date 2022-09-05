@@ -5,7 +5,7 @@ import Login from "containers/App/Login";
 import Register from "containers/App/Register";
 import Post from "containers/Post";
 import PostDetail from "containers/Post/Detail";
-import Profile from "containers/Profile";
+import User from "containers/User";
 import { setToken } from "./actions";
 import Logout from "containers/App/Logout";
 import Verify from "containers/App/Verify";
@@ -27,7 +27,7 @@ function App() {
         { path: "/", element: <Post /> },
         { path: "/feed", element: <Post /> },
         { path: "/feed/:id", element: <PostDetail /> },
-        { path: "/profile", element: <Profile /> },
+        { path: "/user/:id", element: <User /> },
         { path: "/login", element: <Login /> },
         { path: "/logout", element: <Logout /> },
         { path: "/register", element: <Register /> },

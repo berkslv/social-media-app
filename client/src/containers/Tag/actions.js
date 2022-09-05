@@ -9,16 +9,16 @@ import {
 
 // ------------------------------------ GET TAGS ------------------------------------
 
-export const getTagsRequest = () => ({
+const getTagsRequest = () => ({
     type: GET_TAGS_REQUEST,
 });
 
-export const getTagsSuccess = (tags) => ({
+const getTagsSuccess = (tags) => ({
     type: GET_TAGS_SUCCESS,
     payload: tags,
 });
 
-export const getTagsFailed = (error) => ({
+const getTagsFailed = (error) => ({
     type: GET_TAGS_FAILED,
     payload: error,
 });
@@ -27,7 +27,8 @@ export const getTags = () => async (dispatch) => {
     dispatch(getTagsRequest());
     try {
         const { data } = await axios.get("/tags");
-        dispatch(getTagsSuccess(data));
+        if (data.success) dispatch(getTagsSuccess(data));
+        else dispatch(getTagsFailed(data.message));
     } catch (error) {
         dispatch(getTagsFailed(error));
     }

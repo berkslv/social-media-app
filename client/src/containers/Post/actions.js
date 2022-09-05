@@ -15,19 +15,22 @@ import {
   CREATE_POST_REQUEST,
   CREATE_POST_FAILED,
   CREATE_POST_SUCCESS,
+  DELETE_POST_REQUEST,
+  DELETE_POST_FAILED,
+  DELETE_POST_SUCCESS,
 } from "./types";
 
 // ------------------------------------ GET POST ------------------------------------
-export const getPostRequest = () => ({
+const getPostRequest = () => ({
   type: GET_POST_REQUEST,
 });
 
-export const getPostSuccess = (post) => ({
+const getPostSuccess = (post) => ({
   type: GET_POST_SUCCESS,
   payload: post,
 });
 
-export const getPostFailed = (error) => ({
+const getPostFailed = (error) => ({
   type: GET_POST_FAILED,
   payload: error,
 });
@@ -35,24 +38,29 @@ export const getPostFailed = (error) => ({
 export const getPost = (id) => async (dispatch) => {
   dispatch(getPostRequest());
   try {
-    const { data } = await axios.get(`/posts/${id}`);
-    dispatch(getPostSuccess(data));
+    const { data, status } = await axios.get(`/posts/${id}`);
+
+    if (status === 204) dispatch(getPostFailed("No post found"));
+    if (status === 200) {
+      if (data.success) dispatch(getPostSuccess(data));
+      else dispatch(getPostFailed(data.message));
+    }
   } catch (error) {
     dispatch(getPostFailed(error));
   }
 };
 
 // ------------------------------------ GET POSTS ------------------------------------
-export const getPostsRequest = () => ({
+const getPostsRequest = () => ({
   type: GET_POSTS_REQUEST,
 });
 
-export const getPostsSuccess = (posts) => ({
+const getPostsSuccess = (posts) => ({
   type: GET_POSTS_SUCCESS,
   payload: posts,
 });
 
-export const getPostsFailed = (error) => ({
+const getPostsFailed = (error) => ({
   type: GET_POSTS_FAILED,
   payload: error,
 });
@@ -62,26 +70,30 @@ export const getPosts = () => async (dispatch, getState) => {
   try {
     const currentPage = getState().post.currentPage;
 
-    const { data } = await axios.get(
+    const { data, status } = await axios.get(
       `/posts?pageNumber=${currentPage + 1}&orderBy=Created_desc`
     );
-    dispatch(getPostsSuccess(data));
+    if (status === 204) dispatch(getPostsFailed("No posts found"));
+    if (status === 200) {
+      if (data.success) dispatch(getPostsSuccess(data));
+      else dispatch(getPostsFailed(data.message));
+    }
   } catch (error) {
     dispatch(getPostsFailed(error));
   }
 };
 
 // ------------------------------------ LIKE POST ------------------------------------
-export const likePostRequest = () => ({
+const likePostRequest = () => ({
   type: LIKE_POST_REQUEST,
 });
 
-export const likePostSuccess = (post) => ({
+const likePostSuccess = (post) => ({
   type: LIKE_POST_SUCCESS,
   payload: post,
 });
 
-export const likePostFailed = (error) => ({
+const likePostFailed = (error) => ({
   type: LIKE_POST_FAILED,
   payload: error,
 });
@@ -89,8 +101,13 @@ export const likePostFailed = (error) => ({
 export const likePost = (id) => async (dispatch) => {
   dispatch(likePostRequest());
   try {
-    const { data } = await axios.put(`/posts/${id}/like`);
-    dispatch(likePostSuccess(data));
+    const { data, status } = await axios.put(`/posts/${id}/like`);
+
+    if (status === 204) dispatch(likePostFailed("No post found"));
+    if (status === 200) {
+      if (data.success) dispatch(likePostSuccess(data));
+      else dispatch(likePostFailed(data.message));
+    }
   } catch (error) {
     dispatch(likePostFailed(error));
   }
@@ -98,16 +115,16 @@ export const likePost = (id) => async (dispatch) => {
 
 // ------------------------------------ DISLIKE POST ------------------------------------
 
-export const dislikePostRequest = () => ({
+const dislikePostRequest = () => ({
   type: DISLIKE_POST_REQUEST,
 });
 
-export const dislikePostSuccess = (post) => ({
+const dislikePostSuccess = (post) => ({
   type: DISLIKE_POST_SUCCESS,
   payload: post,
 });
 
-export const dislikePostFailed = (error) => ({
+const dislikePostFailed = (error) => ({
   type: DISLIKE_POST_FAILED,
   payload: error,
 });
@@ -115,8 +132,13 @@ export const dislikePostFailed = (error) => ({
 export const dislikePost = (id) => async (dispatch) => {
   dispatch(dislikePostRequest());
   try {
-    const { data } = await axios.put(`/posts/${id}/dislike`);
-    dispatch(dislikePostSuccess(data));
+    const { data, status } = await axios.put(`/posts/${id}/dislike`);
+
+    if (status === 204) dispatch(dislikePostFailed("No post found"));
+    if (status === 200) {
+      if (data.success) dispatch(dislikePostSuccess(data));
+      else dispatch(dislikePostFailed(data.message));
+    }
   } catch (error) {
     dispatch(dislikePostFailed(error));
   }
@@ -124,16 +146,16 @@ export const dislikePost = (id) => async (dispatch) => {
 
 // ------------------------------------ CREATE POST ------------------------------------
 
-export const createPostRequest = () => ({
+const createPostRequest = () => ({
   type: CREATE_POST_REQUEST,
 });
 
-export const createPostSuccess = (post) => ({
+const createPostSuccess = (post) => ({
   type: CREATE_POST_SUCCESS,
   payload: post,
 });
 
-export const createPostFailed = (error) => ({
+const createPostFailed = (error) => ({
   type: CREATE_POST_FAILED,
   payload: error,
 });
@@ -142,8 +164,39 @@ export const createPost = (post) => async (dispatch) => {
   dispatch(createPostRequest());
   try {
     const { data } = await axios.post(`/posts`, post);
-    dispatch(createPostSuccess(data));
+    if (data.success) dispatch(createPostSuccess(data));
+    else dispatch(createPostFailed(data.message));
   } catch (error) {
     dispatch(createPostFailed(error));
   }
-}
+};
+
+// ------------------------------------ DELETE POST ------------------------------------
+
+const deletePostRequest = () => ({
+  type: DELETE_POST_REQUEST,
+});
+
+const deletePostSuccess = (id) => ({
+  type: DELETE_POST_SUCCESS,
+  payload: id,
+});
+
+const deletePostFailed = (error) => ({
+  type: DELETE_POST_FAILED,
+  payload: error,
+});
+
+export const deletePost = (id) => async (dispatch) => {
+  dispatch(deletePostRequest());
+  try {
+    const { data, status } = await axios.delete(`/posts/${id}`);
+    if (status === 204) dispatch(deletePostFailed("No post found"));
+    if (status === 200) {
+      if (data.success) dispatch(deletePostSuccess(id));
+      else dispatch(deletePostFailed(data.message));
+    }
+  } catch (error) {
+    dispatch(deletePostFailed(error));
+  }
+};

@@ -13,79 +13,97 @@ import {
 
 // ------------------------------------ GET UNIVERSITIES ------------------------------------
 
-export const getUniversitiesRequest = () => ({
-    type: GET_UNIVERSITIES_REQUEST,
+const getUniversitiesRequest = () => ({
+  type: GET_UNIVERSITIES_REQUEST,
 });
 
-export const getUniversitiesSuccess = (universities) => ({
-    type: GET_UNIVERSITIES_SUCCESS,
-    payload: universities,
+const getUniversitiesSuccess = (universities) => ({
+  type: GET_UNIVERSITIES_SUCCESS,
+  payload: universities,
 });
 
-export const getUniversitiesFailure = (error) => ({
-    type: GET_UNIVERSITIES_FAILURE,
-    payload: error,
+const getUniversitiesFailure = (error) => ({
+  type: GET_UNIVERSITIES_FAILURE,
+  payload: error,
 });
 
 export const getUniversities = () => async (dispatch) => {
-    dispatch(getUniversitiesRequest());
-    try {
-        const { data } = await axios.get("/universities");
-        dispatch(getUniversitiesSuccess(data));
-    } catch (error) {
-        dispatch(getUniversitiesFailure(error));
+  dispatch(getUniversitiesRequest());
+  try {
+    const { data, status } = await axios.get("/universities");
+
+    if (status === 204) dispatch(getUniversitiesFailure("No university found"));
+    if (status === 200) {
+      if (data.success) dispatch(getUniversitiesSuccess(data));
+      else dispatch(getUniversitiesFailure(data.message));
     }
-}
+  } catch (error) {
+    dispatch(getUniversitiesFailure(error));
+  }
+};
 
 // ------------------------------------ GET FACULTIES ------------------------------------
 
-export const getFacultiesRequest = () => ({
-    type: GET_FACULTIES_REQUEST,
+const getFacultiesRequest = () => ({
+  type: GET_FACULTIES_REQUEST,
 });
 
-export const getFacultiesSuccess = (faculties) => ({
-    type: GET_FACULTIES_SUCCESS,
-    payload: faculties,
-
+const getFacultiesSuccess = (faculties) => ({
+  type: GET_FACULTIES_SUCCESS,
+  payload: faculties,
 });
 
-export const getFacultiesFailure = (error) => ({
-    type: GET_FACULTIES_FAILURE,
-    payload: error,
+const getFacultiesFailure = (error) => ({
+  type: GET_FACULTIES_FAILURE,
+  payload: error,
 });
 
 export const getFaculties = (universityId) => async (dispatch) => {
-    dispatch(getFacultiesRequest());
-    try {
-        const { data } = await axios.get(`/universities/${universityId}/faculties`);
-        dispatch(getFacultiesSuccess(data));
-    } catch (error) {
-        dispatch(getFacultiesFailure(error));
+  dispatch(getFacultiesRequest());
+  try {
+    const { data, status } = await axios.get(
+      `/universities/${universityId}/faculties`
+    );
+
+    if (status === 204) dispatch(getFacultiesFailure("No faculty found"));
+    if (status === 200) {
+      if (data.success) dispatch(getFacultiesSuccess(data));
+      else dispatch(getFacultiesFailure(data.message));
     }
-}
+  } catch (error) {
+    dispatch(getFacultiesFailure(error));
+  }
+};
 
 // ------------------------------------ GET DEPARTMENTS ------------------------------------
 
-export const getDepartmentsRequest = () => ({
-    type: GET_DEPARTMENTS_REQUEST,
+const getDepartmentsRequest = () => ({
+  type: GET_DEPARTMENTS_REQUEST,
 });
 
-export const getDepartmentsSuccess = (departments) => ({
-    type: GET_DEPARTMENTS_SUCCESS,
-    payload: departments,
+const getDepartmentsSuccess = (departments) => ({
+  type: GET_DEPARTMENTS_SUCCESS,
+  payload: departments,
 });
 
-export const getDepartmentsFailure = (error) => ({
-    type: GET_DEPARTMENTS_FAILURE,
-    payload: error,
+const getDepartmentsFailure = (error) => ({
+  type: GET_DEPARTMENTS_FAILURE,
+  payload: error,
 });
 
 export const getDepartments = (facultyId) => async (dispatch) => {
-    dispatch(getDepartmentsRequest());
-    try {
-        const { data } = await axios.get(`/departments?facultyId=${facultyId}`);
-        dispatch(getDepartmentsSuccess(data));
-    } catch (error) {
-        dispatch(getDepartmentsFailure(error));
+  dispatch(getDepartmentsRequest());
+  try {
+    const { data, status } = await axios.get(
+      `/departments?facultyId=${facultyId}`
+    );
+
+    if (status === 204) dispatch(getDepartmentsFailure("No department found"));
+    if (status === 200) {
+      if (data.success) dispatch(getDepartmentsSuccess(data));
+      else dispatch(getDepartmentsFailure(data.message));
     }
-}
+  } catch (error) {
+    dispatch(getDepartmentsFailure(error));
+  }
+};

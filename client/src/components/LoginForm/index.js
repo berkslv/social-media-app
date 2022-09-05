@@ -2,12 +2,17 @@ import React from "react";
 import Logo from "images/logo-light.svg";
 import { Link } from "react-router-dom";
 
-function LoginForm({ onSubmit, onChangeEmail, onChangePassword }) {
+function LoginForm({ error, onSubmit, onChangeEmail, onChangePassword }) {
   return (
     <div
-      className="d-flex justify-content-center align-items-center bg-light" style={{ height: "100vh" }}
+      className="d-flex justify-content-center align-items-center bg-light"
+      style={{ height: "100vh" }}
     >
-      <form className="card p-4" style={{ minWidth: "320px" }} onSubmit={onSubmit}>
+      <form
+        className="card p-4"
+        style={{ minWidth: "320px" }}
+        onSubmit={onSubmit}
+      >
         <div className="mx-auto my-3">
           <img src={Logo} alt="logo" width="180px" />
         </div>
@@ -29,7 +34,16 @@ function LoginForm({ onSubmit, onChangeEmail, onChangePassword }) {
             placeholder="********"
           />
         </div>
-        <input type="submit" className="btn btn-primary my-2" value="Giriş Yap" />
+        {error && (
+          <div className="alert alert-danger" role="alert">
+            {error}
+          </div>
+        )}
+        <input
+          type="submit"
+          className="btn btn-primary my-2"
+          value="Giriş Yap"
+        />
         <Link className="btn btn-outline-primary my-2" to="/register">
           Üye ol
         </Link>

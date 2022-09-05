@@ -24,5 +24,19 @@ namespace DataAccess.Concrete.EntityFramework
 
             }
         }
+
+        public override async Task<User> Get(Expression<Func<User, bool>> filter)
+        {
+            using (var context = new HubContext())
+            {
+                return await context
+                    .Set<User>()
+                    .Include(x => x.University)
+                    .Include(x => x.Faculty)
+                    .Include(x => x.Department)
+                    .ThenInclude(x => x.DepartmentCode)
+                    .SingleOrDefaultAsync(filter);
+            }
+        }
     }
 }

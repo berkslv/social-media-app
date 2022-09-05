@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { getPosts, likePost, dislikePost } from "./actions";
+import { getPosts, likePost, dislikePost, deletePost } from "./actions";
 import Header from "containers/Header";
 import PostCard from "components/PostCard";
 import Container from "components/Container";
@@ -10,7 +10,7 @@ import Create from "./Create";
 import { selectPost } from "./selector";
 import Tag from "containers/Tag";
 
-function Post({ post, data, getPosts, likePost, dislikePost }) {
+function Post({ app, post, data, getPosts, likePost, dislikePost, deletePost }) {
   useEffect(() => {
     if (post.data.length === 0) {
       getPosts();
@@ -39,11 +39,13 @@ function Post({ post, data, getPosts, likePost, dislikePost }) {
         >
           {data.map((post) => (
             <PostCard
+              user={app.user}
               key={post.id}
               type="post"
               post={post}
               likeAction={likePost}
               dislikeAction={dislikePost}
+              deleteAction={deletePost}
             />
           ))}
         </InfiniteScroll>
@@ -54,6 +56,7 @@ function Post({ post, data, getPosts, likePost, dislikePost }) {
 
 const mapStateToProps = (state) => {
   return {
+    app: state.app,
     post: state.post,
     data: selectPost(state),
   };
@@ -64,6 +67,7 @@ const mapDispatchToProps = (dispatch) => {
     getPosts: () => dispatch(getPosts()),
     likePost: (id) => dispatch(likePost(id)),
     dislikePost: (id) => dispatch(dislikePost(id)),
+    deletePost: (id) => dispatch(deletePost(id)),
   };
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "images/logo-light.svg";
 import { Link } from "react-router-dom";
 
-function VerifyForm({ message, onSubmit, onChangeEmail, onChangeCode }) {
+function VerifyForm({ message, isVerified, onSubmit, onChangeEmail, onChangeCode }) {
   return (
     <div
       className="d-flex justify-content-center align-items-center bg-light"
@@ -16,7 +16,7 @@ function VerifyForm({ message, onSubmit, onChangeEmail, onChangeCode }) {
         <div className="mx-auto my-3">
           <img src={Logo} alt="logo" width="180px" />
         </div>
-        {message ? (
+        {(message !== null && isVerified) ? (
           <>
             <div className="alert alert-success" role="alert">
               {message}
@@ -42,7 +42,7 @@ function VerifyForm({ message, onSubmit, onChangeEmail, onChangeCode }) {
                 onChange={onChangeCode}
                 type="text"
                 className="form-control"
-                placeholder="********"
+                placeholder="123456"
               />
             </div>
             <input

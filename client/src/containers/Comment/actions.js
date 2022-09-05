@@ -16,16 +16,16 @@ import {
 
 // ------------------------------------ GET COMMENTS ------------------------------------
 
-export const getCommentsRequest = () => ({
+const getCommentsRequest = () => ({
   type: GET_COMMENTS_REQUEST,
 });
 
-export const getCommentsSuccess = (data) => ({
+const getCommentsSuccess = (data) => ({
   type: GET_COMMENTS_SUCCESS,
   payload: data,
 });
 
-export const getCommentsFaied = (error) => ({
+const getCommentsFaied = (error) => ({
   type: GET_COMMENTS_FAILED,
   payload: error,
 });
@@ -36,10 +36,15 @@ export const getComments = (id) => async (dispatch, getState) => {
     const currentPage = getState().comment.currentPage;
 
     const { data, status } = await axios.get(
-      `/comments?postId=${id}&pageNumber=${currentPage + 1}&orderBy=Created_desc`
+      `/comments?postId=${id}&pageNumber=${
+        currentPage + 1
+      }&orderBy=Created_desc`
     );
     if (status === 204) dispatch(getCommentsFaied("No comments found"));
-    if (status === 200) dispatch(getCommentsSuccess(data));
+    if (status === 200) {
+      if (data.success) dispatch(getCommentsSuccess(data));
+      else dispatch(getCommentsFaied(data.message));
+    }
   } catch (error) {
     dispatch(getCommentsFaied(error));
   }
@@ -64,8 +69,13 @@ export const likeCommentFailed = (error) => ({
 export const likeComment = (id) => async (dispatch) => {
   dispatch(likeCommentRequest());
   try {
-    const { data } = await axios.put(`/comments/${id}/like`);
-    dispatch(likeCommentSuccess(data));
+    const { data, status } = await axios.put(`/comments/${id}/like`);
+
+    if (status === 204) dispatch(likeCommentFailed("No comment found"));
+    if (status === 200) {
+      if (data.success) dispatch(likeCommentSuccess(data));
+      else dispatch(likeCommentFailed(data.message));
+    }
   } catch (error) {
     dispatch(likeCommentFailed(error));
   }
@@ -90,8 +100,12 @@ export const dislikeCommentFailed = (error) => ({
 export const dislikeComment = (id) => async (dispatch) => {
   dispatch(dislikeCommentRequest());
   try {
-    const { data } = await axios.put(`/comments/${id}/dislike`);
-    dispatch(dislikeCommentSuccess(data));
+    const { data, status } = await axios.put(`/comments/${id}/dislike`);
+    if (status === 204) dispatch(likeCommentFailed("No comment found"));
+    if (status === 200) {
+      if (data.success) dispatch(dislikeCommentSuccess(data));
+      else dispatch(dislikeCommentFailed(data.message));
+    }
   } catch (error) {
     dispatch(dislikeCommentFailed(error));
   }
@@ -117,7 +131,8 @@ export const createComment = (post) => async (dispatch) => {
   dispatch(createCommentRequest());
   try {
     const { data } = await axios.post("/comments", post);
-    dispatch(createCommentSuccess(data));
+    if (data.success) dispatch(createCommentSuccess(data));
+    else dispatch(createCommentFailed(data.message));
   } catch (error) {
     dispatch(createCommentFailed(error));
   }

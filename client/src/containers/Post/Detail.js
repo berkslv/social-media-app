@@ -13,6 +13,7 @@ import Comment from "containers/Comment";
 function PostDetail() {
   const { id } = useParams();
 
+  const app = useSelector((state) => state.app);
   const post = useSelector((state) => state.post.data);
   const data = useSelector((state) => selectPostById(state, id));
   const dispatch = useDispatch();
@@ -34,7 +35,7 @@ function PostDetail() {
           data && (
             <>
               <PostCard
-                type="post"
+                user={app.user}
                 post={data}
                 likeAction={(id) => dispatch(likePost(id))}
                 dislikeAction={(id) => dispatch(dislikePost(id))}
