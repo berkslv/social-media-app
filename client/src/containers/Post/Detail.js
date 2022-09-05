@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getPost, likePost, dislikePost } from "containers/Post/actions";
-import Header from "components/Header";
+import Header from "containers/Header";
 import PostCard from "components/PostCard";
 import Container from "components/Container";
 import Loading from "components/Loading";

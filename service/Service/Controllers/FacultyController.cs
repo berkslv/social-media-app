@@ -14,7 +14,6 @@ namespace Service.Controllers
 {
     [Route("api/faculties")]
     [ApiController]
-    [Authorize]
     [ValidateModel]
     public class FacultyController : ControllerExtension
     {
@@ -45,7 +44,6 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
         [HttpGet]
         public async Task<IActionResult> GetList([FromQuery] PaginationParameters pagination, [FromQuery] FacultyFilter filter)
         {
@@ -73,7 +71,6 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
         [HttpGet("{facultyId}")]
         public async Task<IActionResult> GetById(int facultyId)
         {
@@ -101,7 +98,6 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
         [HttpGet("{facultyId}/university")]
         public async Task<IActionResult> GetByIdIncludeUniversity(int facultyId)
         {
@@ -130,10 +126,10 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
         [HttpGet("{facultyId}/departments")]
         public async Task<IActionResult> GetByIdIncludeDepartment(int facultyId, [FromQuery] PaginationParameters pagination)
         {
+            Console.WriteLine(facultyId);
             var result = await _facultyService.GetByIdIncludeDepartment(facultyId, pagination);
             
             _logger.LogInformation(result.Message);
@@ -159,7 +155,6 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
         [HttpGet("{facultyId}/users")]
         public async Task<IActionResult> GetByIdIncludeUsers(int facultyId, [FromQuery] PaginationParameters pagination)
         {

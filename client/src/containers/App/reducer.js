@@ -2,6 +2,12 @@ import {
   LOGIN_REQUEST,
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
+  REGISTER_REQUEST,
+  REGISTER_SUCCESS,
+  REGISTER_FAILURE,
+  VERIFY_REQUEST,
+  VERIFY_SUCCESS,
+  VERIFY_FAILURE,
   WHOAMI_REQUEST,
   WHOAMI_SUCCESS,
   WHOAMI_FAILURE,
@@ -13,6 +19,7 @@ const initialState = {
   isAuthenticated: false,
   token: null,
   user: {},
+  message: null,
   error: null,
   loading: false,
 };
@@ -22,7 +29,8 @@ const appReducer = (state = initialState, action) => {
     case SET_TOKEN:
       return {
         ...state,
-        token: action.payload,
+        token: action.payload.token,
+        user: action.payload.user,
         isAuthenticated: true,
       };
     case SET_TOKEN_FAILURE:
@@ -40,11 +48,49 @@ const appReducer = (state = initialState, action) => {
       return {
         ...state,
         token: action.payload.data.token,
-        user: action.payload.data.user,
+        error: null,
         loading: false,
         isAuthenticated: true,
       };
     case LOGIN_FAILURE:
+      return {
+        ...state,
+        error: action.payload,
+        loading: false,
+        isAuthenticated: false,
+      };
+    case REGISTER_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+    case REGISTER_SUCCESS:
+      return {
+        ...state,
+        message: action.payload.message,
+        error: null,
+        loading: false,
+      };
+    case REGISTER_FAILURE:
+      return {
+        ...state,
+        error: action.payload,
+        loading: false,
+        isAuthenticated: false,
+      };
+    case VERIFY_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+    case VERIFY_SUCCESS:
+      return {
+        ...state,
+        message: action.payload.message,
+        error: null,
+        loading: false,
+      };
+    case VERIFY_FAILURE:
       return {
         ...state,
         error: action.payload,

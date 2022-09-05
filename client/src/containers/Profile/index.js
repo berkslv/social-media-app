@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "components/Header";
+import Header from "containers/Header";
 import Container from "components/Container";
 
 function Profile() {

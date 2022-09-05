@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from "react";
-import LoginForm from "components/LoginForm";
-import { login } from "./actions";
+import VerifyForm from "components/VerifyForm";
+import { verify } from "./actions";
 import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-function Login({ app, login }) {
+function Verify({ app, verify }) {
   const [Email, setEmail] = useState("");
-  const [Password, setPassword] = useState("");
+  const [Code, setCode] = useState("");
   const navigate = useNavigate();
 
   const onChangeEmailHandler = (event) => {
     setEmail(event.currentTarget.value);
   };
 
-  const onChangePasswordHandler = (event) => {
-    setPassword(event.currentTarget.value);
+  const onChangeCodeHandler = (event) => {
+    setCode(event.currentTarget.value);
   };
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    login(Email, Password);
+    verify(Email, Code);
   };
 
   useEffect(() => {
@@ -31,9 +31,10 @@ function Login({ app, login }) {
   
 
   return (
-    <LoginForm
+    <VerifyForm
+      message={app.message}
       onChangeEmail={onChangeEmailHandler}
-      onChangePassword={onChangePasswordHandler}
+      onChangeCode={onChangeCodeHandler}
       onSubmit={onSubmitHandler}
     />
   );
@@ -47,8 +48,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    login: (email, password) => dispatch(login(email, password)),
+    verify: (email, code) => dispatch(verify(email, code)),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Verify);

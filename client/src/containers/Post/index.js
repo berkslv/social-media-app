@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getPosts, likePost, dislikePost } from "./actions";
-import Header from "components/Header";
+import Header from "containers/Header";
 import PostCard from "components/PostCard";
 import Container from "components/Container";
 import Loading from "components/Loading";

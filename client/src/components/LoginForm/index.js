@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "images/logo-light.svg";
+import { Link } from "react-router-dom";
 
 function LoginForm({ onSubmit, onChangeEmail, onChangePassword }) {
   return (
@@ -29,6 +30,9 @@ function LoginForm({ onSubmit, onChangeEmail, onChangePassword }) {
           />
         </div>
         <input type="submit" className="btn btn-primary my-2" value="Giriş Yap" />
+        <Link className="btn btn-outline-primary my-2" to="/register">
+          Üye ol
+        </Link>
       </form>
     </div>
   );

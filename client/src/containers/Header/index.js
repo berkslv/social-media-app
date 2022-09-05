@@ -3,9 +3,13 @@ import Logo from "images/logo-dark.svg";
 import Home from "images/home.svg";
 import User from "images/user.svg";
 import Logout from "images/logout.svg";
+import Login from "images/login.svg";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 function Header() {
+  const app = useSelector((state) => state.app);
+
   return (
     <header>
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg d-none d-lg-block">
@@ -22,19 +26,29 @@ function Header() {
               </li>
               <li className="nav-item">
                 <Link to={`/profile`} className="nav-link active">
-                  Profil
+                  {app.user ? app.user.name : "Profil"}
                 </Link>
               </li>
             </ul>
           </div>
           <div className="d-flex" role="search">
             <div className="btn-group" role="group" aria-label="Basic example">
-              <Link to={`/login`} className="btn btn-primary">
-                Giriş yap
-              </Link>
-              <Link to={`/login`} className="btn btn-outline-primary">
-                Üye ol
-              </Link>
+              {app.isAuthenticated ? (
+                <>
+                  <Link to={`/logout`} className="btn btn-outline-primary">
+                    Çıkış yap
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link to={`/login`} className="btn btn-primary">
+                    Giriş yap
+                  </Link>
+                  <Link to={`/login`} className="btn btn-outline-primary">
+                    Üye ol
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -44,12 +58,30 @@ function Header() {
           <Link to={`/feed`} className="btn btn-dark" style={{ width: "33%" }}>
             <img src={Home} alt="logo" width="30px" />
           </Link>
-          <Link to={`/profile`} className="btn btn-dark" style={{ width: "33%" }}>
+          <Link
+            to={`/profile`}
+            className="btn btn-dark"
+            style={{ width: "33%" }}
+          >
             <img src={User} alt="logo" width="30px" />
           </Link>
-          <Link to={`/login`} className="btn btn-dark" style={{ width: "33%" }}>
-            <img src={Logout} alt="logo" width="30px" />
-          </Link>
+          {app.isAuthenticated ? (
+            <Link
+              to={`/logout`}
+              className="btn btn-dark"
+              style={{ width: "33%" }}
+            >
+              <img src={Logout} alt="logo" width="30px" />
+            </Link>
+          ) : (
+            <Link
+              to={`/login`}
+              className="btn btn-dark"
+              style={{ width: "33%" }}
+            >
+              <img src={Login} alt="logo" width="30px" />
+            </Link>
+          )}
         </div>
       </nav>
     </header>

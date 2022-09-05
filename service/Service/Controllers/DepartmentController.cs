@@ -12,7 +12,6 @@ namespace Service.Controllers
 {
     [Route("api/departments")]
     [ApiController]
-    [Authorize]
     [ValidateModel]
     public class DepartmentController : ControllerExtension
     {
@@ -47,7 +46,6 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
         [HttpGet]
         public async Task<IActionResult> GetList([FromQuery] PaginationParameters pagination, [FromQuery] DepartmentFilter filter)
         {
@@ -75,7 +73,6 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
         [HttpGet("{departmentId}")]
         public async Task<IActionResult> GetById(int departmentId)
         {
@@ -102,7 +99,6 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
         [HttpGet("{departmentId}/faculty")]
         public async Task<IActionResult> GetByIdIncludeFaculty(int departmentId)
         {
@@ -131,7 +127,6 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
         [HttpGet("{departmentId}/users")]
         public async Task<IActionResult> GetByIdIncludeUser(int departmentId, [FromQuery] PaginationParameters pagination)
         {

@@ -80,7 +80,6 @@ namespace Service.Controllers
         [HttpPost("verify")]
         public async Task<IActionResult> Confirm(UserForConfirmDto userForConfirmDto)
         {
-
             var user = await _userService.GetByMail(userForConfirmDto.Email);
 
             if (!user.Success)

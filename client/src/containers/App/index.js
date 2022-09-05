@@ -7,6 +7,8 @@ import Post from "containers/Post";
 import PostDetail from "containers/Post/Detail";
 import Profile from "containers/Profile";
 import { setToken } from "./actions";
+import Logout from "containers/App/Logout";
+import Verify from "containers/App/Verify";
 
 function App() {
   const dispatch = useDispatch();
@@ -14,6 +16,7 @@ function App() {
 
   useEffect(() => {
     dispatch(setToken());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   let Route = null;
@@ -26,6 +29,7 @@ function App() {
         { path: "/feed/:id", element: <PostDetail /> },
         { path: "/profile", element: <Profile /> },
         { path: "/login", element: <Login /> },
+        { path: "/logout", element: <Logout /> },
         { path: "/register", element: <Register /> },
       ]);
   } else {
@@ -34,6 +38,7 @@ function App() {
         { path: "/", element: <Login /> },
         { path: "/login", element: <Login /> },
         { path: "/register", element: <Register /> },
+        { path: "/verify", element: <Verify /> },
       ]);
   }
 
