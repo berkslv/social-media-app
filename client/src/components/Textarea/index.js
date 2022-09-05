@@ -2,9 +2,9 @@ import React from "react";
 
 function Textarea({ placeholder, onChange, rows = 3 }) {
   return (
-    <div class="mb-3">
+    <div className="mb-3">
       <textarea
-        class="form-control"
+        className="form-control"
         id="exampleFormControlTextarea1"
         rows={rows}
         onChange={onChange}

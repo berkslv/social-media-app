@@ -107,8 +107,17 @@ namespace Business.Concrete
             // The created Post is sent to the database.
             var addedComment = await _commentDal.Add(comment);
 
+            // Post is returned with the given id.
+            var gettedComment = await _commentDal.Get(p => p.Id == addedComment.Id);
+
+            // The post is checked. 
+            if (gettedComment is null)
+            {
+                return new ErrorDataResult<CommentDto>(Messages.Entity.NotFound, HttpStatusCode.NoContent);
+            }
+
             // Post returned from VB is mapped.
-            var result = _mapper.Map<CommentDto>(addedComment);
+            var result = _mapper.Map<CommentDto>(gettedComment);
 
             // The mapped result is returned.
             return new SuccessDataResult<CommentDto>(result, Messages.Entity.Added, HttpStatusCode.Created);

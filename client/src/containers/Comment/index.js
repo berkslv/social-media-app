@@ -21,33 +21,30 @@ function Comment({ postId }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
 
+  const handleNext = () => {
+    dispatch(getComments(postId));
+  };
+
+  console.log(data.length);
   return (
     <>
       <Create postId={postId} />
-      {comment.loading ? (
-        <Loading />
-      ) : data.length > 0 ? (
-        <InfiniteScroll
-          dataLength={comment.data.length} //This is important field to render the next data
-          next={getComments}
-          hasMore={comment.hasNext}
-          loader={<Loading />}
-        >
-          {data.map((comment) => (
-            <div key={comment.id}>
-              <CommentCard
-                comment={comment}
-                likeAction={(id) => dispatch(likeComment(id))}
-                dislikeAction={(id) => dispatch(dislikeComment(id))}
-              />
-            </div>
-          ))}
-        </InfiniteScroll>
-      ) : (
-        <p className="text-center">
-          Bu gönderiye henüz yorum yapılmamış. İlk yorumu sen yap!
-        </p>
-      )}
+      <InfiniteScroll
+        dataLength={data.length} //This is important field to render the next data
+        next={handleNext}
+        hasMore={comment.hasNext}
+        loader={<Loading />}
+      >
+        {data.map((comment) => (
+          <div key={comment.id}>
+            <CommentCard
+              comment={comment}
+              likeAction={(id) => dispatch(likeComment(id))}
+              dislikeAction={(id) => dispatch(dislikeComment(id))}
+            />
+          </div>
+        ))}
+      </InfiniteScroll>
     </>
   );
 }

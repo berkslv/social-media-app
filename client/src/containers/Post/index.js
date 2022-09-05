@@ -17,7 +17,7 @@ function Post({ post, data, getPosts, likePost, dislikePost }) {
     } else if (post.data.length === 1) {
       window.location.reload();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
   return (
@@ -38,14 +38,13 @@ function Post({ post, data, getPosts, likePost, dislikePost }) {
           }
         >
           {data.map((post) => (
-            <div key={post.id}>
-              <PostCard
-                type="post"
-                post={post}
-                likeAction={likePost}
-                dislikeAction={dislikePost}
-              />
-            </div>
+            <PostCard
+              key={post.id}
+              type="post"
+              post={post}
+              likeAction={likePost}
+              dislikeAction={dislikePost}
+            />
           ))}
         </InfiniteScroll>
       </Container>

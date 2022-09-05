@@ -15,7 +15,7 @@ export const selectCommentById = createSelector(
 export const selectCommentByPostId = createSelector(
   [selectComments, selectCommentPostId],
   (comment, postId) => {
-    if (comment.data.length > 0 && comment.data[0] !== undefined) {
+    if (comment.data.length > 0) {
       let selected = comment.data.filter((comment) => comment.postId === postId);
       
       return selected.sort((a, b) => {

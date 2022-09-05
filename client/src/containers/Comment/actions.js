@@ -11,7 +11,7 @@ import {
   DISLIKE_COMMENT_FAILED,
   CREATE_COMMENT_REQUEST,
   CREATE_COMMENT_SUCCESS,
-  CREATE_COMMENT_FAILED
+  CREATE_COMMENT_FAILED,
 } from "./types";
 
 // ------------------------------------ GET COMMENTS ------------------------------------
@@ -30,11 +30,16 @@ export const getCommentsFaied = (error) => ({
   payload: error,
 });
 
-export const getComments = (id) => async (dispatch) => {
+export const getComments = (id) => async (dispatch, getState) => {
   dispatch(getCommentsRequest());
   try {
-    const { data } = await axios.get(`/posts/${id}/comments`);
-    dispatch(getCommentsSuccess(data));
+    const currentPage = getState().comment.currentPage;
+
+    const { data, status } = await axios.get(
+      `/comments?postId=${id}&pageNumber=${currentPage + 1}&orderBy=Created_desc`
+    );
+    if (status === 204) dispatch(getCommentsFaied("No comments found"));
+    if (status === 200) dispatch(getCommentsSuccess(data));
   } catch (error) {
     dispatch(getCommentsFaied(error));
   }
@@ -64,7 +69,7 @@ export const likeComment = (id) => async (dispatch) => {
   } catch (error) {
     dispatch(likeCommentFailed(error));
   }
-}
+};
 
 // ------------------------------------ DISLIKE COMMENT ------------------------------------
 
@@ -90,7 +95,7 @@ export const dislikeComment = (id) => async (dispatch) => {
   } catch (error) {
     dispatch(dislikeCommentFailed(error));
   }
-}
+};
 
 // ------------------------------------ CREATE COMMENT ------------------------------------
 
@@ -116,4 +121,4 @@ export const createComment = (post) => async (dispatch) => {
   } catch (error) {
     dispatch(createCommentFailed(error));
   }
-}
+};

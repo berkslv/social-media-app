@@ -13,6 +13,8 @@ namespace Entity.Filter
         public string Content { get; set; }
 
         public int? AuthorId { get; set; }
+        public int? PostId { get; set; }
+
         public void CreateQuery()
         {
             base.OrderBy = base.CreateSortWithType(typeof(Comment));
@@ -26,6 +28,11 @@ namespace Entity.Filter
             if (AuthorId is not null)
             {
                 filter.Add(String.Format("AuthorId == {0}", AuthorId));
+            }
+
+            if (PostId is not null)
+            {
+                filter.Add(String.Format("PostId == {0}", PostId));
             }
 
             if (Content is not null)

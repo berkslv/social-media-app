@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import Header from "components/Header";
+import Container from "components/Container";
 
 function Profile() {
   return (
-    <div>Profile</div>
-  )
+    <>
+      <Header />
+      <Container>
+        <h1>Profile</h1>
+      </Container>
+    </>
+  );
 }
 
-export default Profile
+export default Profile;

@@ -1,0 +1,10 @@
+export const LOGIN_REQUEST = 'LOGIN_REQUEST';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAILURE = 'LOGIN_FAILURE';
+
+export const WHOAMI_REQUEST = 'WHOAMI_REQUEST';
+export const WHOAMI_SUCCESS = 'WHOAMI_SUCCESS';
+export const WHOAMI_FAILURE = 'WHOAMI_FAILURE';
+
+export const SET_TOKEN = 'SET_TOKEN';
+export const SET_TOKEN_FAILURE = 'SET_TOKEN_FAILURE';

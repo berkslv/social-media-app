@@ -32,9 +32,9 @@ function PostCard({ post, likeAction, dislikeAction, }) {
           <img src={Comment} alt="comment" width="20" height="20" />
         </Link>
       </div>
-      <div class="card-footer text-muted">
+      <div className="card-footer text-muted">
         {post.tags.map((tag) => (
-          <span className="badge bg-primary me-1">{tag}</span>
+          <span key={tag.id} className="badge bg-primary me-1">{tag}</span>
         ))}
       </div>
     </div>

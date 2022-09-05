@@ -41,7 +41,9 @@ namespace Entity.Mapper
 
             CreateMap<Comment, CommentDto>()
                 .ForMember(pts => pts.Like , opt => opt.MapFrom(ps => ps.Likes.Count))
+                .ForMember(pts => pts.Liked , opt => opt.MapFrom(ps => ps.Likes.FindAll(x => x.UserId == ps.AuthorId).Any()))
                 .ForMember(pts => pts.Dislike , opt => opt.MapFrom(ps => ps.Dislikes.Count))
+                .ForMember(pts => pts.Disliked , opt => opt.MapFrom(ps => ps.Dislikes.FindAll(x => x.UserId == ps.AuthorId).Any()))
                 .ForMember(pts => pts.Username , opt => opt.MapFrom(ps => ps.Author.Username));
             CreateMap<CommentForUpdateDto, Comment>();
 

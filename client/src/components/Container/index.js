@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Container({ children }) {
+function Container({ children, className, style }) {
   return (
-    <div className="container py-3">
+    <div className={`container py-3 ${className}`} style={style}>
         {children}
     </div>
   )
