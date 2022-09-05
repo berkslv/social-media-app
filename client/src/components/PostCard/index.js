@@ -5,6 +5,7 @@ import Like from "images/like.svg";
 import Dislike from "images/dislike.svg";
 import Comment from "images/comment.svg";
 import { Link } from "react-router-dom";
+import roles from "utils/roles";
 
 function PostCard({ user, post, likeAction, dislikeAction, deleteAction }) {
   const date = moment.unix(post.created).fromNow();
@@ -16,7 +17,8 @@ function PostCard({ user, post, likeAction, dislikeAction, deleteAction }) {
         <p className="card-title">
           <span className="d-flex justify-content-between">
             <span>
-              <Link to={`/user/${post.authorId}`} >@{post.username}</Link> · <span className="text-muted">{date}</span>
+              <Link to={`/user/${post.authorId}`}>@{post.username}</Link> ·{" "}
+              <span className="text-muted">{date}</span>
             </span>
             {user.id === post.authorId.toString() && (
               <span>
@@ -26,6 +28,16 @@ function PostCard({ user, post, likeAction, dislikeAction, deleteAction }) {
                   className="btn-close"
                   aria-label="Close"
                 ></button>
+              </span>
+            )}
+          </span>
+          <span className="text-muted">
+            {post.authorUniversity === null ? (
+              <span className="fw-bold font-monospace text-danger">Admin</span>
+            ) : (
+              <span>
+                {post.authorUniversity} - {post.authorFaculty} -{" "}
+                {post.authorDeparment}
               </span>
             )}
           </span>

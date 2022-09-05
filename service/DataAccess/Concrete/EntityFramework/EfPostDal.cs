@@ -22,6 +22,12 @@ namespace DataAccess.Concrete.EntityFramework
                     .Include(x => x.Tags)
                     .ThenInclude(x => x.Tag)
                     .Include(x => x.Author)
+                    .ThenInclude(x => x.University)
+                    .Include(x => x.Author)
+                    .ThenInclude(x => x.Faculty)
+                    .Include(x => x.Author)
+                    .ThenInclude(x => x.Department)
+                    .ThenInclude(x => x.DepartmentCode)
                     .SingleOrDefaultAsync(filter);
             }
         }
@@ -39,6 +45,12 @@ namespace DataAccess.Concrete.EntityFramework
                         .Include(x => x.Tags)
                         .ThenInclude(x => x.Tag)
                         .Include(x => x.Author)
+                        .ThenInclude(x => x.University)
+                        .Include(x => x.Author)
+                        .ThenInclude(x => x.Faculty)
+                        .Include(x => x.Author)
+                        .ThenInclude(x => x.Department)
+                        .ThenInclude(x => x.DepartmentCode)
                     : context
                         .Set<Post>()
                         .Include(x => x.Likes)
@@ -46,6 +58,12 @@ namespace DataAccess.Concrete.EntityFramework
                         .Include(x => x.Tags)
                         .ThenInclude(x => x.Tag)
                         .Include(x => x.Author)
+                        .ThenInclude(x => x.University)
+                        .Include(x => x.Author)
+                        .ThenInclude(x => x.Faculty)
+                        .Include(x => x.Author)
+                        .ThenInclude(x => x.Department)
+                        .ThenInclude(x => x.DepartmentCode)
                         .Where(filter.Filter);
 
                 if (filter.OrderBy is not null)
@@ -74,6 +92,12 @@ namespace DataAccess.Concrete.EntityFramework
                         .Include(x => x.Tags)
                         .ThenInclude(x => x.Tag)
                         .Include(x => x.Author)
+                        .ThenInclude(x => x.University)
+                        .Include(x => x.Author)
+                        .ThenInclude(x => x.Faculty)
+                        .Include(x => x.Author)
+                        .ThenInclude(x => x.Department)
+                        .ThenInclude(x => x.DepartmentCode)
                         .OrderBy(x => x.Created)
                     : context
                         .Set<Post>()
@@ -82,6 +106,12 @@ namespace DataAccess.Concrete.EntityFramework
                         .Include(x => x.Tags)
                         .ThenInclude(x => x.Tag)
                         .Include(x => x.Author)
+                        .ThenInclude(x => x.University)
+                        .Include(x => x.Author)
+                        .ThenInclude(x => x.Faculty)
+                        .Include(x => x.Author)
+                        .ThenInclude(x => x.Department)
+                        .ThenInclude(x => x.DepartmentCode)
                         .OrderBy(x => x.Created)
                         .Where(filter);
 
