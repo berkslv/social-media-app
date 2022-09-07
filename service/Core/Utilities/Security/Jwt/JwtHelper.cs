@@ -14,13 +14,12 @@ namespace Core.Utilities.Security.Jwt
 {
     public class JwtHelper : ITokenHelper
     {
-        public IConfiguration Configuration { get; }
         private DateTime _accessTokenExpiration;
-        public JwtHelper(IConfiguration configuration)
+        public JwtHelper()
         {
-            Configuration = configuration;
-            _accessTokenExpiration = DateTime.Now.AddMinutes(Int32.Parse(Environment.GetEnvironmentVariable("TOKEN_ACCESS_TOKEN_EXPIRATION")));
+            _accessTokenExpiration = DateTime.UtcNow.AddMinutes(Int32.Parse(Environment.GetEnvironmentVariable("TOKEN_ACCESS_TOKEN_EXPIRATION")));
         }
+        
         public AccessToken CreateToken(UserBase user, List<OperationClaim> operationClaims)
         {
             var securityKey = SecurityKeyHelper.CreateSecurityKey(Environment.GetEnvironmentVariable("TOKEN_SECURITY_KEY"));

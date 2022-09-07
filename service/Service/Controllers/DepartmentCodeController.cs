@@ -44,7 +44,7 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpGet]
         public async Task<IActionResult> GetList([FromQuery] PaginationParameters pagination, [FromQuery] DepartmentCodeFilter filter)
         {
@@ -72,7 +72,7 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpGet("{departmentCodeId}")]
         public async Task<IActionResult> GetById(int departmentCodeId)
         {
@@ -100,7 +100,7 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpGet("{departmentCodeId}/departments")]
         public async Task<IActionResult> GetByIdIncludeDepartment(int departmentCodeId, [FromQuery] PaginationParameters pagination)
         {
@@ -128,7 +128,7 @@ namespace Service.Controllers
         /// <response code="400">An unexpected error has occurred.</response>
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Manager}")]
+        [Authorize(Roles = $"{Role.Admin}")]
         [HttpPost]
         public async Task<IActionResult> Add(DepartmentCodeForCreateDto departmentCodeForCreateDto)
         {
@@ -157,7 +157,7 @@ namespace Service.Controllers
         /// <response code="400">An unexpected error has occurred.</response>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Manager}")]
+        [Authorize(Roles = $"{Role.Admin}")]
         [HttpPut("{departmentCodeId}")]
         public async Task<IActionResult> Update(int departmentCodeId, DepartmentCodeForUpdateDto departmentCodeForUpdateDto)
         {
@@ -183,7 +183,7 @@ namespace Service.Controllers
         /// <response code="400">An unexpected error has occurred.</response>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Manager}")]
+        [Authorize(Roles = $"{Role.Admin}")]
         [HttpDelete("{departmentCodeId}")]
         public async Task<IActionResult> Delete(int departmentCodeId)
         {

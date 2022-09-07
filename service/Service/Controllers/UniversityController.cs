@@ -155,7 +155,7 @@ namespace Service.Controllers
         /// <response code="400">An unexpected error has occurred.</response>
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Manager}")]
+        [Authorize(Roles = $"{Role.Admin}")]
         [HttpPost]
         public async Task<IActionResult> Add(UniversityForCreateDto universityForCreateDto)
         {
@@ -186,7 +186,7 @@ namespace Service.Controllers
         /// <response code="400">An unexpected error has occurred.</response>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Manager}")]
+        [Authorize(Roles = $"{Role.Admin}")]
         [HttpPut("{universityId}")]
         public async Task<IActionResult> Update(int universityId, UniversityForUpdateDto universityForUpdateDto)
         {
@@ -213,7 +213,7 @@ namespace Service.Controllers
         /// <response code="400">An unexpected error has occurred.</response>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Manager}")]
+        [Authorize(Roles = $"{Role.Admin}")]
         [HttpDelete("{universityId}")]
         public async Task<IActionResult> Delete(int universityId)
         {

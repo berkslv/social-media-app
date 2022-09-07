@@ -15,8 +15,7 @@ namespace DataAccess.Concrete.EntityFramework.Seed
             modelBuilder.Entity<OperationClaim>().HasData(
                 new OperationClaim { Id = 1, Name = Role.Student },
                 new OperationClaim { Id = 2, Name = Role.Business },
-                new OperationClaim { Id = 3, Name = Role.Manager },
-                new OperationClaim { Id = 4, Name = Role.Admin }
+                new OperationClaim { Id = 3, Name = Role.Admin }
             );
 
             // Seed User
@@ -37,9 +36,32 @@ namespace DataAccess.Concrete.EntityFramework.Seed
                 }
             );
 
+            string password2 = "myStrongPassword123";
+            byte[] passwordHash2, passwordSalt2;
+            HashingHelper.CreatePasswordHash(password2, out passwordHash2, out passwordSalt2);
+            modelBuilder.Entity<User>().HasData(
+                new User
+                {
+                    Id = 2,
+                    Name = "Deneme kullanıcısı",
+                    Email = "test@example.com",
+                    Status = true,
+                    Username = "testuser",
+                    PasswordSalt = passwordSalt2,
+                    PasswordHash = passwordHash2,
+                    Role = Role.Student,
+                    UniversityId = 1,
+                    FacultyId = 1,
+                    DepartmentId = 1
+                }
+            );
+
             // Seed UserOperationClaim
             modelBuilder.Entity<UserOperationClaim>().HasData(
-                new UserOperationClaim { Id = 1, UserId = 1, OperationClaimId = 4 }
+                new UserOperationClaim { Id = 1, UserId = 1, OperationClaimId = 3 }
+            );
+            modelBuilder.Entity<UserOperationClaim>().HasData(
+                new UserOperationClaim { Id = 2, UserId = 2, OperationClaimId = 1 }
             );
 
             // deserialize JSON directly from a file

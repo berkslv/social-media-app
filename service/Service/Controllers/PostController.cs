@@ -45,7 +45,7 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpGet]
         public async Task<IActionResult> GetList([FromQuery] PaginationParameters pagination, [FromQuery] PostFilter filter)
         {
@@ -73,7 +73,7 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpGet("{postId}")]
         public async Task<IActionResult> GetById(int postId)
         {
@@ -102,7 +102,7 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpGet("{postId}/comments")]
         public async Task<IActionResult> GetByIdIncludeComment(int postId ,[FromQuery] PaginationParameters pagination)
         {
@@ -131,7 +131,7 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpGet("{postId}/likes")]
         public async Task<IActionResult> GetByIdIncludeLikes(int postId ,[FromQuery] PaginationParameters pagination)
         {
@@ -160,7 +160,7 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpGet("{postId}/dislikes")]
         public async Task<IActionResult> GetByIdIncludeDislikes(int postId ,[FromQuery] PaginationParameters pagination)
         {
@@ -188,7 +188,7 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpGet("{postId}/author")]
         public async Task<IActionResult> GetByIdIncludeAuthor(int postId)
         {
@@ -218,7 +218,7 @@ namespace Service.Controllers
         /// <response code="400">An unexpected error has occurred.</response>
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpPost]
         public async Task<IActionResult> Add(PostForCreateDto postForCreateDto)
         {
@@ -250,7 +250,7 @@ namespace Service.Controllers
         /// <response code="400">An unexpected error has occurred.</response>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpPut("{postId}")]
         public async Task<IActionResult> Update(int postId, PostForUpdateDto postForUpdateDto)
         {
@@ -276,7 +276,7 @@ namespace Service.Controllers
         /// <response code="400">An unexpected error has occurred.</response>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpPut("{postId}/like")]
         public async Task<IActionResult> Like(int postId)
         {
@@ -304,7 +304,7 @@ namespace Service.Controllers
         /// <response code="400">An unexpected error has occurred.</response>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpPut("{postId}/dislike")]
         public async Task<IActionResult> Dislike(int postId)
         {
@@ -332,7 +332,7 @@ namespace Service.Controllers
         /// <response code="400">An unexpected error has occurred.</response>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpDelete("{postId}")]
         public async Task<IActionResult> Delete(int postId)
         {

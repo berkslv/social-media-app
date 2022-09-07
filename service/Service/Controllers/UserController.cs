@@ -42,7 +42,7 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpGet("me")]
         public async Task<IActionResult> GetMe()
         {
@@ -70,7 +70,7 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Manager}")]
+        [Authorize(Roles = $"{Role.Admin}")]
         [HttpGet]
         public async Task<IActionResult> GetList([FromQuery] PaginationParameters pagination, [FromQuery] UserFilter filter)
         {
@@ -98,7 +98,7 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpGet("{userId}")]
         public async Task<IActionResult> GetById(int userId)
         {

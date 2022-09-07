@@ -2,7 +2,8 @@ import React from "react";
 import Logo from "images/logo-light.svg";
 import { Link } from "react-router-dom";
 
-function LoginForm({ error, onSubmit, onChangeEmail, onChangePassword }) {
+function LoginForm({ error, onSubmit, onChangeEmail, onChangePassword, visitorEvent }) {
+
   return (
     <div
       className="d-flex justify-content-center align-items-center bg-light"
@@ -44,6 +45,9 @@ function LoginForm({ error, onSubmit, onChangeEmail, onChangePassword }) {
           className="btn btn-primary my-2"
           value="Giriş Yap"
         />
+        <button className="btn btn-primary my-2" onClick={visitorEvent}>
+          Ziyaterçi olarak giriş yap
+        </button>
         <Link className="btn btn-outline-primary my-2" to="/register">
           Üye ol
         </Link>

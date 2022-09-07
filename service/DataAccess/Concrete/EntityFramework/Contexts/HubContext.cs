@@ -17,6 +17,11 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
             // read from ENV
             var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
 
+            if (connectionString is null)
+            {
+                connectionString = "server=localhost;user=root;password=123456789;database=hub";
+            }
+
             optionsBuilder.UseMySql(
                 connectionString,
                 new MySqlServerVersion(new Version(8, 0, 11))
@@ -103,7 +108,7 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
                 .WithMany(x => x.Posts);
 
 
-            // SeedData.Seed(modelBuilder);
+            SeedData.Seed(modelBuilder);
         }
         
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

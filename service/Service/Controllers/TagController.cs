@@ -46,7 +46,7 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpGet]
         public async Task<IActionResult> GetList([FromQuery] PaginationParameters pagination, [FromQuery] TagFilter filter)
         {
@@ -74,7 +74,7 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpGet("{tagId}")]
         public async Task<IActionResult> GetById(int tagId)
         {
@@ -102,7 +102,7 @@ namespace Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Manager},{Role.Student}")]
+        [Authorize(Roles = $"{Role.Admin},{Role.Business},{Role.Student}")]
         [HttpGet("{tagId}/posts")]
         public async Task<IActionResult> GetByIdIncludePost(int tagId, [FromQuery] PaginationParameters pagination)
         {
@@ -131,7 +131,7 @@ namespace Service.Controllers
         /// <response code="400">An unexpected error has occurred.</response>
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Manager}")]
+        [Authorize(Roles = $"{Role.Admin}")]
         [HttpPost]
         public async Task<IActionResult> Add(TagForCreateDto tagForCreateDto)
         {
@@ -163,7 +163,7 @@ namespace Service.Controllers
         /// <response code="400">An unexpected error has occurred.</response>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Manager}")]
+        [Authorize(Roles = $"{Role.Admin}")]
         [HttpPut("{tagId}")]
         public async Task<IActionResult> Update(int tagId, TagForUpdateDto tagForUpdateDto)
         {
@@ -188,7 +188,7 @@ namespace Service.Controllers
         /// <response code="400">An unexpected error has occurred.</response>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [Authorize(Roles = $"{Role.Admin},{Role.Manager}")]
+        [Authorize(Roles = $"{Role.Admin}")]
         [HttpDelete("{tagId}")]
         public async Task<IActionResult> Delete(int tagId)
         {

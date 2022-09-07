@@ -2,6 +2,7 @@ import React from 'react'
 import roles from "utils/roles";
 
 function Profile({ user }) {
+  console.log(user);
   return (
     <div className="card">
     <div className="card-body">

@@ -22,6 +22,11 @@ function Login({ app, login }) {
     login(Email, Password);
   };
 
+  const visitorLogin = () => {
+    setEmail("test@example.com")
+    setPassword("myStrongPassword123")
+  };
+
   useEffect(() => {
     if (app.isAuthenticated) {
       navigate("/");
@@ -36,6 +41,7 @@ function Login({ app, login }) {
       onChangeEmail={onChangeEmailHandler}
       onChangePassword={onChangePasswordHandler}
       onSubmit={onSubmitHandler}
+      visitorEvent={visitorLogin}
     />
   );
 }

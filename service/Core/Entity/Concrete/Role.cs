@@ -4,7 +4,6 @@ namespace Core.Entity.Concrete
     {
         public const string Student = "Student";
         public const string Business = "Business";
-        public const string Manager = "Manager";
         public const string Admin = "Admin";
         public static List<string> RoleList = new List<string>();
 
@@ -12,8 +11,6 @@ namespace Core.Entity.Concrete
         {
             RoleList.Add(Student);
             RoleList.Add(Business);
-            RoleList.Add(Manager);
-            RoleList.Add(Admin);
         }
 
     }
