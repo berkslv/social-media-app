@@ -1,5 +1,11 @@
 # Social media app
 
+<p align="center">
+    <img src="./docs/logo.svg" alt="Logo" width="360">
+</p>
+
+<br/>
+
 The web service of this application is developed with Monolithic architecture using .Net Core Web API, frontend with react and admin panel with react-admin.
 
 The main purpose of this project is to develop a fully functional, architecturally advanced, web service developed in accordance with clean code.
@@ -7,6 +13,8 @@ The main purpose of this project is to develop a fully functional, architectural
 This application is designed as a social media platform that only university students can use, and is currently only open to university students with university e-mail addresses affiliated with universities, faculties and departments in Turkey, but those who want to visit the application can use it as a visitor.
 
 Since client and admin applications outside of the web service are designed to provide a user-friendly interface only for the client, documentation can only be found for the web service, not for these applications. User interfaces are designed in Turkish for Turkish users. English language support may be added in the future.
+
+<br/>
 
 # Technologies 
 
@@ -34,6 +42,8 @@ In addition I use react-admin for admin panel.
 
 The web service is basically designed using onion architecture. In addition to this architecture, clean code principles such as the DRY principle have been tried to be applied as much as possible.
 
+<br/>
+
 ![Onion architecture](./docs/Architecture.png)
 
 
@@ -57,6 +67,7 @@ Business library enforces business rules and requests from API Controllers are p
 
 Service is a .Net Core Web API application and provides a UI that can be accessed by URL to the application. Controller classes transfer the requests to the Business layer and perform the necessary log operations. Middlewares are implemented here, for example JWT configurations are made here.
 
+<br/>
 
 # Deployment
 
