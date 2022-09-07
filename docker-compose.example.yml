@@ -27,19 +27,18 @@ services:
     environment:
       - CONNECTION_STRING=server=collegehub-mysql;user=root;password=12345678;database=hub
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://+:5000
-      - ASPNETCORE_HTTP_PORT=https://+:5001
-      - MAIL_ACCOUNT=berkslv@gmail.com,
-      - MAIL_USERNAME=berkslv@gmail.com,
-      - MAIL_PASSWORD=<my-sendinblue-password>,
-      - MAIL_HOST=smtp-relay.sendinblue.com,
-      - TOKEN_AUDIENCE=https://localhost:5001,
-      - TOKEN_ISSUER=https://localhost:5001,
-      - TOKEN_ACCESS_TOKEN_EXPIRATION=1000,
+      - ASPNETCORE_URLS=http://+:80
+      - ASPNETCORE_HTTP_PORT=https://+:443
+      - MAIL_ACCOUNT=berkslv@gmail.com
+      - MAIL_USERNAME=berkslv@gmail.com
+      - MAIL_PASSWORD=<my-sendinblue-password>
+      - MAIL_HOST=smtp-relay.sendinblue.com
+      - TOKEN_AUDIENCE=www.berkselvi.dev
+      - TOKEN_ISSUER=www.berkselvi.dev
+      - TOKEN_ACCESS_TOKEN_EXPIRATION=1000
       - TOKEN_SECURITY_KEY=Erxkqb9amTxauDvpr
     ports:
-      - 5001:5000
-      - 5002:5001
+      - 80:80
     networks:
       - collegehub-network
     depends_on:
@@ -53,7 +52,7 @@ services:
       context: ./client
       dockerfile: Dockerfile
       args:
-        REACT_APP_API_URL: http://localhost:5001/api
+        REACT_APP_API_URL: http://localhost:80/api
     ports:
       - 3000:80
     networks:
