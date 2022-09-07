@@ -13,14 +13,12 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
     {
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            IConfiguration configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory()) // Directory where the json files are located
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .Build();
+        {   
+            // read from ENV
+            var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
 
             optionsBuilder.UseMySql(
-                configuration.GetValue<string>("ConnectionStrings:DefaultConnection"),
+                connectionString,
                 new MySqlServerVersion(new Version(8, 0, 11))
             );
         }
@@ -105,7 +103,7 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
                 .WithMany(x => x.Posts);
 
 
-            SeedData.Seed(modelBuilder);
+            // SeedData.Seed(modelBuilder);
         }
         
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

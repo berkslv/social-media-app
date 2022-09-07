@@ -4,7 +4,7 @@
 
 ```bash
 
-dotnet watch run --project ./Service
+dotnet watch run --project ./Service --launch-profile "Development"
 
 ```
 

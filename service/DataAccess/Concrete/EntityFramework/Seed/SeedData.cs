@@ -43,12 +43,14 @@ namespace DataAccess.Concrete.EntityFramework.Seed
             );
 
             // deserialize JSON directly from a file
-            using (StreamReader file = File.OpenText("/Users/berkslv/Documents/project/social-media-app/service/DataAccess/data.json"))
+            var fileLocation = "/Users/berkslv/Documents/project/social-media-app/service/DataAccess/data.json";
+
+            using (StreamReader file = File.OpenText(fileLocation))
             {
                 JsonSerializer serializer = new JsonSerializer();
 
                 var dataSet = (DataSet)serializer.Deserialize(file, typeof(DataSet));
-                
+
                 // Seed University
                 modelBuilder.Entity<University>().HasData(dataSet.Universities);
 

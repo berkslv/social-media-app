@@ -34,6 +34,7 @@ try
     // builder.Logging.ClearProviders();
     // builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
     // builder.Host.UseNLog();
+    
     // Add services to the container.
 
     // Autofac resolve
@@ -116,9 +117,7 @@ try
     builder.Services.AddFluentValidationRulesToSwagger();
 
 
-    // JWT resolve
-    var tokenOptions = builder.Configuration.GetSection("TokenOptions").Get<TokenOptions>();
-
+    // JWT
     builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         .AddJwtBearer(options =>
         {
@@ -127,13 +126,14 @@ try
                 ValidateIssuer = true,
                 ValidateAudience = true,
                 ValidateLifetime = true,
-                ValidIssuer = tokenOptions.Issuer,
-                ValidAudience = tokenOptions.Audience,
+                ValidIssuer = Environment.GetEnvironmentVariable("TOKEN_ISSUER"),
+                ValidAudience = Environment.GetEnvironmentVariable("TOKEN_AUDIENCE"),
                 ValidateIssuerSigningKey = true,
-                IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey(tokenOptions.SecurityKey)
+                IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey(Environment.GetEnvironmentVariable("TOKEN_SECURITY_KEY"))
             };
         });
 
+    // CORS
     builder.Services.AddCors(options =>
         {
             options.AddDefaultPolicy(

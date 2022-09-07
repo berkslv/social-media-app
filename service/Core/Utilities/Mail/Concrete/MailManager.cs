@@ -11,13 +11,9 @@ namespace Core.Utilities.Mail.Concrete
     {
         public async Task<IResult> SendMail(string mailAddress, string name, string subject, string body)
         {
-            IConfiguration configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory()) // Directory where the json files are located
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .Build();
 
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("CollegeHub", configuration.GetValue<string>("Mail:Account")));
+            message.From.Add(new MailboxAddress("CollegeHub", Environment.GetEnvironmentVariable("MAIL_ACCOUNT")));
             message.To.Add(new MailboxAddress(name, mailAddress));
             message.Subject = subject;
 
@@ -30,10 +26,10 @@ namespace Core.Utilities.Mail.Concrete
             {
                 try
                 {
-                    client.Connect("smtp-relay.sendinblue.com", 587, false);
+                    client.Connect(Environment.GetEnvironmentVariable("MAIL_HOST"), 587, false);
 
                     // Note: only needed if the SMTP server requires authentication
-                    client.Authenticate(configuration.GetValue<string>("Mail:Username"), configuration.GetValue<string>("Mail:Password"));
+                    client.Authenticate(Environment.GetEnvironmentVariable("MAIL_USERNAME"), Environment.GetEnvironmentVariable("MAIL_PASSWORD"));
 
                     await client.SendAsync(message);
                     client.Disconnect(true);

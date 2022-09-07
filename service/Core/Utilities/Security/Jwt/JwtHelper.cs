@@ -15,19 +15,17 @@ namespace Core.Utilities.Security.Jwt
     public class JwtHelper : ITokenHelper
     {
         public IConfiguration Configuration { get; }
-        private TokenOptions _tokenOptions;
         private DateTime _accessTokenExpiration;
         public JwtHelper(IConfiguration configuration)
         {
             Configuration = configuration;
-            _tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
-            _accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOptions.AccessTokenExpiration);
+            _accessTokenExpiration = DateTime.Now.AddMinutes(Int32.Parse(Environment.GetEnvironmentVariable("TOKEN_ACCESS_TOKEN_EXPIRATION")));
         }
         public AccessToken CreateToken(UserBase user, List<OperationClaim> operationClaims)
         {
-            var securityKey = SecurityKeyHelper.CreateSecurityKey(_tokenOptions.SecurityKey);
+            var securityKey = SecurityKeyHelper.CreateSecurityKey(Environment.GetEnvironmentVariable("TOKEN_SECURITY_KEY"));
             var signingCredentials = SigningCredentialsHelper.CreateSigningCredentials(securityKey);
-            var jwt = CreateJwtSecurityToken(_tokenOptions, user, signingCredentials, operationClaims);
+            var jwt = CreateJwtSecurityToken(user, signingCredentials, operationClaims);
             var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
             var token = jwtSecurityTokenHandler.WriteToken(jwt);
 
@@ -39,12 +37,12 @@ namespace Core.Utilities.Security.Jwt
 
         }
 
-        public JwtSecurityToken CreateJwtSecurityToken(TokenOptions tokenOptions, UserBase user, 
+        public JwtSecurityToken CreateJwtSecurityToken(UserBase user, 
             SigningCredentials signingCredentials, List<OperationClaim> operationClaims)
         {
             var jwt = new JwtSecurityToken(
-                issuer:tokenOptions.Issuer,
-                audience:tokenOptions.Audience,
+                issuer: Environment.GetEnvironmentVariable("TOKEN_ISSUER"),
+                audience: Environment.GetEnvironmentVariable("TOKEN_AUDIENCE"),
                 expires:_accessTokenExpiration,
                 notBefore:DateTime.Now,
                 claims: SetClaims(user,operationClaims),
