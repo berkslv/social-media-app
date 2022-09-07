@@ -107,8 +107,8 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
                 .HasOne(x => x.Author)
                 .WithMany(x => x.Posts);
 
-
-            SeedData.Seed(modelBuilder);
+            // If you run this in docker, there will be error because data.json file could not be found
+            // SeedData.Seed(modelBuilder);
         }
         
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

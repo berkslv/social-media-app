@@ -20,7 +20,7 @@ using System.Net.Mime;
 using Core.Utilities.Query;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
 
-// var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
+var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
 
 try
 {
@@ -31,9 +31,9 @@ try
     builder.Services.AddControllersWithViews();
 
     // NLog: Setup NLog for Dependency injection
-    // builder.Logging.ClearProviders();
-    // builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
-    // builder.Host.UseNLog();
+    builder.Logging.ClearProviders();
+    builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
+    builder.Host.UseNLog();
     
     // Add services to the container.
 
@@ -174,12 +174,12 @@ try
 
     app.Run();
 }
-catch (System.Exception)
+catch (System.Exception ex)
 {
-    // logger.Error(ex, "Stopped program because of exception");
+    logger.Error(ex, "Stopped program because of exception");
 }
 finally
 {
     // Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
-    // NLog.LogManager.Shutdown();
+    NLog.LogManager.Shutdown();
 }
