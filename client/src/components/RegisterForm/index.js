@@ -63,8 +63,8 @@ function Register({
 
   return (
     <div
-      className="d-flex justify-content-center align-items-center bg-light"
-      style={{ height: "100vh" }}
+      className="d-flex justify-content-center align-items-center bg-dark"
+      style={{ height: "100vh", backgroundColor: "#dbeafe" }}
     >
       <form
         className="card p-4"

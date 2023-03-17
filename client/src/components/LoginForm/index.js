@@ -6,8 +6,8 @@ function LoginForm({ error, onSubmit, onChangeEmail, onChangePassword, visitorEv
 
   return (
     <div
-      className="d-flex justify-content-center align-items-center bg-light"
-      style={{ height: "100vh" }}
+      className="d-flex justify-content-center align-items-center"
+      style={{ height: "100vh", backgroundColor: "#dbeafe" }}
     >
       <form
         className="card p-4"

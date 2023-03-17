@@ -94,7 +94,7 @@ docker-compose up
 ```bash
 
 cd service 
-dotnet build # onyl once in the directory
+dotnet build # only once in the directory
 dotnet watch run --project ./Service --launch-profile "Development"
 
 ```

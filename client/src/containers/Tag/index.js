@@ -25,7 +25,7 @@ function Tag({ tag, getTags, selectTag, deselectTag }) {
         tag.data.map((item) => (
           <Button
             key={item.id}
-            className={`btn mx-1 ${tag.selectedTagId === item.id ? "btn-primary" : "btn-outline-primary"}`}
+            className={`btn mx-1 ${tag.selectedTagId === item.id ? "btn-dark" : "btn-outline-dark"}`}
             type="button"
             content={item.name}
             onClick={() => selectTagHandler(item.id)}

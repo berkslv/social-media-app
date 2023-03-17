@@ -68,14 +68,16 @@ function PostCard({ user, post, likeAction, dislikeAction, deleteAction }) {
           <img src={Comment} alt="comment" width="20" height="20" />
         </Link>
       </div>
-      <div className="card-footer text-muted">
-        {post.tags.map((tag) => (
-          <span key={tag.id} className="badge bg-primary me-1">
-            {tag}
-          </span>
-        ))}
+      {post.tags.length > 0 && (
+        <div className="card-footer text-muted">
+         {post.tags.map((tag) => (
+            <span key={tag.id} className="badge bg-primary me-1">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
       </div>
-    </div>
   );
 }
 
