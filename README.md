@@ -14,6 +14,18 @@ This application is designed as a social media platform that only university stu
 
 Since client and admin applications outside of the web service are designed to provide a user-friendly interface only for the client, documentation can only be found for the web service, not for these applications. User interfaces are designed in Turkish for Turkish users. English language support may be added in the future.
 
+# Screenshots from the application
+
+![Login](./docs/login.png)
+
+<br/>
+
+![Home](./docs/home.png)
+
+<br/>
+
+![Profile](./docs/profile.png)
+
 <br/>
 
 # Technologies 
