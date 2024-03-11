@@ -1,7 +1,7 @@
 import { stringify } from "query-string";
 import { fetchUtils } from "ra-core";
 
-let apiUrl = "https://localhost:5001/api";
+let apiUrl = "http://localhost:5000/api";
 const httpClient = (url, options = {}) => {
   if (!options.headers) {
     options.headers = new Headers({ Accept: "application/json" });

@@ -1,4 +1,4 @@
-const apiUrl = "https://localhost:5001/api";
+const apiUrl = "http://localhost:5000/api";
 
 const authProvider = {
   // called when the user attempts to log in

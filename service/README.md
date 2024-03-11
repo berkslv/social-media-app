@@ -1,5 +1,23 @@
 # service
 
+- Set enviroment variables
+
+```bash
+
+export TOKEN_ACCESS_TOKEN_EXPIRATION=10000
+export TOKEN_SECURITY_KEY="Erxkqb9amTxauDvpr"
+export TOKEN_ISSUER="www.berk.com"
+export TOKEN_AUDIENCE="www.berk.com"
+
+export MAIL_ACCOUNT="berkslv@gmail.com"
+export MAIL_HOST="smtp.sendinblue.com" 
+export MAIL_USERNAME="berkslv"
+export MAIL_PASSWORD="password"
+
+export CONNECTION_STRING="server=localhost;user=root;password=12345678;database=hub"
+
+```
+
 - Run this project
 
 ```bash

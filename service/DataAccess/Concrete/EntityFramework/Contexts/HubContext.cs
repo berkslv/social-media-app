@@ -19,7 +19,7 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
 
             if (connectionString is null)
             {
-                connectionString = "server=localhost;user=root;password=123456789;database=hub";
+                connectionString = "server=localhost;user=root;password=12345678;database=hub";
             }
 
             optionsBuilder.UseMySql(
