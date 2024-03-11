@@ -28,6 +28,20 @@ Since client and admin applications outside of the web service are designed to p
 
 <br/>
 
+# Screenshots from the admin panel
+
+![Login](./docs/admin-login.png)
+
+<br/>
+
+![Posts](./docs/admin-posts.png)
+
+<br/>
+
+![Users](./docs/admin-users.png)
+
+<br/>
+
 # Technologies 
 
 For API, I used .Net Core Web API and several nuget packages along with it. Here is complete list.
